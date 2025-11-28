@@ -1,32 +1,45 @@
 import { MapPin, Clock, Calendar } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const EventDetails = () => {
+  const { t, language } = useLanguage();
+
   const events = [
     {
-      title: "Ceremony",
+      titleKey: 'ceremony' as const,
       time: "4:00 PM",
-      location: "The Garden Chapel",
-      address: "123 Vineyard Lane, Napa Valley",
-      description: "Join us as we exchange vows in the beautiful garden chapel surrounded by roses and olive trees.",
+      location: "Las Mañanitas",
+      address: "Cuernavaca, Mexico",
+      descriptionEn: "Join us as we exchange vows in the beautiful gardens of Las Mañanitas.",
+      descriptionEs: "Acompáñanos mientras intercambiamos votos en los hermosos jardines de Las Mañanitas.",
+      descriptionSv: "Följ med oss när vi utbyter löften i Las Mañanitas vackra trädgårdar.",
     },
     {
-      title: "Reception",
+      titleKey: 'reception' as const,
       time: "6:00 PM",
-      location: "The Grand Ballroom",
-      address: "123 Vineyard Lane, Napa Valley",
-      description: "Dinner, dancing, and celebration under the stars on the terrace overlooking the vineyard.",
+      location: "Las Mañanitas",
+      address: "Cuernavaca, Mexico",
+      descriptionEn: "Dinner, dancing, and celebration under the stars in the enchanting gardens.",
+      descriptionEs: "Cena, baile y celebración bajo las estrellas en los encantadores jardines.",
+      descriptionSv: "Middag, dans och firande under stjärnorna i de förtrollande trädgårdarna.",
     },
   ];
+
+  const getDescription = (event: typeof events[0]) => {
+    if (language === 'es') return event.descriptionEs;
+    if (language === 'sv') return event.descriptionSv;
+    return event.descriptionEn;
+  };
 
   return (
     <section className="py-24 px-6 bg-gradient-hero">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="font-sans text-sm uppercase tracking-[0.3em] text-gold mb-4">
-            Save the Date
+            {t.details.saveTheDate}
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-charcoal mb-4">
-            Wedding Details
+            {t.details.weddingDetails}
           </h2>
           <div className="flex items-center justify-center gap-4">
             <div className="h-px w-24 bg-sage-light" />
@@ -36,13 +49,13 @@ const EventDetails = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {events.map((event, index) => (
+          {events.map((event) => (
             <div
-              key={event.title}
+              key={event.titleKey}
               className="bg-ivory/80 backdrop-blur-sm rounded-lg p-8 shadow-soft hover:shadow-elevated transition-shadow duration-300"
             >
               <h3 className="font-display text-2xl text-charcoal mb-4">
-                {event.title}
+                {t.details[event.titleKey]}
               </h3>
               
               <div className="space-y-3 mb-6">
@@ -61,7 +74,7 @@ const EventDetails = () => {
               </div>
               
               <p className="font-body text-muted-foreground leading-relaxed">
-                {event.description}
+                {getDescription(event)}
               </p>
             </div>
           ))}
