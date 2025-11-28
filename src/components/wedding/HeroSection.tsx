@@ -53,6 +53,9 @@ const HeroSection = () => {
           >
             {t.hero.rsvp}
           </Button>
+          <p className="font-body text-sm text-ivory/80 mt-3 drop-shadow-md">
+            {t.hero.rsvpDeadline}
+          </p>
         </div>
       </div>
       

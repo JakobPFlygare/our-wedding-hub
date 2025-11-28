@@ -19,6 +19,9 @@ const flags = {
       <rect width="28" height="48" fill="#006341"/>
       <rect x="28" width="28" height="48" fill="#fff"/>
       <rect x="56" width="28" height="48" fill="#ce1126"/>
+      {/* Eagle emblem simplified */}
+      <circle cx="42" cy="24" r="6" fill="#6D3C1B"/>
+      <ellipse cx="42" cy="22" rx="4" ry="3" fill="#006341"/>
     </svg>
   ),
   sv: (
