@@ -12,7 +12,8 @@ interface Translations {
     saveTheDate: string;
     weddingDetails: string;
     ceremony: string;
-    reception: string;
+    dinner: string;
+    tornafiesta: string;
     time: string;
     location: string;
   };
@@ -52,7 +53,8 @@ const translations: Record<Language, Translations> = {
       saveTheDate: 'Save the Date',
       weddingDetails: 'Wedding Details',
       ceremony: 'Ceremony',
-      reception: 'Reception',
+      dinner: 'Dinner',
+      tornafiesta: 'Torna Fiesta',
       time: 'Time',
       location: 'Location',
     },
@@ -90,7 +92,8 @@ const translations: Record<Language, Translations> = {
       saveTheDate: 'Reserva la Fecha',
       weddingDetails: 'Detalles de la Boda',
       ceremony: 'Ceremonia',
-      reception: 'Recepción',
+      dinner: 'Cena',
+      tornafiesta: 'Torna Fiesta',
       time: 'Hora',
       location: 'Lugar',
     },
@@ -128,7 +131,8 @@ const translations: Record<Language, Translations> = {
       saveTheDate: 'Spara Datumet',
       weddingDetails: 'Bröllopsdetaljer',
       ceremony: 'Ceremoni',
-      reception: 'Fest',
+      dinner: 'Middag',
+      tornafiesta: 'Torna Fiesta',
       time: 'Tid',
       location: 'Plats',
     },

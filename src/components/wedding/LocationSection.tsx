@@ -6,7 +6,7 @@ const LocationSection = () => {
   const { t } = useLanguage();
   
   const googleMapsUrl = "https://maps.google.com/?q=Las+Mañanitas+Cuernavaca+Mexico";
-  const embedMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.0682646556455!2d-99.23579372394196!3d18.919755256368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddfb4a86c0a07%3A0x4d9f6f5b1e8a3e47!2sLas%20Ma%C3%B1anitas!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx";
+  const embedMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15096.273058625817!2d-99.24579372394196!3d18.919755256368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddfb4a86c0a07%3A0x4d9f6f5b1e8a3e47!2sLas%20Ma%C3%B1anitas!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx&markers=color:red%7C18.9197,-99.2358";
 
   return (
     <section className="py-24 px-6 bg-ivory">

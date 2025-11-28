@@ -7,7 +7,7 @@ const EventDetails = () => {
   const events = [
     {
       titleKey: 'ceremony' as const,
-      time: "4:00 PM",
+      time: "15:00",
       location: "Las Mañanitas",
       address: "Cuernavaca, Mexico",
       descriptionEn: "Join us as we exchange vows in the beautiful gardens of Las Mañanitas.",
@@ -15,13 +15,22 @@ const EventDetails = () => {
       descriptionSv: "Följ med oss när vi utbyter löften i Las Mañanitas vackra trädgårdar.",
     },
     {
-      titleKey: 'reception' as const,
-      time: "6:00 PM",
+      titleKey: 'dinner' as const,
+      time: "18:00",
       location: "Las Mañanitas",
       address: "Cuernavaca, Mexico",
-      descriptionEn: "Dinner, dancing, and celebration under the stars in the enchanting gardens.",
-      descriptionEs: "Cena, baile y celebración bajo las estrellas en los encantadores jardines.",
-      descriptionSv: "Middag, dans och firande under stjärnorna i de förtrollande trädgårdarna.",
+      descriptionEn: "Dinner and celebration under the stars in the enchanting gardens.",
+      descriptionEs: "Cena y celebración bajo las estrellas en los encantadores jardines.",
+      descriptionSv: "Middag och firande under stjärnorna i de förtrollande trädgårdarna.",
+    },
+    {
+      titleKey: 'tornafiesta' as const,
+      time: "23:00",
+      location: "Las Mañanitas",
+      address: "Cuernavaca, Mexico",
+      descriptionEn: "Late night snacks and dancing to keep the celebration going!",
+      descriptionEs: "Antojitos nocturnos y baile para continuar la celebración!",
+      descriptionSv: "Sena nattsnacks och dans för att hålla festen igång!",
     },
   ];
 
@@ -48,7 +57,7 @@ const EventDetails = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {events.map((event) => (
             <div
               key={event.titleKey}

@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         
         <p className="font-sans text-sm text-ivory/60">
-          {t.footer.madeWith} • #PauAndJakob2027
+          #PauAndJakob2027
         </p>
       </div>
     </footer>
