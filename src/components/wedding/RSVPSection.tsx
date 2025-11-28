@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const RSVPSection = () => {
@@ -19,7 +19,7 @@ const RSVPSection = () => {
           {t.rsvp.description}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-8 md:mb-12">
+        <div className="flex justify-center mb-8 md:mb-12">
           <Button 
             variant="wedding" 
             size="lg"
@@ -29,16 +29,6 @@ const RSVPSection = () => {
             {t.rsvp.rsvpOnline}
             <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          
-          <Button 
-            variant="wedding-outline" 
-            size="lg"
-            onClick={() => window.location.href = 'mailto:pau.jakob.2027@email.com'}
-            className="w-full sm:w-auto"
-          >
-            <Mail className="w-4 h-4" />
-            {t.rsvp.emailUs}
-          </Button>
         </div>
 
         <div className="p-4 md:p-6 bg-ivory/60 backdrop-blur-sm rounded-lg shadow-soft">
@@ -46,13 +36,7 @@ const RSVPSection = () => {
             {t.rsvp.questions}
           </p>
           <p className="font-body text-sm md:text-base text-muted-foreground">
-            Feel free to reach out to us at{" "}
-            <a 
-              href="mailto:pau.jakob.2027@email.com" 
-              className="text-sage hover:text-sage/80 underline underline-offset-4 break-all"
-            >
-              pau.jakob.2027@email.com
-            </a>
+            {t.rsvp.contactUs}
           </p>
         </div>
       </div>

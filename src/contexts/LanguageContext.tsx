@@ -42,6 +42,7 @@ interface Translations {
     rsvpOnline: string;
     emailUs: string;
     questions: string;
+    contactUs: string;
   };
   footer: {
     celebrate: string;
@@ -86,10 +87,11 @@ const translations: Record<Language, Translations> = {
     rsvp: {
       subtitle: "We Can't Wait to See You",
       title: 'Kindly Respond',
-      description: 'Please let us know if you\'ll be joining us for our special day by December 1, 2026. We truly hope you can celebrate with us!',
+      description: 'Please let us know if you\'ll be joining us for our special day by July 9, 2026. We truly hope you can celebrate with us!',
       rsvpOnline: 'RSVP Online',
       emailUs: 'Email Us',
       questions: 'Questions?',
+      contactUs: 'Feel free to reach out to us via phone – you know how to find us!',
     },
     footer: {
       celebrate: "We can't wait to celebrate with you!",
@@ -132,10 +134,11 @@ const translations: Record<Language, Translations> = {
     rsvp: {
       subtitle: 'Esperamos Verte',
       title: 'Confirma tu Asistencia',
-      description: 'Por favor confirma tu asistencia antes del 1 de diciembre de 2026. ¡Esperamos poder celebrar contigo!',
+      description: 'Por favor confirma tu asistencia antes del 9 de julio de 2026. ¡Esperamos poder celebrar contigo!',
       rsvpOnline: 'Confirmar en Línea',
       emailUs: 'Escríbenos',
       questions: '¿Preguntas?',
+      contactUs: 'No dudes en contactarnos por teléfono – ¡ya sabes cómo encontrarnos!',
     },
     footer: {
       celebrate: '¡Estamos emocionados de celebrar contigo!',
@@ -178,10 +181,11 @@ const translations: Record<Language, Translations> = {
     rsvp: {
       subtitle: 'Vi Längtar Efter att Träffa Dig',
       title: 'Vänligen Svara',
-      description: 'Vänligen meddela oss om du kan delta senast den 1 december 2026. Vi hoppas verkligen att du kan fira med oss!',
+      description: 'Vänligen meddela oss om du kan delta senast den 9 juli 2026. Vi hoppas verkligen att du kan fira med oss!',
       rsvpOnline: 'OSA Online',
       emailUs: 'Maila Oss',
       questions: 'Frågor?',
+      contactUs: 'Hör gärna av dig via telefon – du vet hur du når oss!',
     },
     footer: {
       celebrate: 'Vi längtar efter att fira med dig!',
