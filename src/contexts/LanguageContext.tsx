@@ -24,9 +24,16 @@ interface Translations {
     address: string;
     distance: string;
     distanceInfo: string;
-    viewOnMaps: string;
     gettingThere: string;
     gettingThereInfo: string;
+  };
+  dressCode: {
+    subtitle: string;
+    title: string;
+    formal: string;
+    formalDescription: string;
+    weather: string;
+    weatherDescription: string;
   };
   rsvp: {
     subtitle: string;
@@ -65,9 +72,16 @@ const translations: Record<Language, Translations> = {
       address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, Mexico',
       distance: 'Distance from Mexico City',
       distanceInfo: 'Approximately 1.5 hours by car (85 km) from Mexico City via Highway 95D',
-      viewOnMaps: 'View on Google Maps',
       gettingThere: 'Getting There',
       gettingThereInfo: 'We recommend renting a car or arranging transportation from Mexico City. The venue offers parking facilities.',
+    },
+    dressCode: {
+      subtitle: 'What to Wear',
+      title: 'Dress Code',
+      formal: 'Formal Attire',
+      formalDescription: 'We invite you to dress in elegant formal attire. Think cocktail dresses, suits, or traditional formal wear. Light fabrics are recommended due to the warm weather.',
+      weather: 'January Weather',
+      weatherDescription: 'Cuernavaca enjoys pleasant spring-like weather year-round. January evenings can be cool, so consider bringing a light jacket or shawl.',
     },
     rsvp: {
       subtitle: "We Can't Wait to See You",
@@ -104,9 +118,16 @@ const translations: Record<Language, Translations> = {
       address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, México',
       distance: 'Distancia desde la Ciudad de México',
       distanceInfo: 'Aproximadamente 1.5 horas en coche (85 km) desde la Ciudad de México por la Autopista 95D',
-      viewOnMaps: 'Ver en Google Maps',
       gettingThere: 'Cómo Llegar',
       gettingThereInfo: 'Recomendamos rentar un coche o coordinar transporte desde la Ciudad de México. El lugar cuenta con estacionamiento.',
+    },
+    dressCode: {
+      subtitle: 'Qué Vestir',
+      title: 'Código de Vestimenta',
+      formal: 'Vestimenta Formal',
+      formalDescription: 'Te invitamos a vestir elegante formal. Piensa en vestidos de cóctel, trajes o vestimenta formal tradicional. Se recomiendan telas ligeras debido al clima cálido.',
+      weather: 'Clima en Enero',
+      weatherDescription: 'Cuernavaca disfruta de un clima primaveral agradable todo el año. Las noches de enero pueden ser frescas, así que considera traer una chaqueta ligera o chal.',
     },
     rsvp: {
       subtitle: 'Esperamos Verte',
@@ -143,9 +164,16 @@ const translations: Record<Language, Translations> = {
       address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, Mexiko',
       distance: 'Avstånd från Mexico City',
       distanceInfo: 'Cirka 1,5 timmar med bil (85 km) från Mexico City via motorväg 95D',
-      viewOnMaps: 'Visa på Google Maps',
       gettingThere: 'Hitta dit',
       gettingThereInfo: 'Vi rekommenderar att hyra bil eller ordna transport från Mexico City. Lokalen har parkering.',
+    },
+    dressCode: {
+      subtitle: 'Klädkod',
+      title: 'Klädsel',
+      formal: 'Formell Klädsel',
+      formalDescription: 'Vi bjuder in dig att klä dig i elegant formell klädsel. Tänk cocktailklänningar, kostymer eller traditionell formell klädsel. Lätta tyger rekommenderas på grund av det varma vädret.',
+      weather: 'Väder i Januari',
+      weatherDescription: 'Cuernavaca har ett behagligt vårliknande klimat året runt. Januarikvällar kan vara svala, så överväg att ta med en lätt jacka eller sjal.',
     },
     rsvp: {
       subtitle: 'Vi Längtar Efter att Träffa Dig',

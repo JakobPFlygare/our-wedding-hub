@@ -6,25 +6,25 @@ const RSVPSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 px-6 bg-sage-muted">
+    <section className="py-16 md:py-24 px-4 md:px-6 bg-sage-muted">
       <div className="max-w-2xl mx-auto text-center">
-        <p className="font-sans text-sm uppercase tracking-[0.3em] text-gold mb-4">
+        <p className="font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-gold mb-3 md:mb-4">
           {t.rsvp.subtitle}
         </p>
-        <h2 className="font-display text-4xl md:text-5xl text-charcoal mb-6">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4 md:mb-6">
           {t.rsvp.title}
         </h2>
         
-        <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed">
+        <p className="font-body text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
           {t.rsvp.description}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-8 md:mb-12">
           <Button 
             variant="wedding" 
-            size="xl"
+            size="lg"
             onClick={() => window.open('https://forms.gle/7dmhmZQkeFh7HhwPA', '_blank')}
-            className="group"
+            className="group w-full sm:w-auto"
           >
             {t.rsvp.rsvpOnline}
             <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -32,23 +32,24 @@ const RSVPSection = () => {
           
           <Button 
             variant="wedding-outline" 
-            size="xl"
+            size="lg"
             onClick={() => window.location.href = 'mailto:pau.jakob.2027@email.com'}
+            className="w-full sm:w-auto"
           >
             <Mail className="w-4 h-4" />
             {t.rsvp.emailUs}
           </Button>
         </div>
 
-        <div className="p-6 bg-ivory/60 backdrop-blur-sm rounded-lg shadow-soft">
-          <p className="font-sans text-sm uppercase tracking-wider text-sage mb-2">
+        <div className="p-4 md:p-6 bg-ivory/60 backdrop-blur-sm rounded-lg shadow-soft">
+          <p className="font-sans text-xs md:text-sm uppercase tracking-wider text-sage mb-2">
             {t.rsvp.questions}
           </p>
-          <p className="font-body text-muted-foreground">
+          <p className="font-body text-sm md:text-base text-muted-foreground">
             Feel free to reach out to us at{" "}
             <a 
               href="mailto:pau.jakob.2027@email.com" 
-              className="text-sage hover:text-sage/80 underline underline-offset-4"
+              className="text-sage hover:text-sage/80 underline underline-offset-4 break-all"
             >
               pau.jakob.2027@email.com
             </a>
