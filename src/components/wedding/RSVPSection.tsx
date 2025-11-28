@@ -26,7 +26,7 @@ const RSVPSection = () => {
             onClick={() => window.open('https://forms.gle/7dmhmZQkeFh7HhwPA', '_blank')}
             className="group w-full sm:w-auto"
           >
-            {t.rsvp.rsvpOnline}
+            {t.hero.rsvp}
             <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>

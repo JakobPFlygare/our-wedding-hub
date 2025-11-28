@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TimeLeft {
-  years: number;
   months: number;
   days: number;
   hours: number;
@@ -13,7 +12,6 @@ interface TimeLeft {
 const Countdown = () => {
   const { language } = useLanguage();
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    years: 0,
     months: 0,
     days: 0,
     hours: 0,
@@ -22,9 +20,9 @@ const Countdown = () => {
   });
 
   const labels = {
-    en: { years: "Years", months: "Months", days: "Days", hours: "Hours", minutes: "Min", seconds: "Sec" },
-    es: { years: "Años", months: "Meses", days: "Días", hours: "Horas", minutes: "Min", seconds: "Seg" },
-    sv: { years: "År", months: "Månader", days: "Dagar", hours: "Timmar", minutes: "Min", seconds: "Sek" },
+    en: { months: "Months", days: "Days", hours: "Hours", minutes: "Min", seconds: "Sec" },
+    es: { months: "Meses", days: "Días", hours: "Horas", minutes: "Min", seconds: "Seg" },
+    sv: { months: "Månader", days: "Dagar", hours: "Timmar", minutes: "Min", seconds: "Sek" },
   };
 
   useEffect(() => {
@@ -38,13 +36,8 @@ const Countdown = () => {
         const totalSeconds = Math.floor(difference / 1000);
         const totalMinutes = Math.floor(totalSeconds / 60);
         const totalHours = Math.floor(totalMinutes / 60);
-        const totalDays = Math.floor(totalHours / 24);
         
-        // Calculate years, months, days more accurately
-        let years = 0;
-        let months = 0;
-        let days = 0;
-        
+        // Calculate total months and remaining days
         const nowYear = now.getFullYear();
         const nowMonth = now.getMonth();
         const nowDay = now.getDate();
@@ -53,24 +46,17 @@ const Countdown = () => {
         const targetMonth = weddingDate.getMonth();
         const targetDay = weddingDate.getDate();
         
-        years = targetYear - nowYear;
-        months = targetMonth - nowMonth;
-        days = targetDay - nowDay;
+        let totalMonths = (targetYear - nowYear) * 12 + (targetMonth - nowMonth);
+        let days = targetDay - nowDay;
         
         if (days < 0) {
-          months--;
+          totalMonths--;
           const lastMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
           days += lastMonth.getDate();
         }
-        
-        if (months < 0) {
-          years--;
-          months += 12;
-        }
 
         setTimeLeft({
-          years,
-          months,
+          months: totalMonths,
           days,
           hours: totalHours % 24,
           minutes: totalMinutes % 60,
@@ -92,7 +78,7 @@ const Countdown = () => {
       <div className="bg-charcoal/80 backdrop-blur-sm rounded-lg px-2 py-1.5 md:px-4 md:py-3 min-w-[40px] md:min-w-[60px]">
         <span className="font-display text-lg md:text-3xl text-ivory">{value}</span>
       </div>
-      <span className="font-sans text-[10px] md:text-xs uppercase tracking-wider text-charcoal/80 mt-1">
+      <span className="font-sans text-[10px] md:text-xs uppercase tracking-wider text-ivory bg-charcoal/60 rounded px-1.5 py-0.5 mt-1">
         {label}
       </span>
     </div>
@@ -100,7 +86,6 @@ const Countdown = () => {
 
   return (
     <div className="flex flex-wrap justify-center gap-1.5 md:gap-3 mb-6 md:mb-8">
-      <TimeBlock value={timeLeft.years} label={currentLabels.years} />
       <TimeBlock value={timeLeft.months} label={currentLabels.months} />
       <TimeBlock value={timeLeft.days} label={currentLabels.days} />
       <TimeBlock value={timeLeft.hours} label={currentLabels.hours} />

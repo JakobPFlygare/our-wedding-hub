@@ -7,6 +7,7 @@ interface Translations {
     together: string;
     gettingMarried: string;
     rsvp: string;
+    rsvpDeadline: string;
   };
   details: {
     saveTheDate: string;
@@ -56,6 +57,7 @@ const translations: Record<Language, Translations> = {
       together: 'Together with their families',
       gettingMarried: 'Are getting married',
       rsvp: 'RSVP Now',
+      rsvpDeadline: 'Please RSVP by July 9, 2026',
     },
     details: {
       saveTheDate: 'Save the Date',
@@ -103,6 +105,7 @@ const translations: Record<Language, Translations> = {
       together: 'Junto con sus familias',
       gettingMarried: 'Se casan',
       rsvp: 'Confirmar Asistencia',
+      rsvpDeadline: 'Por favor confirma antes del 9 de julio de 2026',
     },
     details: {
       saveTheDate: 'Reserva la Fecha',
@@ -150,6 +153,7 @@ const translations: Record<Language, Translations> = {
       together: 'Tillsammans med sina familjer',
       gettingMarried: 'Gifter sig',
       rsvp: 'OSA Nu',
+      rsvpDeadline: 'Vänligen OSA senast 9 juli 2026',
     },
     details: {
       saveTheDate: 'Spara Datumet',

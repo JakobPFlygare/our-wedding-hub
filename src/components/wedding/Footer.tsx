@@ -12,15 +12,11 @@ const Footer = () => {
           January 9, 2027
         </p>
         
-        <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
+        <div className="flex items-center justify-center gap-2">
           <div className="h-px w-8 md:w-12 bg-ivory/30" />
           <Heart className="w-4 h-4 text-blush fill-blush" />
           <div className="h-px w-8 md:w-12 bg-ivory/30" />
         </div>
-        
-        <p className="font-sans text-xs md:text-sm text-ivory/60">
-          #PauAndJakob2027
-        </p>
       </div>
     </footer>
   );
