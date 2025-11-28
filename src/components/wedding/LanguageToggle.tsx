@@ -15,9 +15,11 @@ const flags = {
     </svg>
   ),
   es: (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" className="w-6 h-4 rounded-sm shadow-sm">
-      <rect width="750" height="500" fill="#AA151B"/>
-      <rect width="750" height="250" y="125" fill="#F1BF00"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 48" className="w-6 h-4 rounded-sm shadow-sm">
+      <rect width="84" height="48" fill="#006341"/>
+      <rect x="21" width="42" height="48" fill="#fff"/>
+      <rect x="42" width="42" height="48" fill="#ce1126"/>
+      <circle cx="42" cy="24" r="8" fill="#6d4c41"/>
     </svg>
   ),
   sv: (

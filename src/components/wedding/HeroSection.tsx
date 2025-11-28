@@ -18,11 +18,7 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 py-20">
-        <p className="font-sans text-sm uppercase tracking-[0.3em] text-sage mb-6 opacity-0 animate-fade-in-up">
-          {t.hero.together}
-        </p>
-        
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-charcoal mb-4 opacity-0 animate-fade-in-up animation-delay-200">
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-charcoal mb-4 opacity-0 animate-fade-in-up">
           Pau & Jakob
         </h1>
         
