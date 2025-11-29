@@ -75,10 +75,10 @@ const Countdown = () => {
 
   const TimeBlock = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-rosa/90 backdrop-blur-sm rounded-lg px-2 py-1.5 md:px-4 md:py-3 min-w-[40px] md:min-w-[60px] shadow-lg">
-        <span className="font-display text-lg md:text-3xl text-cream">{value}</span>
+      <div className="bg-charcoal/80 backdrop-blur-sm rounded-lg px-2 py-1.5 md:px-4 md:py-3 min-w-[40px] md:min-w-[60px]">
+        <span className="font-display text-lg md:text-3xl text-ivory">{value}</span>
       </div>
-      <span className="font-sans text-[10px] md:text-xs uppercase tracking-wider text-cream bg-turquoise/80 rounded px-1.5 py-0.5 mt-1">
+      <span className="font-sans text-[10px] md:text-xs uppercase tracking-wider text-ivory bg-charcoal/60 rounded px-1.5 py-0.5 mt-1">
         {label}
       </span>
     </div>

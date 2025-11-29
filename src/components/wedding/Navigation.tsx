@@ -26,7 +26,7 @@ const Navigation = () => {
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-50 p-2 rounded-full bg-cream/90 backdrop-blur-sm shadow-soft border border-rosa/30 transition-all hover:shadow-elevated hover:bg-rosa/10"
+        className="fixed top-4 left-4 z-50 p-2 rounded-full bg-ivory/90 backdrop-blur-sm shadow-soft border border-sage-light/30 transition-all hover:shadow-elevated"
         aria-label="Toggle menu"
       >
         {isOpen ? (
@@ -46,19 +46,19 @@ const Navigation = () => {
 
       {/* Menu Panel */}
       <nav
-        className={`fixed top-0 left-0 h-full w-72 bg-cream/95 backdrop-blur-md shadow-elevated z-40 transform transition-transform duration-300 ease-out ${
+        className={`fixed top-0 left-0 h-full w-72 bg-ivory/95 backdrop-blur-md shadow-elevated z-40 transform transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="pt-20 px-6">
-          <p className="font-display text-2xl text-rosa mb-8">Pau & Jakob</p>
+          <p className="font-display text-2xl text-charcoal mb-8">Pau & Jakob</p>
           
           <ul className="space-y-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <button
                   onClick={() => handleNavClick(item.href)}
-                  className="w-full text-left py-3 px-4 font-body text-lg text-charcoal hover:bg-rosa-muted rounded-lg transition-colors"
+                  className="w-full text-left py-3 px-4 font-body text-lg text-charcoal hover:bg-sage-muted rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>

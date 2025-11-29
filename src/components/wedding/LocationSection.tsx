@@ -10,7 +10,7 @@ const LocationSection = () => {
     <section className="py-10 md:py-14 px-4 md:px-6 bg-gradient-hero">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-6 md:mb-8">
-          <p className="font-sans text-xs uppercase tracking-[0.3em] text-coral mb-2">
+          <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">
             {t.location.subtitle}
           </p>
           <h2 className="font-display text-2xl md:text-3xl text-charcoal">
@@ -34,17 +34,17 @@ const LocationSection = () => {
         </div>
 
         {/* Transportation Section */}
-        <div className="bg-cream/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft mb-4 md:mb-6 border border-turquoise/20">
+        <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft mb-4 md:mb-6">
           <div className="flex items-center gap-2 mb-4">
-            <Bus className="w-5 h-5 text-turquoise" />
+            <Bus className="w-5 h-5 text-sage" />
             <h3 className="font-display text-lg md:text-xl text-charcoal">
               {t.location.transportTitle}
             </h3>
           </div>
           
           <div className="space-y-3">
-            <div className="border-l-2 border-turquoise pl-3">
-              <h4 className="font-sans text-xs uppercase tracking-wider text-turquoise mb-1">
+            <div className="border-l-2 border-sage pl-3">
+              <h4 className="font-sans text-xs uppercase tracking-wider text-sage mb-1">
                 {t.location.shuttleTitle}
               </h4>
               <p className="font-body text-sm text-muted-foreground">
@@ -52,8 +52,8 @@ const LocationSection = () => {
               </p>
             </div>
             
-            <div className="border-l-2 border-turquoise pl-3">
-              <h4 className="font-sans text-xs uppercase tracking-wider text-turquoise mb-1">
+            <div className="border-l-2 border-sage pl-3">
+              <h4 className="font-sans text-xs uppercase tracking-wider text-sage mb-1">
                 {t.location.parkingTitle}
               </h4>
               <p className="font-body text-sm text-muted-foreground">
@@ -64,28 +64,28 @@ const LocationSection = () => {
         </div>
 
         {/* Accommodation Section */}
-        <div className="bg-cream/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft border border-rosa/20">
+        <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft">
           <div className="flex items-center gap-2 mb-4">
-            <Hotel className="w-5 h-5 text-rosa" />
+            <Hotel className="w-5 h-5 text-sage" />
             <h3 className="font-display text-lg md:text-xl text-charcoal">
               {t.location.accommodationTitle}
             </h3>
           </div>
           
           <div className="grid md:grid-cols-2 gap-3 md:gap-4">
-            <div className="border border-rosa-light rounded-lg p-4 bg-rosa/5">
+            <div className="border border-sage-light rounded-lg p-4">
               <h4 className="font-display text-base text-charcoal mb-1">
                 Las Mañanitas Hotel
               </h4>
               <p className="font-body text-sm text-muted-foreground mb-2">
                 {t.location.venueHotelInfo}
               </p>
-              <span className="inline-block font-sans text-xs uppercase tracking-wider text-marigold bg-marigold/15 px-2 py-0.5 rounded">
+              <span className="inline-block font-sans text-xs uppercase tracking-wider text-gold bg-gold/10 px-2 py-0.5 rounded">
                 {t.location.guestDiscount}
               </span>
             </div>
             
-            <div className="border border-turquoise-light rounded-lg p-4 bg-turquoise/5">
+            <div className="border border-sage-light rounded-lg p-4">
               <h4 className="font-display text-base text-charcoal mb-1">
                 {t.location.otherHotels}
               </h4>

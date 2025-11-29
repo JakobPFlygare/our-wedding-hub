@@ -16,7 +16,7 @@ const EventDetails = () => {
     <section className="py-10 md:py-14 px-4 md:px-6 bg-gradient-hero">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-6 md:mb-8">
-          <p className="font-sans text-xs uppercase tracking-[0.3em] text-coral mb-2">
+          <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">
             {t.details.schedule}
           </p>
           <h2 className="font-display text-2xl md:text-3xl text-charcoal">
@@ -25,7 +25,7 @@ const EventDetails = () => {
         </div>
 
         {/* Mini Timeline */}
-        <div className="bg-cream/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft border border-rosa/20">
+        <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft">
           <div className="relative flex flex-col gap-4">
             {milestones.map((milestone, index) => (
               <div key={milestone.titleKey} className="flex items-center gap-4">
@@ -39,10 +39,10 @@ const EventDetails = () => {
                   <div className={`w-2.5 h-2.5 rounded-full shrink-0 ${
                     index === milestones.length - 1 
                       ? 'bg-muted-foreground/50' 
-                      : 'bg-rosa'
+                      : 'bg-sage'
                   }`} />
                   {index < milestones.length - 1 && (
-                    <div className="w-0.5 h-4 bg-rosa-light absolute top-full" />
+                    <div className="w-0.5 h-4 bg-sage-light absolute top-full" />
                   )}
                 </div>
                 
