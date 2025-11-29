@@ -39,15 +39,15 @@ const LanguageToggle = () => {
   const languages: Array<'en' | 'es' | 'sv'> = ['en', 'es', 'sv'];
 
   return (
-    <div className="fixed top-4 right-4 z-50 flex items-center gap-1 bg-ivory/90 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
+    <div className="fixed top-4 right-4 z-50 flex items-center gap-1 bg-cream/90 backdrop-blur-sm rounded-full p-1.5 shadow-soft border border-rosa/20">
       {languages.map((lang) => (
         <button
           key={lang}
           onClick={() => setLanguage(lang)}
           className={`p-1.5 rounded-full transition-all duration-200 ${
             language === lang
-              ? 'bg-sage/20 ring-2 ring-sage/30 scale-110'
-              : 'hover:bg-sage/10 opacity-70 hover:opacity-100'
+              ? 'bg-rosa/20 ring-2 ring-rosa/40 scale-110'
+              : 'hover:bg-rosa/10 opacity-70 hover:opacity-100'
           }`}
           aria-label={`Switch to ${lang === 'en' ? 'English' : lang === 'es' ? 'Spanish' : 'Swedish'}`}
         >

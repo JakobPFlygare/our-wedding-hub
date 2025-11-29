@@ -15,9 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        wedding: "bg-sage text-ivory border-2 border-sage hover:bg-sage/90 hover:shadow-elevated uppercase tracking-[0.2em] font-sans",
-        "wedding-outline": "bg-transparent text-sage border-2 border-sage hover:bg-sage hover:text-ivory uppercase tracking-[0.2em] font-sans",
-        "wedding-gold": "bg-gold text-ivory border-2 border-gold hover:bg-gold/90 hover:shadow-elevated uppercase tracking-[0.2em] font-sans",
+        wedding: "bg-rosa text-cream border-2 border-rosa hover:bg-rosa-light hover:shadow-elevated uppercase tracking-[0.2em] font-sans",
+        "wedding-outline": "bg-transparent text-rosa border-2 border-rosa hover:bg-rosa hover:text-cream uppercase tracking-[0.2em] font-sans",
+        "wedding-turquoise": "bg-turquoise text-cream border-2 border-turquoise hover:bg-turquoise-light hover:shadow-elevated uppercase tracking-[0.2em] font-sans",
+        "wedding-marigold": "bg-marigold text-charcoal border-2 border-marigold hover:bg-marigold-light hover:shadow-elevated uppercase tracking-[0.2em] font-sans",
       },
       size: {
         default: "h-10 px-4 py-2",

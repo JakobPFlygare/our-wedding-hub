@@ -6,54 +6,57 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 150 10% 25%;
+    --background: 35 40% 97%;
+    --foreground: 340 70% 25%;
 
-    --card: 40 33% 98%;
-    --card-foreground: 150 10% 25%;
+    --card: 35 40% 97%;
+    --card-foreground: 340 70% 25%;
 
-    --popover: 40 33% 98%;
-    --popover-foreground: 150 10% 25%;
+    --popover: 35 40% 97%;
+    --popover-foreground: 340 70% 25%;
 
-    --primary: 150 25% 45%;
-    --primary-foreground: 40 33% 98%;
+    --primary: 340 85% 55%;
+    --primary-foreground: 35 40% 97%;
 
-    --secondary: 350 30% 85%;
-    --secondary-foreground: 150 10% 25%;
+    --secondary: 175 65% 45%;
+    --secondary-foreground: 35 40% 97%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 150 10% 45%;
+    --muted: 35 30% 92%;
+    --muted-foreground: 340 40% 40%;
 
-    --accent: 38 50% 65%;
-    --accent-foreground: 150 10% 20%;
+    --accent: 35 95% 55%;
+    --accent-foreground: 340 70% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 150 15% 85%;
-    --input: 150 15% 85%;
-    --ring: 150 25% 45%;
+    --border: 340 30% 85%;
+    --input: 340 30% 85%;
+    --ring: 340 85% 55%;
 
     --radius: 0.5rem;
 
-    /* Wedding specific tokens */
-    --sage: 150 25% 45%;
-    --sage-light: 150 20% 75%;
-    --sage-muted: 150 15% 90%;
-    --blush: 350 30% 85%;
-    --blush-dark: 350 25% 70%;
-    --ivory: 40 33% 98%;
-    --gold: 38 50% 65%;
-    --gold-light: 38 40% 80%;
-    --charcoal: 150 10% 25%;
+    /* Mexican wedding specific tokens */
+    --rosa-mexicano: 340 85% 55%;
+    --rosa-light: 340 70% 75%;
+    --rosa-muted: 340 40% 92%;
+    --turquoise: 175 65% 45%;
+    --turquoise-light: 175 50% 70%;
+    --marigold: 35 95% 55%;
+    --marigold-light: 35 80% 75%;
+    --coral: 15 85% 60%;
+    --terracotta: 20 60% 45%;
+    --cream: 35 40% 97%;
+    --charcoal: 340 70% 20%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(var(--sage-muted)) 0%, hsl(var(--ivory)) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(var(--rosa-muted)) 0%, hsl(var(--cream)) 100%);
+    --gradient-fiesta: linear-gradient(135deg, hsl(var(--rosa-mexicano)) 0%, hsl(var(--coral)) 50%, hsl(var(--marigold)) 100%);
+    --gradient-turquoise: linear-gradient(135deg, hsl(var(--turquoise)) 0%, hsl(var(--turquoise-light)) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--sage) / 0.1);
-    --shadow-elevated: 0 10px 40px hsl(var(--sage) / 0.15);
+    --shadow-soft: 0 4px 20px hsl(var(--rosa-mexicano) / 0.15);
+    --shadow-elevated: 0 10px 40px hsl(var(--rosa-mexicano) / 0.2);
 
     /* Typography */
     --font-display: 'Playfair Display', serif;
@@ -71,45 +74,47 @@
   }
 
   .dark {
-    --background: 150 15% 10%;
-    --foreground: 40 33% 95%;
+    --background: 340 30% 10%;
+    --foreground: 35 40% 95%;
 
-    --card: 150 15% 12%;
-    --card-foreground: 40 33% 95%;
+    --card: 340 30% 12%;
+    --card-foreground: 35 40% 95%;
 
-    --popover: 150 15% 12%;
-    --popover-foreground: 40 33% 95%;
+    --popover: 340 30% 12%;
+    --popover-foreground: 35 40% 95%;
 
-    --primary: 150 25% 55%;
-    --primary-foreground: 150 15% 10%;
+    --primary: 340 85% 60%;
+    --primary-foreground: 340 30% 10%;
 
-    --secondary: 350 20% 25%;
-    --secondary-foreground: 40 33% 95%;
+    --secondary: 175 55% 40%;
+    --secondary-foreground: 35 40% 95%;
 
-    --muted: 150 15% 18%;
-    --muted-foreground: 150 10% 65%;
+    --muted: 340 20% 18%;
+    --muted-foreground: 340 30% 65%;
 
-    --accent: 38 40% 55%;
-    --accent-foreground: 40 33% 95%;
+    --accent: 35 85% 50%;
+    --accent-foreground: 35 40% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 150 15% 20%;
-    --input: 150 15% 20%;
-    --ring: 150 25% 55%;
+    --border: 340 20% 25%;
+    --input: 340 20% 25%;
+    --ring: 340 85% 60%;
 
-    --sage: 150 25% 55%;
-    --sage-light: 150 20% 35%;
-    --sage-muted: 150 15% 15%;
-    --blush: 350 25% 30%;
-    --blush-dark: 350 20% 45%;
-    --ivory: 40 20% 12%;
-    --gold: 38 45% 55%;
-    --gold-light: 38 35% 40%;
-    --charcoal: 40 33% 95%;
+    --rosa-mexicano: 340 85% 60%;
+    --rosa-light: 340 60% 40%;
+    --rosa-muted: 340 30% 15%;
+    --turquoise: 175 55% 40%;
+    --turquoise-light: 175 45% 30%;
+    --marigold: 35 85% 50%;
+    --marigold-light: 35 70% 40%;
+    --coral: 15 75% 50%;
+    --terracotta: 20 50% 35%;
+    --cream: 35 30% 12%;
+    --charcoal: 35 40% 95%;
 
-    --gradient-hero: linear-gradient(180deg, hsl(var(--sage-muted)) 0%, hsl(var(--background)) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(var(--rosa-muted)) 0%, hsl(var(--background)) 100%);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -150,8 +155,8 @@
     font-family: var(--font-sans);
   }
 
-  .text-gradient-gold {
-    background: var(--gradient-gold);
+  .text-gradient-fiesta {
+    background: var(--gradient-fiesta);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
