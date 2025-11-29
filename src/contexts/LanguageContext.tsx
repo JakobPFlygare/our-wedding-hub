@@ -28,6 +28,10 @@ interface Translations {
     dinner: string;
     tornafiesta: string;
     venueCloses: string;
+    childrenTitle: string;
+    childrenDescription: string;
+    giftsTitle: string;
+    giftsDescription: string;
   };
   location: {
     subtitle: string;
@@ -86,13 +90,17 @@ const translations: Record<Language, Translations> = {
       comingSoon: 'Photos coming soon...',
     },
     details: {
-      schedule: 'Schedule',
+      schedule: 'Wedding Details',
       weddingDetails: 'January 9, 2027',
       ceremony: 'Ceremony',
       cocktail: 'Cocktail Hour',
       dinner: 'Dinner',
-      tornafiesta: 'Torna Fiesta',
+      tornafiesta: 'Torna Fiesta aka Vickning',
       venueCloses: 'Venue Closes',
+      childrenTitle: 'Children',
+      childrenDescription: 'We believe guests will enjoy the wedding more if they are able to attend childfree. However, we realize this is simply not possible for some and children are of course welcome.',
+      giftsTitle: 'Wedding Gifts',
+      giftsDescription: "Your presence is the greatest gift we could ask for. We kindly ask that you don't bring physical presents – our suitcases simply won't fit them for the journey home!",
     },
     location: {
       subtitle: 'The Venue',
@@ -149,13 +157,17 @@ const translations: Record<Language, Translations> = {
       comingSoon: 'Fotos próximamente...',
     },
     details: {
-      schedule: 'Programa',
+      schedule: 'Detalles de la Boda',
       weddingDetails: '9 de Enero, 2027',
       ceremony: 'Ceremonia',
       cocktail: 'Cóctel',
       dinner: 'Cena',
-      tornafiesta: 'Torna Fiesta',
+      tornafiesta: 'Torna Fiesta aka Vickning',
       venueCloses: 'Cierre del Lugar',
+      childrenTitle: 'Niños',
+      childrenDescription: 'Creemos que los invitados disfrutarán más de la boda si pueden asistir sin niños. Sin embargo, entendemos que esto no es posible para todos y los niños son bienvenidos.',
+      giftsTitle: 'Regalos de Boda',
+      giftsDescription: 'Tu presencia es el mejor regalo que podríamos pedir. Te pedimos que no traigas regalos físicos – ¡nuestras maletas no tendrán espacio para el viaje de regreso!',
     },
     location: {
       subtitle: 'El Lugar',
@@ -212,13 +224,17 @@ const translations: Record<Language, Translations> = {
       comingSoon: 'Foton kommer snart...',
     },
     details: {
-      schedule: 'Schema',
+      schedule: 'Bröllopsdetaljer',
       weddingDetails: '9 Januari, 2027',
       ceremony: 'Ceremoni',
       cocktail: 'Cocktail',
       dinner: 'Middag',
-      tornafiesta: 'Torna Fiesta',
+      tornafiesta: 'Torna Fiesta aka Vickning',
       venueCloses: 'Lokalen Stänger',
+      childrenTitle: 'Barn',
+      childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna.',
+      giftsTitle: 'Bröllopspresenter',
+      giftsDescription: 'Er närvaro är den bästa presenten vi kan önska oss. Vi ber er att inte ta med fysiska presenter – våra resväskor har helt enkelt inte plats för dem på hemresan!',
     },
     location: {
       subtitle: 'Platsen',
