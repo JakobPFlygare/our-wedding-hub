@@ -1,4 +1,4 @@
-import { Calendar } from "lucide-react";
+import { Baby, Gift } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const EventDetails = () => {
@@ -25,7 +25,7 @@ const EventDetails = () => {
         </div>
 
         {/* Mini Timeline */}
-        <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft">
+        <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft mb-6">
           <div className="relative flex flex-col gap-4">
             {milestones.map((milestone, index) => (
               <div key={milestone.titleKey} className="flex items-center gap-4">
@@ -56,6 +56,29 @@ const EventDetails = () => {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Children & Gifts Info */}
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 shadow-soft">
+            <div className="flex items-center gap-3 mb-3">
+              <Baby className="w-5 h-5 text-rosa" />
+              <h3 className="font-display text-lg text-charcoal">{t.details.childrenTitle}</h3>
+            </div>
+            <p className="font-body text-sm text-charcoal/80 leading-relaxed">
+              {t.details.childrenDescription}
+            </p>
+          </div>
+          
+          <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 shadow-soft">
+            <div className="flex items-center gap-3 mb-3">
+              <Gift className="w-5 h-5 text-turquoise" />
+              <h3 className="font-display text-lg text-charcoal">{t.details.giftsTitle}</h3>
+            </div>
+            <p className="font-body text-sm text-charcoal/80 leading-relaxed">
+              {t.details.giftsDescription}
+            </p>
           </div>
         </div>
       </div>
