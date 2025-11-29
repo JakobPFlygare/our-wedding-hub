@@ -3,11 +3,22 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 type Language = 'en' | 'es' | 'sv';
 
 interface Translations {
+  nav: {
+    details: string;
+    dressCode: string;
+    location: string;
+    rsvp: string;
+  };
   hero: {
     together: string;
     gettingMarried: string;
     rsvp: string;
     rsvpDeadline: string;
+  };
+  gallery: {
+    subtitle: string;
+    title: string;
+    comingSoon: string;
   };
   details: {
     saveTheDate: string;
@@ -22,10 +33,6 @@ interface Translations {
   location: {
     subtitle: string;
     title: string;
-    venueName: string;
-    address: string;
-    distance: string;
-    distanceInfo: string;
     transportTitle: string;
     shuttleTitle: string;
     shuttleInfo: string;
@@ -62,11 +69,22 @@ interface Translations {
 
 const translations: Record<Language, Translations> = {
   en: {
+    nav: {
+      details: 'Wedding Details',
+      dressCode: 'Dress Code',
+      location: 'Location',
+      rsvp: 'RSVP',
+    },
     hero: {
       together: 'Together with their families',
       gettingMarried: 'Are getting married',
       rsvp: 'RSVP Now',
       rsvpDeadline: 'Please RSVP by July 9, 2026',
+    },
+    gallery: {
+      subtitle: 'Our Story',
+      title: 'Moments Together',
+      comingSoon: 'Photos coming soon...',
     },
     details: {
       saveTheDate: 'Save the Date',
@@ -81,10 +99,6 @@ const translations: Record<Language, Translations> = {
     location: {
       subtitle: 'The Venue',
       title: 'Location',
-      venueName: 'Las Mañanitas',
-      address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, Mexico',
-      distance: 'From Mexico City',
-      distanceInfo: 'Approximately 1.5 hours by car (85 km) via Highway 95D',
       transportTitle: 'Getting There',
       shuttleTitle: 'Shuttle Bus',
       shuttleInfo: 'We will provide a shuttle bus from Mexico City for guests without a car. Details will be shared closer to the date.',
@@ -119,11 +133,22 @@ const translations: Record<Language, Translations> = {
     },
   },
   es: {
+    nav: {
+      details: 'Detalles',
+      dressCode: 'Vestimenta',
+      location: 'Ubicación',
+      rsvp: 'Confirmar',
+    },
     hero: {
       together: 'Junto con sus familias',
       gettingMarried: 'Se casan',
       rsvp: 'Confirmar Asistencia',
       rsvpDeadline: 'Por favor confirma antes del 9 de julio de 2026',
+    },
+    gallery: {
+      subtitle: 'Nuestra Historia',
+      title: 'Momentos Juntos',
+      comingSoon: 'Fotos próximamente...',
     },
     details: {
       saveTheDate: 'Reserva la Fecha',
@@ -138,10 +163,6 @@ const translations: Record<Language, Translations> = {
     location: {
       subtitle: 'El Lugar',
       title: 'Ubicación',
-      venueName: 'Las Mañanitas',
-      address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, México',
-      distance: 'Desde la Ciudad de México',
-      distanceInfo: 'Aproximadamente 1.5 horas en coche (85 km) por la Autopista 95D',
       transportTitle: 'Cómo Llegar',
       shuttleTitle: 'Autobús',
       shuttleInfo: 'Proporcionaremos un autobús desde la Ciudad de México para invitados sin coche. Los detalles se compartirán más cerca de la fecha.',
@@ -176,11 +197,22 @@ const translations: Record<Language, Translations> = {
     },
   },
   sv: {
+    nav: {
+      details: 'Detaljer',
+      dressCode: 'Klädsel',
+      location: 'Plats',
+      rsvp: 'OSA',
+    },
     hero: {
       together: 'Tillsammans med sina familjer',
       gettingMarried: 'Gifter sig',
       rsvp: 'OSA Nu',
       rsvpDeadline: 'Vänligen OSA senast 9 juli 2026',
+    },
+    gallery: {
+      subtitle: 'Vår Historia',
+      title: 'Stunder Tillsammans',
+      comingSoon: 'Foton kommer snart...',
     },
     details: {
       saveTheDate: 'Spara Datumet',
@@ -195,10 +227,6 @@ const translations: Record<Language, Translations> = {
     location: {
       subtitle: 'Platsen',
       title: 'Plats',
-      venueName: 'Las Mañanitas',
-      address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, Mexiko',
-      distance: 'Från Mexico City',
-      distanceInfo: 'Cirka 1,5 timmar med bil (85 km) via motorväg 95D',
       transportTitle: 'Hitta Dit',
       shuttleTitle: 'Shuttlebuss',
       shuttleInfo: 'Vi tillhandahåller en shuttlebuss från Mexico City för gäster utan bil. Detaljer kommer närmare datumet.',
