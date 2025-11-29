@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const RSVPSection = () => {
@@ -5,7 +7,7 @@ const RSVPSection = () => {
 
   return (
     <section className="py-10 md:py-14 px-4 md:px-6 bg-sage-muted">
-      <div className="max-w-2xl mx-auto text-center">
+      <div className="max-w-xl mx-auto text-center">
         <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">
           {t.rsvp.subtitle}
         </p>
@@ -13,24 +15,20 @@ const RSVPSection = () => {
           {t.rsvp.title}
         </h2>
         
-        <p className="font-body text-sm md:text-base text-muted-foreground mb-6 leading-relaxed">
+        <p className="font-body text-sm md:text-base text-muted-foreground mb-5 leading-relaxed">
           {t.rsvp.description}
         </p>
 
-        {/* Embedded Google Form */}
-        <div className="bg-ivory rounded-lg shadow-elevated overflow-hidden mb-6">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSds3sqOKAm1ecI3L41EJFauEY044I1D8WPv-oxly2_0O11LyA/viewform?embedded=true"
-            width="100%"
-            height="923"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            className="w-full"
-            title="RSVP Form"
+        <div className="flex justify-center mb-6">
+          <Button 
+            variant="wedding" 
+            size="lg"
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSds3sqOKAm1ecI3L41EJFauEY044I1D8WPv-oxly2_0O11LyA/viewform', '_blank')}
+            className="group w-full sm:w-auto"
           >
-            Loading…
-          </iframe>
+            {t.hero.rsvp}
+            <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
 
         <div className="p-4 bg-ivory/60 backdrop-blur-sm rounded-lg shadow-soft">
