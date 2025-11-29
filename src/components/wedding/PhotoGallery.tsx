@@ -34,12 +34,12 @@ const PhotoGallery = () => {
 
   return (
     <section className="py-6 md:py-10 bg-ivory overflow-hidden">
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-stretch justify-center">
         
         {/* Previous Photo Preview - peeking from left */}
         <button
           onClick={goToPrevious}
-          className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-24 lg:w-32 h-48 lg:h-64 rounded-r-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group z-10"
+          className="hidden md:block w-12 lg:w-20 flex-shrink-0 rounded-l-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group"
           aria-label="Previous photo"
         >
           <img
@@ -55,7 +55,7 @@ const PhotoGallery = () => {
         </button>
 
         {/* Main Photo Container */}
-        <div className="relative max-w-3xl w-full mx-4 md:mx-auto px-4 md:px-6">
+        <div className="relative max-w-3xl w-full">
           <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated">
             <img
               src={photos[currentIndex].src}
@@ -100,7 +100,7 @@ const PhotoGallery = () => {
         {/* Next Photo Preview - peeking from right */}
         <button
           onClick={goToNext}
-          className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-24 lg:w-32 h-48 lg:h-64 rounded-l-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group z-10"
+          className="hidden md:block w-12 lg:w-20 flex-shrink-0 rounded-r-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group"
           aria-label="Next photo"
         >
           <img
