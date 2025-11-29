@@ -29,49 +29,76 @@ const PhotoGallery = () => {
     setCurrentIndex((prev) => (prev + 1) % photos.length);
   };
 
-  return (
-    <section className="py-6 md:py-10 px-4 md:px-6 bg-ivory">
-      <div className="max-w-3xl mx-auto">
-        {/* Slideshow Container */}
-        <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated">
-          {/* Photo */}
-          <img
-            src={photos[currentIndex].src}
-            alt={photos[currentIndex].alt}
-            className="w-full h-full object-cover"
-          />
+  const prevIndex = currentIndex === 0 ? photos.length - 1 : currentIndex - 1;
+  const nextIndex = (currentIndex + 1) % photos.length;
 
-          {/* Navigation Arrows */}
+  return (
+    <section className="py-6 md:py-10 px-4 md:px-6 bg-ivory overflow-hidden">
+      <div className="max-w-5xl mx-auto">
+        {/* Carousel Container */}
+        <div className="relative flex items-center justify-center gap-2 md:gap-4">
+          
+          {/* Previous Photo Preview */}
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
+            className="relative group flex-shrink-0 w-16 md:w-32 lg:w-48 aspect-[3/4] rounded-lg overflow-hidden opacity-50 hover:opacity-75 transition-opacity cursor-pointer"
             aria-label="Previous photo"
           >
-            <ChevronLeft className="w-5 h-5 text-charcoal" />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
-            aria-label="Next photo"
-          >
-            <ChevronRight className="w-5 h-5 text-charcoal" />
+            <img
+              src={photos[prevIndex].src}
+              alt={photos[prevIndex].alt}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
+              <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
+                <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-charcoal" />
+              </div>
+            </div>
           </button>
 
-          {/* Dots Indicator */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {photos.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex
-                    ? "bg-gold w-6"
-                    : "bg-ivory/60 hover:bg-ivory"
-                }`}
-                aria-label={`Go to photo ${index + 1}`}
-              />
-            ))}
+          {/* Current Photo */}
+          <div className="relative flex-shrink-0 w-64 md:w-96 lg:w-[500px] aspect-[3/4] rounded-lg overflow-hidden shadow-elevated">
+            <img
+              src={photos[currentIndex].src}
+              alt={photos[currentIndex].alt}
+              className="w-full h-full object-cover"
+            />
+            
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              {photos.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentIndex
+                      ? "bg-gold w-6"
+                      : "bg-ivory/60 hover:bg-ivory"
+                  }`}
+                  aria-label={`Go to photo ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
+
+          {/* Next Photo Preview */}
+          <button
+            onClick={goToNext}
+            className="relative group flex-shrink-0 w-16 md:w-32 lg:w-48 aspect-[3/4] rounded-lg overflow-hidden opacity-50 hover:opacity-75 transition-opacity cursor-pointer"
+            aria-label="Next photo"
+          >
+            <img
+              src={photos[nextIndex].src}
+              alt={photos[nextIndex].alt}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
+              <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
+                <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-charcoal" />
+              </div>
+            </div>
+          </button>
+          
         </div>
       </div>
     </section>
