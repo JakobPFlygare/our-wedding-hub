@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-cuernavaca-painting.jpg";
+import heroImage from "@/assets/hero-watercolor.jpg";
 import Countdown from "./Countdown";
 
 const HeroSection = () => {
