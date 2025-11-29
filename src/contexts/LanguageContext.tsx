@@ -64,6 +64,21 @@ interface Translations {
     questions: string;
     contactUs: string;
   };
+  music: {
+    subtitle: string;
+    title: string;
+    description: string;
+    artistPlaceholder: string;
+    songPlaceholder: string;
+    addSong: string;
+    added: string;
+    success: string;
+    thankYou: string;
+    error: string;
+    fillBoth: string;
+    tryAgain: string;
+    hint: string;
+  };
   footer: {
     celebrate: string;
     madeWith: string;
@@ -133,6 +148,21 @@ const translations: Record<Language, Translations> = {
       questions: 'Questions?',
       contactUs: 'Feel free to reach out to us via phone – you know how to find us!',
     },
+    music: {
+      subtitle: 'Help Us Create the Playlist',
+      title: 'Song Requests',
+      description: 'What songs will get you on the dance floor? Let us know your favorites and we\'ll do our best to play them!',
+      artistPlaceholder: 'Artist name',
+      songPlaceholder: 'Song title',
+      addSong: 'Add Song',
+      added: 'Added!',
+      success: 'Song Added',
+      thankYou: 'Thanks for your music suggestion!',
+      error: 'Error',
+      fillBoth: 'Please fill in both artist and song name.',
+      tryAgain: 'Something went wrong. Please try again.',
+      hint: 'Add as many songs as you like!',
+    },
     footer: {
       celebrate: "We can't wait to celebrate with you!",
       madeWith: 'Made with love',
@@ -200,6 +230,21 @@ const translations: Record<Language, Translations> = {
       questions: '¿Preguntas?',
       contactUs: 'No dudes en contactarnos por teléfono – ¡ya sabes cómo encontrarnos!',
     },
+    music: {
+      subtitle: 'Ayúdanos a Crear la Playlist',
+      title: 'Canciones',
+      description: '¿Qué canciones te harán bailar? ¡Cuéntanos tus favoritas y haremos lo posible por ponerlas!',
+      artistPlaceholder: 'Nombre del artista',
+      songPlaceholder: 'Título de la canción',
+      addSong: 'Agregar',
+      added: '¡Agregada!',
+      success: 'Canción Agregada',
+      thankYou: '¡Gracias por tu sugerencia musical!',
+      error: 'Error',
+      fillBoth: 'Por favor completa el nombre del artista y la canción.',
+      tryAgain: 'Algo salió mal. Por favor intenta de nuevo.',
+      hint: '¡Agrega tantas canciones como quieras!',
+    },
     footer: {
       celebrate: '¡Estamos emocionados de celebrar contigo!',
       madeWith: 'Hecho con amor',
@@ -266,6 +311,21 @@ const translations: Record<Language, Translations> = {
       emailUs: 'Maila Oss',
       questions: 'Frågor?',
       contactUs: 'Hör gärna av dig via telefon – du vet hur du når oss!',
+    },
+    music: {
+      subtitle: 'Hjälp Oss Skapa Spellistan',
+      title: 'Önskelåtar',
+      description: 'Vilka låtar får dig ut på dansgolvet? Berätta dina favoriter så gör vi vårt bästa för att spela dem!',
+      artistPlaceholder: 'Artistnamn',
+      songPlaceholder: 'Låttitel',
+      addSong: 'Lägg Till',
+      added: 'Tillagd!',
+      success: 'Låt Tillagd',
+      thankYou: 'Tack för ditt musikförslag!',
+      error: 'Fel',
+      fillBoth: 'Vänligen fyll i både artist och låtnamn.',
+      tryAgain: 'Något gick fel. Försök igen.',
+      hint: 'Lägg till så många låtar du vill!',
     },
     footer: {
       celebrate: 'Vi längtar efter att fira med dig!',

@@ -6,6 +6,7 @@ import PhotoGallery from "@/components/wedding/PhotoGallery";
 import EventDetails from "@/components/wedding/EventDetails";
 import DressCodeSection from "@/components/wedding/DressCodeSection";
 import LocationSection from "@/components/wedding/LocationSection";
+import MusicRequestSection from "@/components/wedding/MusicRequestSection";
 import RSVPSection from "@/components/wedding/RSVPSection";
 import Footer from "@/components/wedding/Footer";
 
@@ -25,6 +26,9 @@ const Index = () => {
         </div>
         <div id="location">
           <LocationSection />
+        </div>
+        <div id="music">
+          <MusicRequestSection />
         </div>
         <div id="rsvp">
           <RSVPSection />
