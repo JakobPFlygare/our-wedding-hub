@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const LocationSection = () => {
   const { t } = useLanguage();
   
-  const embedMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.5!2d-99.2448223!3d18.9287816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdde4be03ddc85%3A0x320d8cf523d46538!2sLas%20Ma%C3%B1anitas!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx";
+  const embedMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d963000!2d-100.0971273!3d18.9670186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdde4be03ddc85%3A0x320d8cf523d46538!2sLas%20Ma%C3%B1anitas!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx";
 
   return (
     <section className="py-10 md:py-14 px-4 md:px-6 bg-gradient-hero">
