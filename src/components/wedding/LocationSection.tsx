@@ -1,4 +1,4 @@
-import { MapPin, Car, Bus, Hotel } from "lucide-react";
+import { MapPin, Bus, Hotel } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const LocationSection = () => {
@@ -36,30 +36,6 @@ const LocationSection = () => {
             title="Las Mañanitas Location"
             className="w-full md:h-[400px]"
           />
-        </div>
-
-        {/* Venue Info */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-          <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-soft">
-            <h3 className="font-display text-xl md:text-2xl text-charcoal mb-3 md:mb-4">
-              {t.location.venueName}
-            </h3>
-            <p className="font-body text-muted-foreground leading-relaxed text-sm md:text-base">
-              {t.location.address}
-            </p>
-          </div>
-
-          <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-soft">
-            <div className="flex items-center gap-3 mb-3 md:mb-4">
-              <Car className="w-5 md:w-6 h-5 md:h-6 text-sage" />
-              <h3 className="font-display text-xl md:text-2xl text-charcoal">
-                {t.location.distance}
-              </h3>
-            </div>
-            <p className="font-body text-muted-foreground leading-relaxed text-sm md:text-base">
-              {t.location.distanceInfo}
-            </p>
-          </div>
         </div>
 
         {/* Transportation Section */}
