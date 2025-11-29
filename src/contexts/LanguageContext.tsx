@@ -21,14 +21,13 @@ interface Translations {
     comingSoon: string;
   };
   details: {
-    saveTheDate: string;
+    schedule: string;
     weddingDetails: string;
     ceremony: string;
+    cocktail: string;
     dinner: string;
     tornafiesta: string;
     venueCloses: string;
-    time: string;
-    location: string;
   };
   location: {
     subtitle: string;
@@ -87,14 +86,13 @@ const translations: Record<Language, Translations> = {
       comingSoon: 'Photos coming soon...',
     },
     details: {
-      saveTheDate: 'Save the Date',
-      weddingDetails: 'Wedding Details',
+      schedule: 'Schedule',
+      weddingDetails: 'January 9, 2027',
       ceremony: 'Ceremony',
+      cocktail: 'Cocktail Hour',
       dinner: 'Dinner',
       tornafiesta: 'Torna Fiesta',
       venueCloses: 'Venue Closes',
-      time: 'Time',
-      location: 'Location',
     },
     location: {
       subtitle: 'The Venue',
@@ -151,14 +149,13 @@ const translations: Record<Language, Translations> = {
       comingSoon: 'Fotos próximamente...',
     },
     details: {
-      saveTheDate: 'Reserva la Fecha',
-      weddingDetails: 'Detalles de la Boda',
+      schedule: 'Programa',
+      weddingDetails: '9 de Enero, 2027',
       ceremony: 'Ceremonia',
+      cocktail: 'Cóctel',
       dinner: 'Cena',
       tornafiesta: 'Torna Fiesta',
       venueCloses: 'Cierre del Lugar',
-      time: 'Hora',
-      location: 'Lugar',
     },
     location: {
       subtitle: 'El Lugar',
@@ -215,14 +212,13 @@ const translations: Record<Language, Translations> = {
       comingSoon: 'Foton kommer snart...',
     },
     details: {
-      saveTheDate: 'Spara Datumet',
-      weddingDetails: 'Bröllopsdetaljer',
+      schedule: 'Schema',
+      weddingDetails: '9 Januari, 2027',
       ceremony: 'Ceremoni',
+      cocktail: 'Cocktail',
       dinner: 'Middag',
       tornafiesta: 'Torna Fiesta',
       venueCloses: 'Lokalen Stänger',
-      time: 'Tid',
-      location: 'Plats',
     },
     location: {
       subtitle: 'Platsen',

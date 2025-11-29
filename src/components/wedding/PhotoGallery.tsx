@@ -32,17 +32,8 @@ const PhotoGallery = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 px-4 md:px-6 bg-ivory">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
-          <p className="font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-gold mb-3">
-            {t.gallery.subtitle}
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-charcoal">
-            {t.gallery.title}
-          </h2>
-        </div>
-
+    <section className="py-6 md:py-10 px-4 md:px-6 bg-ivory">
+      <div className="max-w-3xl mx-auto">
         {/* Slideshow Container */}
         <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated bg-sage-muted">
           {/* Placeholder Content */}
