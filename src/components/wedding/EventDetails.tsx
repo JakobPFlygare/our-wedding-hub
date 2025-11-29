@@ -1,49 +1,20 @@
-import { MapPin, Clock, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const EventDetails = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
-  const events = [
-    {
-      titleKey: 'ceremony' as const,
-      time: "15:00",
-      location: "Las Mañanitas",
-      address: "Cuernavaca, Mexico",
-      descriptionEn: "Join us as we exchange vows in the beautiful gardens of Las Mañanitas.",
-      descriptionEs: "Acompáñanos mientras intercambiamos votos en los hermosos jardines de Las Mañanitas.",
-      descriptionSv: "Följ med oss när vi utbyter löften i Las Mañanitas vackra trädgårdar.",
-    },
-    {
-      titleKey: 'dinner' as const,
-      time: "18:00",
-      location: "Las Mañanitas",
-      address: "Cuernavaca, Mexico",
-      descriptionEn: "Dinner and celebration under the stars in the enchanting gardens.",
-      descriptionEs: "Cena y celebración bajo las estrellas en los encantadores jardines.",
-      descriptionSv: "Middag och firande under stjärnorna i de förtrollande trädgårdarna.",
-    },
-    {
-      titleKey: 'tornafiesta' as const,
-      time: "23:00",
-      location: "Las Mañanitas",
-      address: "Cuernavaca, Mexico",
-      descriptionEn: "Late night snacks and dancing to keep the celebration going!",
-      descriptionEs: "Antojitos nocturnos y baile para continuar la celebración!",
-      descriptionSv: "Sena nattsnacks och dans för att hålla festen igång!",
-    },
+  const milestones = [
+    { time: "15:00", titleKey: 'ceremony' as const },
+    { time: "18:00", titleKey: 'dinner' as const },
+    { time: "23:00", titleKey: 'tornafiesta' as const },
+    { time: "01:00", titleKey: 'venueCloses' as const },
   ];
-
-  const getDescription = (event: typeof events[0]) => {
-    if (language === 'es') return event.descriptionEs;
-    if (language === 'sv') return event.descriptionSv;
-    return event.descriptionEn;
-  };
 
   return (
     <section className="py-16 md:py-24 px-4 md:px-6 bg-gradient-hero">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-10 md:mb-16">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10 md:mb-12">
           <p className="font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-gold mb-3 md:mb-4">
             {t.details.saveTheDate}
           </p>
@@ -57,36 +28,43 @@ const EventDetails = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {events.map((event) => (
-            <div
-              key={event.titleKey}
-              className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft hover:shadow-elevated transition-shadow duration-300"
-            >
-              <h3 className="font-display text-xl md:text-2xl text-charcoal mb-3 md:mb-4">
-                {t.details[event.titleKey]}
-              </h3>
-              
-              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <Clock className="w-4 h-4 text-sage flex-shrink-0" />
-                  <span className="font-body text-base md:text-lg">{event.time}</span>
-                </div>
-                
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <MapPin className="w-4 h-4 text-sage mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-body text-base md:text-lg">{event.location}</p>
-                    <p className="font-body text-xs md:text-sm">{event.address}</p>
+        {/* Mini Timeline */}
+        <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-soft">
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-[39px] md:left-[47px] top-2 bottom-2 w-0.5 bg-sage-light" />
+            
+            <div className="space-y-6 md:space-y-8">
+              {milestones.map((milestone, index) => (
+                <div key={milestone.titleKey} className="flex items-center gap-4 md:gap-6">
+                  {/* Time */}
+                  <div className="w-16 md:w-20 text-right">
+                    <span className="font-display text-lg md:text-xl text-charcoal">
+                      {milestone.time}
+                    </span>
+                  </div>
+                  
+                  {/* Dot */}
+                  <div className={`relative z-10 w-3 h-3 rounded-full ${
+                    index === milestones.length - 1 
+                      ? 'bg-muted-foreground/50' 
+                      : 'bg-sage'
+                  }`} />
+                  
+                  {/* Event name */}
+                  <div className="flex-1">
+                    <span className={`font-body text-base md:text-lg ${
+                      index === milestones.length - 1 
+                        ? 'text-muted-foreground' 
+                        : 'text-charcoal'
+                    }`}>
+                      {t.details[milestone.titleKey]}
+                    </span>
                   </div>
                 </div>
-              </div>
-              
-              <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
-                {getDescription(event)}
-              </p>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
