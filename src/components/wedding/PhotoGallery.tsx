@@ -33,37 +33,52 @@ const PhotoGallery = () => {
   const nextIndex = (currentIndex + 1) % photos.length;
 
   return (
-    <section className="py-6 md:py-10 px-4 md:px-6 bg-ivory overflow-hidden">
-      <div className="max-w-5xl mx-auto">
-        {/* Carousel Container */}
-        <div className="relative flex items-center justify-center gap-2 md:gap-4">
-          
-          {/* Previous Photo Preview */}
-          <button
-            onClick={goToPrevious}
-            className="relative group flex-shrink-0 w-16 md:w-32 lg:w-48 aspect-[3/4] rounded-lg overflow-hidden opacity-50 hover:opacity-75 transition-opacity cursor-pointer"
-            aria-label="Previous photo"
-          >
-            <img
-              src={photos[prevIndex].src}
-              alt={photos[prevIndex].alt}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
-              <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
-                <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-charcoal" />
-              </div>
+    <section className="py-6 md:py-10 bg-ivory overflow-hidden">
+      <div className="relative flex items-center justify-center">
+        
+        {/* Previous Photo Preview - peeking from left */}
+        <button
+          onClick={goToPrevious}
+          className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-24 lg:w-32 h-48 lg:h-64 rounded-r-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group z-10"
+          aria-label="Previous photo"
+        >
+          <img
+            src={photos[prevIndex].src}
+            alt={photos[prevIndex].alt}
+            className="w-full h-full object-cover object-right"
+          />
+          <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
+            <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
+              <ChevronLeft className="w-5 h-5 text-charcoal" />
             </div>
-          </button>
+          </div>
+        </button>
 
-          {/* Current Photo */}
-          <div className="relative flex-shrink-0 w-64 md:w-96 lg:w-[500px] aspect-[3/4] rounded-lg overflow-hidden shadow-elevated">
+        {/* Main Photo Container */}
+        <div className="relative max-w-3xl w-full mx-4 md:mx-auto px-4 md:px-6">
+          <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated">
             <img
               src={photos[currentIndex].src}
               alt={photos[currentIndex].alt}
               className="w-full h-full object-cover"
             />
-            
+
+            {/* Mobile Navigation Arrows */}
+            <button
+              onClick={goToPrevious}
+              className="md:hidden absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
+              aria-label="Previous photo"
+            >
+              <ChevronLeft className="w-5 h-5 text-charcoal" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
+              aria-label="Next photo"
+            >
+              <ChevronRight className="w-5 h-5 text-charcoal" />
+            </button>
+
             {/* Dots Indicator */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
               {photos.map((_, index) => (
@@ -80,26 +95,26 @@ const PhotoGallery = () => {
               ))}
             </div>
           </div>
-
-          {/* Next Photo Preview */}
-          <button
-            onClick={goToNext}
-            className="relative group flex-shrink-0 w-16 md:w-32 lg:w-48 aspect-[3/4] rounded-lg overflow-hidden opacity-50 hover:opacity-75 transition-opacity cursor-pointer"
-            aria-label="Next photo"
-          >
-            <img
-              src={photos[nextIndex].src}
-              alt={photos[nextIndex].alt}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
-              <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
-                <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-charcoal" />
-              </div>
-            </div>
-          </button>
-          
         </div>
+
+        {/* Next Photo Preview - peeking from right */}
+        <button
+          onClick={goToNext}
+          className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-24 lg:w-32 h-48 lg:h-64 rounded-l-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group z-10"
+          aria-label="Next photo"
+        >
+          <img
+            src={photos[nextIndex].src}
+            alt={photos[nextIndex].alt}
+            className="w-full h-full object-cover object-left"
+          />
+          <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
+            <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
+              <ChevronRight className="w-5 h-5 text-charcoal" />
+            </div>
+          </div>
+        </button>
+        
       </div>
     </section>
   );
