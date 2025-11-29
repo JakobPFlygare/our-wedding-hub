@@ -1,52 +1,45 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import galleryAutumn from "@/assets/gallery-autumn.jpg";
+import galleryBeach from "@/assets/gallery-beach.jpg";
 
-// Placeholder images - replace with actual photos later
-const placeholderPhotos = [
-  { id: 1, placeholder: true },
-  { id: 2, placeholder: true },
-  { id: 3, placeholder: true },
+const photos = [
+  { id: 1, src: galleryAutumn, alt: "Pau & Jakob in autumn leaves" },
+  { id: 2, src: galleryBeach, alt: "Pau & Jakob at the beach" },
 ];
 
 const PhotoGallery = () => {
-  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-advance slideshow
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % placeholderPhotos.length);
+      setCurrentIndex((prev) => (prev + 1) % photos.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => 
-      prev === 0 ? placeholderPhotos.length - 1 : prev - 1
+      prev === 0 ? photos.length - 1 : prev - 1
     );
   };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % placeholderPhotos.length);
+    setCurrentIndex((prev) => (prev + 1) % photos.length);
   };
 
   return (
     <section className="py-6 md:py-10 px-4 md:px-6 bg-ivory">
       <div className="max-w-3xl mx-auto">
         {/* Slideshow Container */}
-        <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated bg-sage-muted">
-          {/* Placeholder Content */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-sage-light/50 flex items-center justify-center">
-                <span className="text-2xl">📷</span>
-              </div>
-              <p className="font-body text-muted-foreground">
-                {t.gallery.comingSoon}
-              </p>
-            </div>
-          </div>
+        <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated">
+          {/* Photo */}
+          <img
+            src={photos[currentIndex].src}
+            alt={photos[currentIndex].alt}
+            className="w-full h-full object-cover"
+          />
 
           {/* Navigation Arrows */}
           <button
@@ -66,7 +59,7 @@ const PhotoGallery = () => {
 
           {/* Dots Indicator */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {placeholderPhotos.map((_, index) => (
+            {photos.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
