@@ -13,11 +13,9 @@ const MusicRequestSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  // Google Form URL - user needs to replace with their own form
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
-  // Entry IDs from the Google Form - user needs to update these
-  const ARTIST_ENTRY = "entry.ARTIST_FIELD_ID";
-  const SONG_ENTRY = "entry.SONG_FIELD_ID";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf-AbSl-M02LPWY0hN3HEEN1SI_ZL2nAPUCQKLgN0yxxzRyPA/formResponse";
+  const ARTIST_ENTRY = "entry.1514894402";
+  const SONG_ENTRY = "entry.62956001";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
