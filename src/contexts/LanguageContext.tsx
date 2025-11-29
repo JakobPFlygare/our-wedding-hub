@@ -15,6 +15,7 @@ interface Translations {
     ceremony: string;
     dinner: string;
     tornafiesta: string;
+    venueCloses: string;
     time: string;
     location: string;
   };
@@ -25,8 +26,16 @@ interface Translations {
     address: string;
     distance: string;
     distanceInfo: string;
-    gettingThere: string;
-    gettingThereInfo: string;
+    transportTitle: string;
+    shuttleTitle: string;
+    shuttleInfo: string;
+    parkingTitle: string;
+    parkingInfo: string;
+    accommodationTitle: string;
+    venueHotelInfo: string;
+    guestDiscount: string;
+    otherHotels: string;
+    moreOptionsSoon: string;
   };
   dressCode: {
     subtitle: string;
@@ -65,6 +74,7 @@ const translations: Record<Language, Translations> = {
       ceremony: 'Ceremony',
       dinner: 'Dinner',
       tornafiesta: 'Torna Fiesta',
+      venueCloses: 'Venue Closes',
       time: 'Time',
       location: 'Location',
     },
@@ -73,10 +83,18 @@ const translations: Record<Language, Translations> = {
       title: 'Location',
       venueName: 'Las Mañanitas',
       address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, Mexico',
-      distance: 'Distance from Mexico City',
-      distanceInfo: 'Approximately 1.5 hours by car (85 km) from Mexico City via Highway 95D',
-      gettingThere: 'Getting There',
-      gettingThereInfo: 'We recommend renting a car or arranging transportation from Mexico City. The venue offers parking facilities.',
+      distance: 'From Mexico City',
+      distanceInfo: 'Approximately 1.5 hours by car (85 km) via Highway 95D',
+      transportTitle: 'Getting There',
+      shuttleTitle: 'Shuttle Bus',
+      shuttleInfo: 'We will provide a shuttle bus from Mexico City for guests without a car. Details will be shared closer to the date.',
+      parkingTitle: 'By Car',
+      parkingInfo: 'Valet parking is available at the venue for guests arriving by car.',
+      accommodationTitle: 'Where to Stay',
+      venueHotelInfo: 'Stay at the wedding venue itself for ultimate convenience.',
+      guestDiscount: 'Guest Discount Available',
+      otherHotels: 'Other Options',
+      moreOptionsSoon: 'More hotel recommendations coming soon...',
     },
     dressCode: {
       subtitle: 'What to Wear',
@@ -113,6 +131,7 @@ const translations: Record<Language, Translations> = {
       ceremony: 'Ceremonia',
       dinner: 'Cena',
       tornafiesta: 'Torna Fiesta',
+      venueCloses: 'Cierre del Lugar',
       time: 'Hora',
       location: 'Lugar',
     },
@@ -121,10 +140,18 @@ const translations: Record<Language, Translations> = {
       title: 'Ubicación',
       venueName: 'Las Mañanitas',
       address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, México',
-      distance: 'Distancia desde la Ciudad de México',
-      distanceInfo: 'Aproximadamente 1.5 horas en coche (85 km) desde la Ciudad de México por la Autopista 95D',
-      gettingThere: 'Cómo Llegar',
-      gettingThereInfo: 'Recomendamos rentar un coche o coordinar transporte desde la Ciudad de México. El lugar cuenta con estacionamiento.',
+      distance: 'Desde la Ciudad de México',
+      distanceInfo: 'Aproximadamente 1.5 horas en coche (85 km) por la Autopista 95D',
+      transportTitle: 'Cómo Llegar',
+      shuttleTitle: 'Autobús',
+      shuttleInfo: 'Proporcionaremos un autobús desde la Ciudad de México para invitados sin coche. Los detalles se compartirán más cerca de la fecha.',
+      parkingTitle: 'En Coche',
+      parkingInfo: 'El lugar cuenta con servicio de valet parking para invitados que lleguen en coche.',
+      accommodationTitle: 'Dónde Hospedarse',
+      venueHotelInfo: 'Hospédate en el mismo lugar de la boda para mayor comodidad.',
+      guestDiscount: 'Descuento para Invitados',
+      otherHotels: 'Otras Opciones',
+      moreOptionsSoon: 'Más recomendaciones de hoteles próximamente...',
     },
     dressCode: {
       subtitle: 'Qué Vestir',
@@ -161,6 +188,7 @@ const translations: Record<Language, Translations> = {
       ceremony: 'Ceremoni',
       dinner: 'Middag',
       tornafiesta: 'Torna Fiesta',
+      venueCloses: 'Lokalen Stänger',
       time: 'Tid',
       location: 'Plats',
     },
@@ -169,10 +197,18 @@ const translations: Record<Language, Translations> = {
       title: 'Plats',
       venueName: 'Las Mañanitas',
       address: 'Ricardo Linares 107, Centro, 62000 Cuernavaca, Morelos, Mexiko',
-      distance: 'Avstånd från Mexico City',
-      distanceInfo: 'Cirka 1,5 timmar med bil (85 km) från Mexico City via motorväg 95D',
-      gettingThere: 'Hitta dit',
-      gettingThereInfo: 'Vi rekommenderar att hyra bil eller ordna transport från Mexico City. Lokalen har parkering.',
+      distance: 'Från Mexico City',
+      distanceInfo: 'Cirka 1,5 timmar med bil (85 km) via motorväg 95D',
+      transportTitle: 'Hitta Dit',
+      shuttleTitle: 'Shuttlebuss',
+      shuttleInfo: 'Vi tillhandahåller en shuttlebuss från Mexico City för gäster utan bil. Detaljer kommer närmare datumet.',
+      parkingTitle: 'Med Bil',
+      parkingInfo: 'Valet parking finns tillgängligt på platsen för gäster som kommer med bil.',
+      accommodationTitle: 'Boende',
+      venueHotelInfo: 'Bo på bröllopslokalen för ultimat bekvämlighet.',
+      guestDiscount: 'Gästrabatt Tillgänglig',
+      otherHotels: 'Andra Alternativ',
+      moreOptionsSoon: 'Fler hotellrekommendationer kommer snart...',
     },
     dressCode: {
       subtitle: 'Klädkod',
