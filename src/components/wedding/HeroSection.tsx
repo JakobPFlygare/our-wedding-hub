@@ -48,7 +48,7 @@ const HeroSection = () => {
           <Button 
             variant="wedding" 
             size="lg"
-            onClick={() => window.open('https://forms.gle/7dmhmZQkeFh7HhwPA', '_blank')}
+            onClick={() => document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto bg-ivory text-charcoal hover:bg-ivory/90 border-none"
           >
             {t.hero.rsvp}
