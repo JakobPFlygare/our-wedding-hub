@@ -20,7 +20,7 @@ const RSVPSection = () => {
         {/* Embedded Google Form */}
         <div className="bg-ivory rounded-lg shadow-elevated overflow-hidden mb-6">
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSd7dmhmZQkeFh7HhwPA/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfuRgRUk76gMpmGmct9/viewform?embedded=true"
             width="100%"
             height="600"
             frameBorder="0"
