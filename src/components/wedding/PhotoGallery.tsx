@@ -29,92 +29,50 @@ const PhotoGallery = () => {
     setCurrentIndex((prev) => (prev + 1) % photos.length);
   };
 
-  const prevIndex = currentIndex === 0 ? photos.length - 1 : currentIndex - 1;
-  const nextIndex = (currentIndex + 1) % photos.length;
-
   return (
-    <section className="py-6 md:py-10 bg-ivory overflow-hidden">
-      <div className="relative flex items-stretch justify-center">
-        
-        {/* Previous Photo Preview - peeking from left */}
-        <button
-          onClick={goToPrevious}
-          className="hidden md:block w-12 lg:w-20 flex-shrink-0 rounded-l-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group"
-          aria-label="Previous photo"
-        >
+    <section className="py-6 md:py-10 px-4 md:px-6 bg-ivory">
+      <div className="max-w-3xl mx-auto">
+        {/* Slideshow Container */}
+        <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated">
+          {/* Photo */}
           <img
-            src={photos[prevIndex].src}
-            alt={photos[prevIndex].alt}
-            className="w-full h-full object-cover object-right"
+            src={photos[currentIndex].src}
+            alt={photos[currentIndex].alt}
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
-            <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
-              <ChevronLeft className="w-5 h-5 text-charcoal" />
-            </div>
-          </div>
-        </button>
 
-        {/* Main Photo Container */}
-        <div className="relative max-w-3xl w-full">
-          <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated">
-            <img
-              src={photos[currentIndex].src}
-              alt={photos[currentIndex].alt}
-              className="w-full h-full object-cover"
-            />
+          {/* Navigation Arrows */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
+            aria-label="Previous photo"
+          >
+            <ChevronLeft className="w-5 h-5 text-charcoal" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
+            aria-label="Next photo"
+          >
+            <ChevronRight className="w-5 h-5 text-charcoal" />
+          </button>
 
-            {/* Mobile Navigation Arrows */}
-            <button
-              onClick={goToPrevious}
-              className="md:hidden absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
-              aria-label="Previous photo"
-            >
-              <ChevronLeft className="w-5 h-5 text-charcoal" />
-            </button>
-            <button
-              onClick={goToNext}
-              className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft hover:bg-ivory transition-colors"
-              aria-label="Next photo"
-            >
-              <ChevronRight className="w-5 h-5 text-charcoal" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-              {photos.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex
-                      ? "bg-gold w-6"
-                      : "bg-ivory/60 hover:bg-ivory"
-                  }`}
-                  aria-label={`Go to photo ${index + 1}`}
-                />
-              ))}
-            </div>
+          {/* Dots Indicator */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {photos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentIndex
+                    ? "bg-gold w-6"
+                    : "bg-ivory/60 hover:bg-ivory"
+                }`}
+                aria-label={`Go to photo ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
-
-        {/* Next Photo Preview - peeking from right */}
-        <button
-          onClick={goToNext}
-          className="hidden md:block w-12 lg:w-20 flex-shrink-0 rounded-r-lg overflow-hidden opacity-40 hover:opacity-60 transition-opacity cursor-pointer group"
-          aria-label="Next photo"
-        >
-          <img
-            src={photos[nextIndex].src}
-            alt={photos[nextIndex].alt}
-            className="w-full h-full object-cover object-left"
-          />
-          <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors flex items-center justify-center">
-            <div className="p-2 rounded-full bg-ivory/80 backdrop-blur-sm shadow-soft">
-              <ChevronRight className="w-5 h-5 text-charcoal" />
-            </div>
-          </div>
-        </button>
-        
       </div>
     </section>
   );
