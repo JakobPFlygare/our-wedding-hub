@@ -10,76 +10,39 @@ const EnvelopeAnimation = ({ onComplete }: EnvelopeAnimationProps) => {
   const handleSealClick = useCallback(() => {
     if (phase !== "sealed") return;
     setPhase("opening");
-    setTimeout(() => setPhase("revealing"), 1200);
+    setTimeout(() => setPhase("revealing"), 1400);
     setTimeout(() => {
       setPhase("done");
       onComplete();
-    }, 2400);
+    }, 2600);
   }, [phase, onComplete]);
 
   if (phase === "done") return null;
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] transition-opacity duration-700 ${
+      className={`fixed inset-0 z-[9999] transition-opacity duration-1000 ${
         phase === "revealing" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      {/* Full-screen envelope background */}
-      <div className="absolute inset-0" style={{ background: "hsl(40, 30%, 88%)" }} />
+      {/* Full-screen envelope body */}
+      <div className="absolute inset-0" style={{ background: "hsl(150, 25%, 38%)" }} />
 
-      {/* Letter content peeking out when opened */}
+      {/* Subtle envelope texture / gradient */}
       <div
-        className={`absolute inset-x-[8%] sm:inset-x-[15%] md:inset-x-[25%] transition-all duration-1000 ease-out flex items-center justify-center ${
-          phase === "opening" || phase === "revealing"
-            ? "top-[5%] h-[45%]"
-            : "top-[30%] h-[40%]"
-        }`}
+        className="absolute inset-0"
         style={{
-          background: "hsl(var(--ivory))",
-          borderRadius: "8px 8px 0 0",
-          boxShadow: "0 -4px 30px hsl(var(--sage) / 0.15)",
+          background: "linear-gradient(170deg, hsl(150, 25%, 42%) 0%, hsl(150, 25%, 35%) 50%, hsl(150, 25%, 30%) 100%)",
         }}
-      >
-        <div className="text-center px-6">
-          <p
-            className="font-sans text-[10px] sm:text-xs tracking-[0.3em] uppercase mb-3"
-            style={{ color: "hsl(var(--sage))" }}
-          >
-            You are invited
-          </p>
-          <h2
-            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-            style={{ color: "hsl(var(--charcoal))" }}
-          >
-            Pau & Jakob
-          </h2>
-          <div className="flex items-center justify-center gap-3 mt-3">
-            <div className="h-px w-8 sm:w-12" style={{ background: "hsl(var(--gold))" }} />
-            <p
-              className="font-body text-sm sm:text-base italic"
-              style={{ color: "hsl(var(--muted-foreground))" }}
-            >
-              January 9, 2027
-            </p>
-            <div className="h-px w-8 sm:w-12" style={{ background: "hsl(var(--gold))" }} />
-          </div>
-          <p
-            className="font-body text-xs sm:text-sm mt-2"
-            style={{ color: "hsl(var(--muted-foreground))" }}
-          >
-            Las Mañanitas • Cuernavaca, Mexico
-          </p>
-        </div>
-      </div>
+      />
 
-      {/* Bottom fold - covers lower half */}
+      {/* Bottom fold triangle */}
       <div
         className="absolute bottom-0 left-0 right-0"
         style={{
           height: "55%",
-          background: "hsl(40, 28%, 82%)",
-          clipPath: "polygon(0 100%, 100% 100%, 50% 10%)",
+          background: "hsl(150, 24%, 32%)",
+          clipPath: "polygon(0 100%, 100% 100%, 50% 12%)",
           zIndex: 2,
         }}
       />
@@ -90,7 +53,7 @@ const EnvelopeAnimation = ({ onComplete }: EnvelopeAnimationProps) => {
         style={{
           width: "100%",
           height: "100%",
-          background: "hsl(40, 30%, 85%)",
+          background: "hsl(150, 25%, 36%)",
           clipPath: "polygon(0 25%, 0 100%, 50% 55%)",
           zIndex: 3,
         }}
@@ -102,61 +65,58 @@ const EnvelopeAnimation = ({ onComplete }: EnvelopeAnimationProps) => {
         style={{
           width: "100%",
           height: "100%",
-          background: "hsl(40, 30%, 85%)",
+          background: "hsl(150, 24%, 34%)",
           clipPath: "polygon(100% 25%, 100% 100%, 50% 55%)",
           zIndex: 3,
         }}
       />
 
-      {/* Top flap - opens on click */}
+      {/* Top flap */}
       <div
-        className={`absolute top-0 left-0 right-0 origin-top transition-transform ease-in-out ${
+        className={`absolute top-0 left-0 right-0 origin-top transition-transform ease-[cubic-bezier(0.4,0,0.2,1)] ${
           phase === "opening" || phase === "revealing"
-            ? "[transform:rotateX(180deg)] duration-1000"
+            ? "[transform:rotateX(180deg)] duration-[1400ms]"
             : "[transform:rotateX(0deg)] duration-700"
         }`}
         style={{
           height: "55%",
-          background: "hsl(40, 28%, 84%)",
+          background: "hsl(150, 25%, 40%)",
           clipPath: "polygon(0 0, 100% 0, 50% 80%)",
           transformStyle: "preserve-3d",
           zIndex: phase === "sealed" ? 10 : 1,
         }}
-      >
-        {/* Back side of flap (visible when opened) */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "hsl(40, 25%, 80%)",
-            clipPath: "polygon(0 0, 100% 0, 50% 80%)",
-            backfaceVisibility: "hidden",
-            transform: "rotateX(180deg)",
-          }}
-        />
-      </div>
+      />
 
-      {/* Wax seal - clickable */}
+      {/* Wax seal - white, stamped look */}
       <button
         onClick={handleSealClick}
         className={`absolute left-1/2 -translate-x-1/2 z-20 rounded-full flex items-center justify-center transition-all ${
           phase === "sealed"
-            ? "cursor-pointer hover:scale-110 active:scale-95"
+            ? "cursor-pointer hover:scale-105 active:scale-95"
             : "opacity-0 pointer-events-none"
         }`}
         style={{
           top: "42%",
-          width: "clamp(64px, 12vw, 96px)",
-          height: "clamp(64px, 12vw, 96px)",
-          background: "radial-gradient(circle at 35% 35%, hsl(38, 55%, 58%), hsl(38, 50%, 45%))",
+          width: "clamp(72px, 14vw, 110px)",
+          height: "clamp(72px, 14vw, 110px)",
+          background: "hsl(40, 30%, 96%)",
           boxShadow:
-            "0 4px 20px hsl(var(--gold) / 0.5), inset 0 1px 2px hsl(38, 60%, 70%)",
+            "inset 0 2px 4px hsl(0 0% 0% / 0.08), inset 0 -1px 2px hsl(0 0% 100% / 0.5), 0 1px 3px hsl(0 0% 0% / 0.15)",
+          border: "3px solid hsl(40, 20%, 88%)",
           transitionDuration: "300ms",
         }}
         aria-label="Open envelope"
       >
+        {/* Inner ring for stamped effect */}
+        <div
+          className="absolute inset-[6px] rounded-full"
+          style={{
+            border: "1.5px solid hsl(150, 20%, 55%)",
+          }}
+        />
         <span
           className="font-display text-lg sm:text-xl md:text-2xl select-none"
-          style={{ color: "hsl(var(--ivory))" }}
+          style={{ color: "hsl(150, 25%, 40%)" }}
         >
           P&J
         </span>
@@ -165,8 +125,8 @@ const EnvelopeAnimation = ({ onComplete }: EnvelopeAnimationProps) => {
       {/* Tap hint */}
       {phase === "sealed" && (
         <p
-          className="absolute left-1/2 -translate-x-1/2 font-sans text-xs tracking-widest uppercase animate-pulse"
-          style={{ top: "56%", color: "hsl(var(--muted-foreground))", zIndex: 20 }}
+          className="absolute left-1/2 -translate-x-1/2 font-sans text-[11px] tracking-[0.25em] uppercase animate-pulse"
+          style={{ top: "57%", color: "hsl(150, 15%, 70%)", zIndex: 20 }}
         >
           Tap to open
         </p>
