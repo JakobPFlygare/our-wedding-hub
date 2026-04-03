@@ -64,6 +64,24 @@ interface Translations {
     questions: string;
     contactUs: string;
   };
+  rsvpForm: {
+    canYouAttend: string;
+    yes: string;
+    no: string;
+    namesLabel: string;
+    namesPlaceholder: string;
+    dietaryLabel: string;
+    dietaryPlaceholder: string;
+    commentsLabel: string;
+    commentsPlaceholder: string;
+    submit: string;
+    redirectNote: string;
+    almostDone: string;
+    completeInTab: string;
+    fillAgain: string;
+    error: string;
+    selectAttendance: string;
+  };
   music: {
     subtitle: string;
     title: string;
