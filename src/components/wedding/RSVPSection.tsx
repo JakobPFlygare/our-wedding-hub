@@ -1,37 +1,168 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Send, CheckCircle2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const GOOGLE_FORM_BASE = "https://docs.google.com/forms/d/e/1FAIpQLSds3sqOKAm1ecI3L41EJFauEY044I1D8WPv-oxly2_0O11LyA/viewform";
 
 const RSVPSection = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  const [attendance, setAttendance] = useState("");
+  const [names, setNames] = useState("");
+  const [dietary, setDietary] = useState("");
+  const [comments, setComments] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  return (
-    <section className="py-10 md:py-14 px-4 md:px-6 bg-sage-muted">
-      <div className="max-w-xl mx-auto text-center">
-        <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">
-          {t.rsvp.subtitle}
-        </p>
-        <h2 className="font-display text-2xl md:text-3xl text-charcoal mb-4">
-          {t.rsvp.title}
-        </h2>
-        
-        <p className="font-body text-sm md:text-base text-muted-foreground mb-5 leading-relaxed">
-          {t.rsvp.description}
-        </p>
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
 
-        <div className="flex justify-center mb-6">
-          <Button 
-            variant="wedding" 
-            size="lg"
-            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSds3sqOKAm1ecI3L41EJFauEY044I1D8WPv-oxly2_0O11LyA/viewform', '_blank')}
-            className="group w-full sm:w-auto"
+    if (!attendance) {
+      toast({
+        title: t.rsvpForm.error,
+        description: t.rsvpForm.selectAttendance,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Build pre-filled Google Form URL
+    const params = new URLSearchParams();
+    params.set("entry.877086558", attendance);
+    if (names) params.set("entry.1498135098", names);
+    if (dietary) params.set("entry.1424661284", dietary);
+    if (comments) params.set("entry.2606285", comments);
+
+    const url = `${GOOGLE_FORM_BASE}?${params.toString()}`;
+    window.open(url, "_blank");
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <section id="rsvp" className="py-14 md:py-20 px-4 md:px-6 bg-sage-muted">
+        <div className="max-w-lg mx-auto text-center">
+          <CheckCircle2 className="w-12 h-12 text-sage mx-auto mb-4" />
+          <h2 className="font-display text-2xl md:text-3xl text-charcoal mb-3">
+            {t.rsvpForm.almostDone}
+          </h2>
+          <p className="font-body text-sm md:text-base text-muted-foreground mb-6 leading-relaxed">
+            {t.rsvpForm.completeInTab}
+          </p>
+          <Button
+            variant="outline"
+            onClick={() => setSubmitted(false)}
+            className="text-sm"
           >
-            {t.hero.rsvp}
-            <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+            {t.rsvpForm.fillAgain}
           </Button>
         </div>
+      </section>
+    );
+  }
 
-        <div className="p-4 bg-ivory/60 backdrop-blur-sm rounded-lg shadow-soft">
+  return (
+    <section id="rsvp" className="py-14 md:py-20 px-4 md:px-6 bg-sage-muted">
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-8">
+          <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">
+            {t.rsvp.subtitle}
+          </p>
+          <h2 className="font-display text-2xl md:text-3xl text-charcoal mb-3">
+            {t.rsvp.title}
+          </h2>
+          <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+            {t.rsvp.description}
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Attendance */}
+          <div className="bg-ivory/60 backdrop-blur-sm rounded-lg p-5 shadow-soft space-y-3">
+            <Label className="font-sans text-sm font-medium text-charcoal">
+              {t.rsvpForm.canYouAttend} <span className="text-gold">*</span>
+            </Label>
+            <RadioGroup value={attendance} onValueChange={setAttendance} className="space-y-2">
+              <div className="flex items-center space-x-3 p-3 rounded-md border border-sage/20 bg-white/50 hover:bg-white/80 transition-colors cursor-pointer">
+                <RadioGroupItem value="Yes!" id="yes" />
+                <Label htmlFor="yes" className="font-body text-sm text-charcoal cursor-pointer flex-1">
+                  {t.rsvpForm.yes}
+                </Label>
+              </div>
+              <div className="flex items-center space-x-3 p-3 rounded-md border border-sage/20 bg-white/50 hover:bg-white/80 transition-colors cursor-pointer">
+                <RadioGroupItem value="Sorry, can't make it. But I still love you." id="no" />
+                <Label htmlFor="no" className="font-body text-sm text-charcoal cursor-pointer flex-1">
+                  {t.rsvpForm.no}
+                </Label>
+              </div>
+            </RadioGroup>
+          </div>
+
+          {/* Names */}
+          <div className="bg-ivory/60 backdrop-blur-sm rounded-lg p-5 shadow-soft space-y-2">
+            <Label htmlFor="names" className="font-sans text-sm font-medium text-charcoal">
+              {t.rsvpForm.namesLabel}
+            </Label>
+            <Input
+              id="names"
+              value={names}
+              onChange={(e) => setNames(e.target.value)}
+              placeholder={t.rsvpForm.namesPlaceholder}
+              className="bg-white/70 border-sage/20 font-body text-sm placeholder:text-muted-foreground/50"
+            />
+          </div>
+
+          {/* Dietary restrictions */}
+          <div className="bg-ivory/60 backdrop-blur-sm rounded-lg p-5 shadow-soft space-y-2">
+            <Label htmlFor="dietary" className="font-sans text-sm font-medium text-charcoal">
+              {t.rsvpForm.dietaryLabel}
+            </Label>
+            <Input
+              id="dietary"
+              value={dietary}
+              onChange={(e) => setDietary(e.target.value)}
+              placeholder={t.rsvpForm.dietaryPlaceholder}
+              className="bg-white/70 border-sage/20 font-body text-sm placeholder:text-muted-foreground/50"
+            />
+          </div>
+
+          {/* Comments */}
+          <div className="bg-ivory/60 backdrop-blur-sm rounded-lg p-5 shadow-soft space-y-2">
+            <Label htmlFor="comments" className="font-sans text-sm font-medium text-charcoal">
+              {t.rsvpForm.commentsLabel}
+            </Label>
+            <Textarea
+              id="comments"
+              value={comments}
+              onChange={(e) => setComments(e.target.value)}
+              placeholder={t.rsvpForm.commentsPlaceholder}
+              rows={3}
+              className="bg-white/70 border-sage/20 font-body text-sm placeholder:text-muted-foreground/50 resize-none"
+            />
+          </div>
+
+          <div className="text-center space-y-3">
+            <Button
+              type="submit"
+              variant="wedding"
+              size="lg"
+              className="group w-full sm:w-auto"
+            >
+              {t.rsvpForm.submit}
+              <Send className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <p className="font-body text-xs text-muted-foreground/70">
+              {t.rsvpForm.redirectNote}
+            </p>
+          </div>
+        </form>
+
+        <div className="mt-8 p-4 bg-ivory/60 backdrop-blur-sm rounded-lg shadow-soft text-center">
           <p className="font-sans text-xs uppercase tracking-wider text-sage mb-1">
             {t.rsvp.questions}
           </p>

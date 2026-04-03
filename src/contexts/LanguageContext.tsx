@@ -64,6 +64,24 @@ interface Translations {
     questions: string;
     contactUs: string;
   };
+  rsvpForm: {
+    canYouAttend: string;
+    yes: string;
+    no: string;
+    namesLabel: string;
+    namesPlaceholder: string;
+    dietaryLabel: string;
+    dietaryPlaceholder: string;
+    commentsLabel: string;
+    commentsPlaceholder: string;
+    submit: string;
+    redirectNote: string;
+    almostDone: string;
+    completeInTab: string;
+    fillAgain: string;
+    error: string;
+    selectAttendance: string;
+  };
   music: {
     subtitle: string;
     title: string;
@@ -148,6 +166,24 @@ const translations: Record<Language, Translations> = {
       questions: 'Questions?',
       contactUs: 'Feel free to reach out to us via phone – you know how to find us!',
     },
+    rsvpForm: {
+      canYouAttend: 'Can you attend?',
+      yes: 'Yes, I\'ll be there!',
+      no: 'Sorry, can\'t make it. But I still love you.',
+      namesLabel: 'Names of people attending',
+      namesPlaceholder: 'e.g. John & Jane Doe',
+      dietaryLabel: 'Dietary restrictions? (incl. name of person)',
+      dietaryPlaceholder: 'e.g. Jane – vegetarian',
+      commentsLabel: 'Comments or questions',
+      commentsPlaceholder: 'Anything you\'d like us to know...',
+      submit: 'Send RSVP',
+      redirectNote: 'You\'ll be redirected to confirm your response',
+      almostDone: 'Almost Done!',
+      completeInTab: 'A new tab has opened with your pre-filled response. Please click "Submit" there to complete your RSVP.',
+      fillAgain: 'Fill out again',
+      error: 'Oops!',
+      selectAttendance: 'Please select whether you can attend.',
+    },
     music: {
       subtitle: 'Help Us Create the Playlist',
       title: 'Song Requests',
@@ -230,6 +266,24 @@ const translations: Record<Language, Translations> = {
       questions: '¿Preguntas?',
       contactUs: 'No dudes en contactarnos por teléfono – ¡ya sabes cómo encontrarnos!',
     },
+    rsvpForm: {
+      canYouAttend: '¿Puedes asistir?',
+      yes: '¡Sí, ahí estaré!',
+      no: 'Lo siento, no puedo. Pero los quiero mucho.',
+      namesLabel: 'Nombres de los asistentes',
+      namesPlaceholder: 'ej. Juan y María López',
+      dietaryLabel: 'Restricciones alimentarias (incl. nombre)',
+      dietaryPlaceholder: 'ej. María – vegetariana',
+      commentsLabel: 'Comentarios o preguntas',
+      commentsPlaceholder: 'Algo que quieras que sepamos...',
+      submit: 'Enviar Confirmación',
+      redirectNote: 'Serás redirigido para confirmar tu respuesta',
+      almostDone: '¡Casi Listo!',
+      completeInTab: 'Se abrió una nueva pestaña con tu respuesta. Por favor haz clic en "Enviar" para completar tu confirmación.',
+      fillAgain: 'Llenar de nuevo',
+      error: '¡Ups!',
+      selectAttendance: 'Por favor selecciona si puedes asistir.',
+    },
     music: {
       subtitle: 'Ayúdanos a Crear la Playlist',
       title: 'Canciones',
@@ -311,6 +365,24 @@ const translations: Record<Language, Translations> = {
       emailUs: 'Maila Oss',
       questions: 'Frågor?',
       contactUs: 'Hör gärna av dig via telefon – du vet hur du når oss!',
+    },
+    rsvpForm: {
+      canYouAttend: 'Kan du komma?',
+      yes: 'Ja, jag kommer!',
+      no: 'Tyvärr, jag kan inte. Men jag älskar er ändå.',
+      namesLabel: 'Namn på gäster som kommer',
+      namesPlaceholder: 't.ex. Johan & Anna Svensson',
+      dietaryLabel: 'Kostbehov? (inkl. namn)',
+      dietaryPlaceholder: 't.ex. Anna – vegetarian',
+      commentsLabel: 'Kommentarer eller frågor',
+      commentsPlaceholder: 'Något du vill att vi ska veta...',
+      submit: 'Skicka OSA',
+      redirectNote: 'Du blir omdirigerad för att bekräfta ditt svar',
+      almostDone: 'Nästan Klart!',
+      completeInTab: 'En ny flik har öppnats med ditt förfyllda svar. Klicka på "Skicka" där för att slutföra din OSA.',
+      fillAgain: 'Fyll i igen',
+      error: 'Hoppsan!',
+      selectAttendance: 'Vänligen välj om du kan komma.',
     },
     music: {
       subtitle: 'Hjälp Oss Skapa Spellistan',
