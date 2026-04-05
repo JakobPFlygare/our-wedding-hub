@@ -65,6 +65,9 @@ interface Translations {
     contactUs: string;
   };
   rsvpForm: {
+    emailLabel: string;
+    emailPlaceholder: string;
+    emailRequired: string;
     canYouAttend: string;
     yes: string;
     no: string;
@@ -75,11 +78,11 @@ interface Translations {
     commentsLabel: string;
     commentsPlaceholder: string;
     submit: string;
-    redirectNote: string;
-    almostDone: string;
-    completeInTab: string;
+    sending: string;
+    thankYou: string;
+    received: string;
     fillAgain: string;
-    error: string;
+    submitError: string;
     selectAttendance: string;
   };
   music: {
