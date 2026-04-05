@@ -65,6 +65,9 @@ interface Translations {
     contactUs: string;
   };
   rsvpForm: {
+    emailLabel: string;
+    emailPlaceholder: string;
+    emailRequired: string;
     canYouAttend: string;
     yes: string;
     no: string;
@@ -75,11 +78,11 @@ interface Translations {
     commentsLabel: string;
     commentsPlaceholder: string;
     submit: string;
-    redirectNote: string;
-    almostDone: string;
-    completeInTab: string;
+    sending: string;
+    thankYou: string;
+    received: string;
     fillAgain: string;
-    error: string;
+    submitError: string;
     selectAttendance: string;
   };
   music: {
@@ -167,6 +170,9 @@ const translations: Record<Language, Translations> = {
       contactUs: 'Feel free to reach out to us via phone – you know how to find us!',
     },
     rsvpForm: {
+      emailLabel: 'Your email',
+      emailPlaceholder: 'email@example.com',
+      emailRequired: 'Please enter a valid email address.',
       canYouAttend: 'Can you attend?',
       yes: 'Yes, I\'ll be there!',
       no: 'Sorry, can\'t make it. But I still love you.',
@@ -177,11 +183,11 @@ const translations: Record<Language, Translations> = {
       commentsLabel: 'Comments or questions',
       commentsPlaceholder: 'Anything you\'d like us to know...',
       submit: 'Send RSVP',
-      redirectNote: 'You\'ll be redirected to confirm your response',
-      almostDone: 'Almost Done!',
-      completeInTab: 'A new tab has opened with your pre-filled response. Please click "Submit" there to complete your RSVP.',
-      fillAgain: 'Fill out again',
-      error: 'Oops!',
+      sending: 'Sending...',
+      thankYou: 'Thank You!',
+      received: 'Your RSVP has been received. We\'re so excited to celebrate with you!',
+      fillAgain: 'Submit another response',
+      submitError: 'Something went wrong. Please try again.',
       selectAttendance: 'Please select whether you can attend.',
     },
     music: {
@@ -267,6 +273,9 @@ const translations: Record<Language, Translations> = {
       contactUs: 'No dudes en contactarnos por teléfono – ¡ya sabes cómo encontrarnos!',
     },
     rsvpForm: {
+      emailLabel: 'Tu correo electrónico',
+      emailPlaceholder: 'correo@ejemplo.com',
+      emailRequired: 'Por favor ingresa un correo electrónico válido.',
       canYouAttend: '¿Puedes asistir?',
       yes: '¡Sí, ahí estaré!',
       no: 'Lo siento, no puedo. Pero los quiero mucho.',
@@ -277,11 +286,11 @@ const translations: Record<Language, Translations> = {
       commentsLabel: 'Comentarios o preguntas',
       commentsPlaceholder: 'Algo que quieras que sepamos...',
       submit: 'Enviar Confirmación',
-      redirectNote: 'Serás redirigido para confirmar tu respuesta',
-      almostDone: '¡Casi Listo!',
-      completeInTab: 'Se abrió una nueva pestaña con tu respuesta. Por favor haz clic en "Enviar" para completar tu confirmación.',
-      fillAgain: 'Llenar de nuevo',
-      error: '¡Ups!',
+      sending: 'Enviando...',
+      thankYou: '¡Gracias!',
+      received: 'Tu confirmación ha sido recibida. ¡Estamos muy emocionados de celebrar contigo!',
+      fillAgain: 'Enviar otra respuesta',
+      submitError: 'Algo salió mal. Por favor intenta de nuevo.',
       selectAttendance: 'Por favor selecciona si puedes asistir.',
     },
     music: {
@@ -367,6 +376,9 @@ const translations: Record<Language, Translations> = {
       contactUs: 'Hör gärna av dig via telefon – du vet hur du når oss!',
     },
     rsvpForm: {
+      emailLabel: 'Din e-post',
+      emailPlaceholder: 'epost@exempel.se',
+      emailRequired: 'Vänligen ange en giltig e-postadress.',
       canYouAttend: 'Kan du komma?',
       yes: 'Ja, jag kommer!',
       no: 'Tyvärr, jag kan inte. Men jag älskar er ändå.',
@@ -377,11 +389,11 @@ const translations: Record<Language, Translations> = {
       commentsLabel: 'Kommentarer eller frågor',
       commentsPlaceholder: 'Något du vill att vi ska veta...',
       submit: 'Skicka OSA',
-      redirectNote: 'Du blir omdirigerad för att bekräfta ditt svar',
-      almostDone: 'Nästan Klart!',
-      completeInTab: 'En ny flik har öppnats med ditt förfyllda svar. Klicka på "Skicka" där för att slutföra din OSA.',
-      fillAgain: 'Fyll i igen',
-      error: 'Hoppsan!',
+      sending: 'Skickar...',
+      thankYou: 'Tack!',
+      received: 'Din OSA har mottagits. Vi ser så mycket fram emot att fira med dig!',
+      fillAgain: 'Skicka ett nytt svar',
+      submitError: 'Något gick fel. Försök igen.',
       selectAttendance: 'Vänligen välj om du kan komma.',
     },
     music: {
