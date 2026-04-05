@@ -13,7 +13,7 @@ const GOOGLE_FORM_ACTION =
 
 // TODO: After adding an "Email" question to your Google Form,
 // replace this with the real entry ID (e.g. "entry.XXXXXXX")
-const EMAIL_ENTRY_ID = "entry.EMAIL_PLACEHOLDER";
+const EMAIL_ENTRY_ID = "entry.123718265";
 
 const ENTRY_IDS = {
   attendance: "entry.877086558",
