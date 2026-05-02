@@ -9,6 +9,7 @@ import galleryHotdogs from "@/assets/gallery/IMG_7496.jpg";
 import galleryPhotobooth from "@/assets/gallery/IMG_8195.jpg";
 import galleryBar from "@/assets/gallery/IMG_8526.jpg";
 import galleryWedding from "@/assets/gallery/IMG_8723.jpg";
+import galleryBouquet from "@/assets/gallery/IMG_8729.jpg";
 
 const photos = [
   { id: 1, src: galleryAutumn, alt: "Pau & Jakob in autumn leaves" },
@@ -20,6 +21,7 @@ const photos = [
   { id: 7, src: galleryPhotobooth, alt: "Pau & Jakob in a photobooth strip" },
   { id: 8, src: galleryBar, alt: "Pau & Jakob sharing a drink at a bar" },
   { id: 9, src: galleryWedding, alt: "Pau & Jakob with friends at a celebration" },
+  { id: 10, src: galleryBouquet, alt: "Pau holding a bouquet by a sunlit mountain window" },
 ];
 
 const PhotoGallery = () => {
