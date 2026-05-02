@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-lasmananitas.jpg";
 import Countdown from "./Countdown";
