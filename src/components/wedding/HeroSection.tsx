@@ -49,11 +49,10 @@ const HeroSection = () => {
           <Button 
             variant="wedding" 
             size="lg"
-            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSds3sqOKAm1ecI3L41EJFauEY044I1D8WPv-oxly2_0O11LyA/viewform', '_blank')}
+            onClick={() => document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth' })}
             className="group w-full sm:w-auto bg-ivory text-charcoal hover:bg-ivory/90 border-none"
           >
             {t.hero.rsvp}
-            <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
           <p className="font-body text-sm text-ivory/80 mt-3 drop-shadow-md">
             {t.hero.rsvpDeadline}
