@@ -49,12 +49,19 @@ const PhotoGallery = () => {
     <section className="py-6 md:py-10 px-4 md:px-6 bg-ivory">
       <div className="max-w-3xl mx-auto">
         {/* Slideshow Container */}
-        <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated">
-          {/* Photo */}
+        <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden shadow-elevated bg-charcoal/5">
+          {/* Blurred backdrop fills empty space for portrait photos */}
+          <img
+            src={photos[currentIndex].src}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-60"
+          />
+          {/* Foreground photo, fully visible */}
           <img
             src={photos[currentIndex].src}
             alt={photos[currentIndex].alt}
-            className="w-full h-full object-cover"
+            className="relative w-full h-full object-contain"
           />
 
           {/* Navigation Arrows */}
