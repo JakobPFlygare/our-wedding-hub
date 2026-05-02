@@ -17,7 +17,6 @@ const Index = () => {
         <Navigation />
         <LanguageToggle />
         <HeroSection />
-        <PhotoGallery />
         <div id="details">
           <EventDetails />
         </div>
@@ -33,6 +32,7 @@ const Index = () => {
         <div id="rsvp">
           <RSVPSection />
         </div>
+        <PhotoGallery />
         <Footer />
       </main>
     </LanguageProvider>
