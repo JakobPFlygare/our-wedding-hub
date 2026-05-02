@@ -2,10 +2,24 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import galleryAutumn from "@/assets/gallery-autumn.jpg";
 import galleryBeach from "@/assets/gallery-beach.jpg";
+import gallerySkiing from "@/assets/gallery/IMG_0759.jpg";
+import galleryXochimilco from "@/assets/gallery/IMG_2292.jpg";
+import galleryCoyoacan from "@/assets/gallery/IMG_5625.jpg";
+import galleryHotdogs from "@/assets/gallery/IMG_7496.jpg";
+import galleryPhotobooth from "@/assets/gallery/IMG_8195.jpg";
+import galleryBar from "@/assets/gallery/IMG_8526.jpg";
+import galleryWedding from "@/assets/gallery/IMG_8723.jpg";
 
 const photos = [
   { id: 1, src: galleryAutumn, alt: "Pau & Jakob in autumn leaves" },
   { id: 2, src: galleryBeach, alt: "Pau & Jakob at the beach" },
+  { id: 3, src: gallerySkiing, alt: "Pau & Jakob cross-country skiing in Sweden" },
+  { id: 4, src: galleryXochimilco, alt: "Pau & Jakob on a trajinera in Xochimilco" },
+  { id: 5, src: galleryCoyoacan, alt: "Pau & Jakob by the coyote fountain in Coyoacán" },
+  { id: 6, src: galleryHotdogs, alt: "Pau & Jakob enjoying hotdogs and beers" },
+  { id: 7, src: galleryPhotobooth, alt: "Pau & Jakob in a photobooth strip" },
+  { id: 8, src: galleryBar, alt: "Pau & Jakob sharing a drink at a bar" },
+  { id: 9, src: galleryWedding, alt: "Pau & Jakob with friends at a celebration" },
 ];
 
 const PhotoGallery = () => {
@@ -20,7 +34,7 @@ const PhotoGallery = () => {
   }, []);
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => 
+    setCurrentIndex((prev) =>
       prev === 0 ? photos.length - 1 : prev - 1
     );
   };
