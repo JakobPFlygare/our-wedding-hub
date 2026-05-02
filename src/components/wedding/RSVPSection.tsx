@@ -147,7 +147,7 @@ const RSVPSection = () => {
                 </Label>
               </div>
               <div className="flex items-center space-x-3 p-3 rounded-md border border-sage/20 bg-white/50 hover:bg-white/80 transition-colors cursor-pointer">
-                <RadioGroupItem value="Sorry, can't make it. But I still love you." id="no" />
+                <RadioGroupItem value="Sorry, can't make it." id="no" />
                 <Label htmlFor="no" className="font-body text-sm text-charcoal cursor-pointer flex-1">
                   {t.rsvpForm.no}
                 </Label>
