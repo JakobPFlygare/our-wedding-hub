@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { PawPrint } from "lucide-react";
 
 const Footer = () => {
   return (
