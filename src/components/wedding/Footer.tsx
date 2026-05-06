@@ -14,7 +14,7 @@ const Footer = () => {
         
         <div className="flex items-center justify-center gap-2">
           <div className="h-px w-8 md:w-12 bg-ivory/30" />
-          <Heart className="w-4 h-4 text-blush fill-blush" />
+          <PawPrint className="w-4 h-4 text-blush fill-blush" />
           <div className="h-px w-8 md:w-12 bg-ivory/30" />
         </div>
       </div>
