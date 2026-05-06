@@ -1,4 +1,4 @@
-import { Bus, Hotel } from "lucide-react";
+import { Bus } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const LocationSection = () => {
