@@ -11,6 +11,10 @@ import gallery7563 from "@/assets/gallery/IMG_7563.jpeg";
 import gallery8179 from "@/assets/gallery/IMG_8179.jpeg";
 import gallery9400 from "@/assets/gallery/IMG_9400.jpeg";
 import gallery9622 from "@/assets/gallery/IMG_9622.jpeg";
+import gallerySegoviaMarket from "@/assets/gallery/IMG_1811.jpeg";
+import gallerySegoviaView from "@/assets/gallery/IMG_1797.jpeg";
+import galleryDayOfDead from "@/assets/gallery/polaroid-dayofdead.jpg";
+import galleryCat from "@/assets/gallery/IMG_0195.jpeg";
 
 const photos = [
   { id: 1, src: galleryAutumn, alt: "Pau & Jakob in autumn leaves" },
@@ -24,6 +28,10 @@ const photos = [
   { id: 9, src: gallery8179, alt: "Pau & Jakob" },
   { id: 10, src: gallery9400, alt: "Pau & Jakob" },
   { id: 11, src: gallery9622, alt: "Pau & Jakob" },
+  { id: 12, src: gallerySegoviaMarket, alt: "Pau & Jakob at the Segovia Christmas market" },
+  { id: 13, src: gallerySegoviaView, alt: "Pau & Jakob with the Segovia cathedral in the background" },
+  { id: 14, src: galleryDayOfDead, alt: "Pau & Jakob in Day of the Dead makeup" },
+  { id: 15, src: galleryCat, alt: "Pau & Jakob with their cat" },
 ];
 
 const PhotoGallery = () => {
