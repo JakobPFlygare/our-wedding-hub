@@ -7,45 +7,45 @@
 @layer base {
   :root {
     --background: 40 33% 98%;
-    --foreground: 150 10% 25%;
+    --foreground: 100 12% 22%;
 
     --card: 40 33% 98%;
-    --card-foreground: 150 10% 25%;
+    --card-foreground: 100 12% 22%;
 
     --popover: 40 33% 98%;
-    --popover-foreground: 150 10% 25%;
+    --popover-foreground: 100 12% 22%;
 
-    --primary: 150 25% 45%;
+    --primary: 95 18% 42%;
     --primary-foreground: 40 33% 98%;
 
     --secondary: 350 30% 85%;
-    --secondary-foreground: 150 10% 25%;
+    --secondary-foreground: 100 12% 22%;
 
     --muted: 40 20% 92%;
-    --muted-foreground: 150 10% 45%;
+    --muted-foreground: 100 10% 42%;
 
     --accent: 38 50% 65%;
-    --accent-foreground: 150 10% 20%;
+    --accent-foreground: 100 12% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 150 15% 85%;
-    --input: 150 15% 85%;
-    --ring: 150 25% 45%;
+    --border: 95 14% 80%;
+    --input: 95 14% 80%;
+    --ring: 95 18% 42%;
 
     --radius: 0.5rem;
 
     /* Wedding specific tokens */
-    --sage: 150 25% 45%;
-    --sage-light: 150 20% 75%;
-    --sage-muted: 150 15% 90%;
+    --sage: 95 18% 42%;
+    --sage-light: 95 16% 72%;
+    --sage-muted: 95 14% 86%;
     --blush: 350 30% 85%;
     --blush-dark: 350 25% 70%;
     --ivory: 40 33% 98%;
     --gold: 38 50% 65%;
     --gold-light: 38 40% 80%;
-    --charcoal: 150 10% 25%;
+    --charcoal: 100 12% 22%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(180deg, hsl(var(--sage-muted)) 0%, hsl(var(--ivory)) 100%);
