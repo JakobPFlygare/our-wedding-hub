@@ -9,7 +9,7 @@ import galleryHotdogs from "@/assets/gallery/IMG_6221.jpg";
 import galleryPhotobooth from "@/assets/gallery/IMG_8195.jpg";
 import galleryBar from "@/assets/gallery/IMG_8526.jpg";
 import galleryWedding from "@/assets/gallery/IMG_8723.jpg";
-import galleryBouquet from "@/assets/gallery/IMG_0740.JPG";
+import galleryBouquet from "@/assets/gallery/IMG_0740.jpg";
 
 const photos = [
   { id: 1, src: galleryAutumn, alt: "Pau & Jakob in autumn leaves" },
