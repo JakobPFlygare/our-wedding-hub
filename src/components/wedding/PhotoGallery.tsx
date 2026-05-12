@@ -4,24 +4,26 @@ import galleryAutumn from "@/assets/gallery-autumn.jpg";
 import galleryBeach from "@/assets/gallery-beach.jpg";
 import gallerySkiing from "@/assets/gallery/IMG_0759.jpg";
 import galleryXochimilco from "@/assets/gallery/IMG_2292.jpg";
-import galleryCoyoacan from "@/assets/gallery/IMG_5625.jpg";
-import galleryHotdogs from "@/assets/gallery/IMG_6221.jpg";
-import galleryPhotobooth from "@/assets/gallery/IMG_8195.jpg";
-import galleryBar from "@/assets/gallery/IMG_8526.jpg";
-import galleryWedding from "@/assets/gallery/IMG_8723.jpg";
 import galleryBouquet from "@/assets/gallery/IMG_0740.jpg";
+import gallery7105 from "@/assets/gallery/IMG_7105.jpeg";
+import gallery7300 from "@/assets/gallery/IMG_7300.jpeg";
+import gallery7563 from "@/assets/gallery/IMG_7563.jpeg";
+import gallery8179 from "@/assets/gallery/IMG_8179.jpeg";
+import gallery9400 from "@/assets/gallery/IMG_9400.jpeg";
+import gallery9622 from "@/assets/gallery/IMG_9622.jpeg";
 
 const photos = [
   { id: 1, src: galleryAutumn, alt: "Pau & Jakob in autumn leaves" },
   { id: 2, src: galleryBeach, alt: "Pau & Jakob at the beach" },
   { id: 3, src: gallerySkiing, alt: "Pau & Jakob cross-country skiing in Sweden" },
   { id: 4, src: galleryXochimilco, alt: "Pau & Jakob on a trajinera in Xochimilco" },
-  { id: 5, src: galleryCoyoacan, alt: "Pau & Jakob by the coyote fountain in Coyoacán" },
-  { id: 6, src: galleryHotdogs, alt: "Pau & Jakob enjoying hotdogs and beers" },
-  { id: 7, src: galleryPhotobooth, alt: "Pau & Jakob in a photobooth strip" },
-  { id: 8, src: galleryBar, alt: "Pau & Jakob sharing a drink at a bar" },
-  { id: 9, src: galleryWedding, alt: "Pau & Jakob with friends at a celebration" },
-  { id: 10, src: galleryBouquet, alt: "Pau holding a bouquet by a sunlit mountain window" },
+  { id: 5, src: galleryBouquet, alt: "Pau holding a bouquet by a sunlit mountain window" },
+  { id: 6, src: gallery7105, alt: "Pau & Jakob" },
+  { id: 7, src: gallery7300, alt: "Pau & Jakob" },
+  { id: 8, src: gallery7563, alt: "Pau & Jakob" },
+  { id: 9, src: gallery8179, alt: "Pau & Jakob" },
+  { id: 10, src: gallery9400, alt: "Pau & Jakob" },
+  { id: 11, src: gallery9622, alt: "Pau & Jakob" },
 ];
 
 const PhotoGallery = () => {
