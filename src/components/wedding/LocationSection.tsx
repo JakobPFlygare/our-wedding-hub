@@ -74,9 +74,14 @@ const LocationSection = () => {
           
           <div className="grid md:grid-cols-2 gap-3 md:gap-4">
             <div className="border border-sage-light rounded-lg p-4">
-              <h4 className="font-display text-base text-charcoal mb-1">
+              <a
+                href="https://www.lasmananitas.com.mx/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display text-base text-charcoal mb-1 inline-block hover:text-sage transition-colors underline decoration-sage/30 hover:decoration-sage"
+              >
                 Las Mañanitas Hotel
-              </h4>
+              </a>
               <p className="font-body text-sm text-muted-foreground mb-2">
                 {t.location.venueHotelInfo}
               </p>
