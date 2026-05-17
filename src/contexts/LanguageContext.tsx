@@ -136,7 +136,7 @@ const translations: Record<Language, Translations> = {
       tornafiesta: 'Torna Fiesta aka Vickning',
       venueCloses: 'Venue Closes',
       childrenTitle: 'Children',
-      childrenDescription: 'Let us know if you are bringing a kid so we can plan accordingly with the menu etc.',
+      childrenDescription: "We believe guests will enjoy the wedding more if they are able to attend childfree. However, we realize this is simply not possible for some and children are of course welcome. Let us know if you are bringing a kid so we can plan accordingly with the menu etc.",
       childrenMexicanNote: '',
       giftsTitle: 'Wedding Gifts',
       giftsDescription: "Your presence is the greatest gift we could ask for. We kindly ask that you don't bring physical presents – our suitcases simply won't fit them for the journey home!",
