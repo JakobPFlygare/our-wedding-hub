@@ -346,7 +346,7 @@ const translations: Record<Language, Translations> = {
       tornafiesta: 'Torna Fiesta aka Vickning',
       venueCloses: 'Lokalen Stänger',
       childrenTitle: 'Barn',
-      childrenDescription: 'Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
+      childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna. Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
       childrenMexicanNote: '',
       giftsTitle: 'Bröllopspresenter',
       giftsDescription: 'Er närvaro är den bästa presenten vi kan önska oss. Vi ber er att inte ta med fysiska presenter – våra resväskor har helt enkelt inte plats för dem på hemresan!',
