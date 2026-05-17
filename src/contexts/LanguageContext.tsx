@@ -242,7 +242,7 @@ const translations: Record<Language, Translations> = {
       venueCloses: 'Cierre del Lugar',
       childrenTitle: 'Niños',
       childrenDescription: 'Creemos que los invitados disfrutarán más de la boda si pueden asistir sin niños. Sin embargo, entendemos que esto no es posible para todos y los niños son bienvenidos.',
-      childrenMexicanNote: 'Si eres de México, esperamos que puedas conseguir una niñera.',
+      childrenMexicanNote: '',
       giftsTitle: 'Regalos de Boda',
       giftsDescription: 'Tu presencia es el mejor regalo que podríamos pedir. Te pedimos que no traigas regalos físicos – ¡nuestras maletas no tendrán espacio para el viaje de regreso!',
     },
