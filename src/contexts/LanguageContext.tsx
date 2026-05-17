@@ -30,6 +30,7 @@ interface Translations {
     venueCloses: string;
     childrenTitle: string;
     childrenDescription: string;
+    childrenMexicanNote: string;
     giftsTitle: string;
     giftsDescription: string;
   };
@@ -59,6 +60,7 @@ interface Translations {
     subtitle: string;
     title: string;
     description: string;
+    plusOneNote: string;
     rsvpOnline: string;
     emailUs: string;
     questions: string;
