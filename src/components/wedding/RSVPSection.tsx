@@ -115,11 +115,6 @@ const RSVPSection = () => {
           <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
             {t.rsvp.description}
           </p>
-          {t.rsvp.plusOneNote && (
-            <p className="font-body text-sm md:text-base text-sage font-medium leading-relaxed mt-3">
-              {t.rsvp.plusOneNote}
-            </p>
-          )}
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
