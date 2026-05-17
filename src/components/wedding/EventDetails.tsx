@@ -69,6 +69,11 @@ const EventDetails = () => {
             <p className="font-body text-sm text-charcoal/80 leading-relaxed">
               {t.details.childrenDescription}
             </p>
+            {t.details.childrenMexicanNote && (
+              <p className="font-body text-sm text-charcoal/60 leading-relaxed mt-2">
+                {t.details.childrenMexicanNote}
+              </p>
+            )}
           </div>
           
           <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 shadow-soft">
