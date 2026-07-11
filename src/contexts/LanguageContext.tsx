@@ -119,7 +119,7 @@ const translations: Record<Language, Translations> = {
       together: 'Together with their families',
       gettingMarried: 'Are getting married',
       rsvp: 'RSVP Now',
-      rsvpDeadline: 'Please RSVP by July 10, 2026',
+      rsvpDeadline: 'Please RSVP by September 1, 2026',
     },
     gallery: {
       subtitle: 'Our Story',
@@ -165,7 +165,7 @@ const translations: Record<Language, Translations> = {
     rsvp: {
       subtitle: "We Can't Wait to See You",
       title: 'Kindly Respond',
-      description: 'Please let us know if you\'ll be joining us for our special day by July 10, 2026. We truly hope you can celebrate with us!',
+      description: 'Please let us know if you\'ll be joining us for our special day by September 1, 2026. We truly hope you can celebrate with us!',
       rsvpOnline: 'RSVP Online',
       emailUs: 'Email Us',
       questions: 'Questions?',
@@ -223,7 +223,7 @@ const translations: Record<Language, Translations> = {
       together: 'Junto con sus familias',
       gettingMarried: 'Se casan',
       rsvp: 'Confirmar Asistencia',
-      rsvpDeadline: 'Por favor confirma antes del 10 de julio de 2026',
+      rsvpDeadline: 'Por favor confirma antes del 1 de septiembre de 2026',
     },
     gallery: {
       subtitle: 'Nuestra Historia',
@@ -269,7 +269,7 @@ const translations: Record<Language, Translations> = {
     rsvp: {
       subtitle: 'Esperamos Verte',
       title: 'Confirma tu Asistencia',
-      description: 'Por favor confirma tu asistencia antes del 10 de julio de 2026. ¡Esperamos poder celebrar contigo!',
+      description: 'Por favor confirma tu asistencia antes del 1 de septiembre de 2026. ¡Esperamos poder celebrar contigo!',
       rsvpOnline: 'Confirmar en Línea',
       emailUs: 'Escríbenos',
       questions: '¿Preguntas?',
@@ -327,7 +327,7 @@ const translations: Record<Language, Translations> = {
       together: 'Tillsammans med sina familjer',
       gettingMarried: 'Gifter sig',
       rsvp: 'OSA Nu',
-      rsvpDeadline: 'Vänligen OSA senast 10 juli 2026',
+      rsvpDeadline: 'Vänligen OSA senast 1 september 2026',
     },
     gallery: {
       subtitle: 'Vår Historia',
@@ -373,7 +373,7 @@ const translations: Record<Language, Translations> = {
     rsvp: {
       subtitle: 'Vi Längtar Efter att Träffa Dig',
       title: 'Vänligen Svara',
-      description: 'Vänligen meddela oss om du kan delta senast den 10 juli 2026. Vi hoppas verkligen att du kan fira med oss!',
+      description: 'Vänligen meddela oss om du kan delta senast den 1 september 2026. Vi hoppas verkligen att du kan fira med oss!',
       rsvpOnline: 'OSA Online',
       emailUs: 'Maila Oss',
       questions: 'Frågor?',
