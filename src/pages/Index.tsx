@@ -12,15 +12,33 @@ import RSVPSection from "@/components/wedding/RSVPSection";
 import Footer from "@/components/wedding/Footer";
 import EnvelopeIntro from "@/components/wedding/EnvelopeIntro";
 
-// Local experiment: flip to `false` (or delete this block) to ship without the envelope intro.
+// Flip to `false` (or delete this block) to ship without the envelope intro.
 const ENABLE_ENVELOPE_INTRO = true;
+// Only play the intro once per browser session (survives in-site navigation, replays in a new tab/visit).
+const INTRO_SEEN_KEY = "envelopeIntroSeen";
 
 const Index = () => {
-  const [introDone, setIntroDone] = useState(!ENABLE_ENVELOPE_INTRO);
+  const [introDone, setIntroDone] = useState(() => {
+    if (!ENABLE_ENVELOPE_INTRO) return true;
+    try {
+      return sessionStorage.getItem(INTRO_SEEN_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
+
+  const handleIntroFinish = () => {
+    try {
+      sessionStorage.setItem(INTRO_SEEN_KEY, "1");
+    } catch {
+      /* ignore (e.g. storage disabled) */
+    }
+    setIntroDone(true);
+  };
 
   return (
     <LanguageProvider>
-      {!introDone && <EnvelopeIntro onFinish={() => setIntroDone(true)} />}
+      {!introDone && <EnvelopeIntro onFinish={handleIntroFinish} />}
       <main className="min-h-screen">
         <Navigation />
         <LanguageToggle />
