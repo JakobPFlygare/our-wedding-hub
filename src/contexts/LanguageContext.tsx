@@ -12,8 +12,6 @@ interface Translations {
   hero: {
     together: string;
     gettingMarried: string;
-    rsvp: string;
-    rsvpDeadline: string;
   };
   gallery: {
     subtitle: string;
@@ -60,31 +58,8 @@ interface Translations {
     subtitle: string;
     title: string;
     description: string;
-    rsvpOnline: string;
-    emailUs: string;
-    questions: string;
+    contactTitle: string;
     contactUs: string;
-  };
-  rsvpForm: {
-    emailLabel: string;
-    emailPlaceholder: string;
-    emailRequired: string;
-    canYouAttend: string;
-    yes: string;
-    no: string;
-    namesLabel: string;
-    namesPlaceholder: string;
-    dietaryLabel: string;
-    dietaryPlaceholder: string;
-    commentsLabel: string;
-    commentsPlaceholder: string;
-    submit: string;
-    sending: string;
-    thankYou: string;
-    received: string;
-    fillAgain: string;
-    submitError: string;
-    selectAttendance: string;
   };
   music: {
     subtitle: string;
@@ -118,8 +93,6 @@ const translations: Record<Language, Translations> = {
     hero: {
       together: 'Together with their families',
       gettingMarried: 'Are getting married',
-      rsvp: 'RSVP Now',
-      rsvpDeadline: 'Please RSVP by September 1, 2026',
     },
     gallery: {
       subtitle: 'Our Story',
@@ -163,34 +136,11 @@ const translations: Record<Language, Translations> = {
       weatherDescription: 'Cuernavaca enjoys pleasant spring-like weather year-round. January evenings can be cool, so consider bringing a light jacket or shawl.',
     },
     rsvp: {
-      subtitle: "We Can't Wait to See You",
-      title: 'Kindly Respond',
-      description: 'Please let us know if you\'ll be joining us for our special day by September 1, 2026. We truly hope you can celebrate with us!',
-      rsvpOnline: 'RSVP Online',
-      emailUs: 'Email Us',
-      questions: 'Questions?',
-      contactUs: 'Feel free to reach out to us via phone – you know how to find us!',
-    },
-    rsvpForm: {
-      emailLabel: 'Your email',
-      emailPlaceholder: 'email@example.com',
-      emailRequired: 'Please enter a valid email address.',
-      canYouAttend: 'Can you attend?',
-      yes: 'Yes, I\'ll be there!',
-      no: 'Sorry, can\'t make it.',
-      namesLabel: 'Name of guest',
-      namesPlaceholder: 'e.g. John Doe',
-      dietaryLabel: 'Dietary restrictions? (incl. name of person)',
-      dietaryPlaceholder: 'e.g. Jane – vegetarian',
-      commentsLabel: 'Comments or questions',
-      commentsPlaceholder: 'Anything you\'d like us to know...',
-      submit: 'Send RSVP',
-      sending: 'Sending...',
-      thankYou: 'Thank You!',
-      received: 'Your RSVP has been received. We\'re so excited to celebrate with you!',
-      fillAgain: 'Submit another response',
-      submitError: 'Something went wrong. Please try again.',
-      selectAttendance: 'Please select whether you can attend.',
+      subtitle: 'Thank You for Responding',
+      title: 'RSVP Is Now Closed',
+      description: 'The deadline to RSVP has passed. Thank you to everyone who responded.',
+      contactTitle: 'Can\'t make it or didn\'t have time to respond?',
+      contactUs: 'Please contact us directly by phone – you know how to find us!',
     },
     music: {
       subtitle: 'Help Us Create the Playlist',
@@ -222,8 +172,6 @@ const translations: Record<Language, Translations> = {
     hero: {
       together: 'Junto con sus familias',
       gettingMarried: 'Se casan',
-      rsvp: 'Confirmar Asistencia',
-      rsvpDeadline: 'Por favor confirma antes del 1 de septiembre de 2026',
     },
     gallery: {
       subtitle: 'Nuestra Historia',
@@ -267,34 +215,11 @@ const translations: Record<Language, Translations> = {
       weatherDescription: 'Cuernavaca disfruta de un clima primaveral agradable todo el año. Las noches de enero pueden ser frescas, así que considera traer una chaqueta ligera o chal.',
     },
     rsvp: {
-      subtitle: 'Esperamos Verte',
-      title: 'Confirma tu Asistencia',
-      description: 'Por favor confirma tu asistencia antes del 1 de septiembre de 2026. ¡Esperamos poder celebrar contigo!',
-      rsvpOnline: 'Confirmar en Línea',
-      emailUs: 'Escríbenos',
-      questions: '¿Preguntas?',
-      contactUs: 'No dudes en contactarnos por teléfono – ¡ya sabes cómo encontrarnos!',
-    },
-    rsvpForm: {
-      emailLabel: 'Tu correo electrónico',
-      emailPlaceholder: 'correo@ejemplo.com',
-      emailRequired: 'Por favor ingresa un correo electrónico válido.',
-      canYouAttend: '¿Puedes asistir?',
-      yes: '¡Sí, ahí estaré!',
-      no: 'Lo siento, no puedo.',
-      namesLabel: 'Nombre del invitado',
-      namesPlaceholder: 'ej. Juan López',
-      dietaryLabel: 'Restricciones alimentarias (incl. nombre)',
-      dietaryPlaceholder: 'ej. María – vegetariana',
-      commentsLabel: 'Comentarios o preguntas',
-      commentsPlaceholder: 'Algo que quieras que sepamos...',
-      submit: 'Enviar Confirmación',
-      sending: 'Enviando...',
-      thankYou: '¡Gracias!',
-      received: 'Tu confirmación ha sido recibida. ¡Estamos muy emocionados de celebrar contigo!',
-      fillAgain: 'Enviar otra respuesta',
-      submitError: 'Algo salió mal. Por favor intenta de nuevo.',
-      selectAttendance: 'Por favor selecciona si puedes asistir.',
+      subtitle: 'Gracias por Responder',
+      title: 'Confirmaciones Cerradas',
+      description: 'El plazo para confirmar asistencia ha terminado. Gracias a todos los que respondieron.',
+      contactTitle: '¿No puedes asistir o no alcanzaste a responder?',
+      contactUs: 'Por favor contáctanos directamente por teléfono – ¡ya sabes cómo encontrarnos!',
     },
     music: {
       subtitle: 'Ayúdanos a Crear la Playlist',
@@ -326,8 +251,6 @@ const translations: Record<Language, Translations> = {
     hero: {
       together: 'Tillsammans med sina familjer',
       gettingMarried: 'Gifter sig',
-      rsvp: 'OSA Nu',
-      rsvpDeadline: 'Vänligen OSA senast 1 september 2026',
     },
     gallery: {
       subtitle: 'Vår Historia',
@@ -371,34 +294,11 @@ const translations: Record<Language, Translations> = {
       weatherDescription: 'Cuernavaca har ett behagligt vårliknande klimat året runt. Januarikvällar kan vara svala, så överväg att ta med en lätt jacka eller sjal.',
     },
     rsvp: {
-      subtitle: 'Vi Längtar Efter att Träffa Dig',
-      title: 'Vänligen Svara',
-      description: 'Vänligen meddela oss om du kan delta senast den 1 september 2026. Vi hoppas verkligen att du kan fira med oss!',
-      rsvpOnline: 'OSA Online',
-      emailUs: 'Maila Oss',
-      questions: 'Frågor?',
-      contactUs: 'Hör gärna av dig via telefon – du vet hur du når oss!',
-    },
-    rsvpForm: {
-      emailLabel: 'Din e-post',
-      emailPlaceholder: 'epost@exempel.se',
-      emailRequired: 'Vänligen ange en giltig e-postadress.',
-      canYouAttend: 'Kan du komma?',
-      yes: 'Ja, jag kommer!',
-      no: 'Tyvärr, jag kan inte.',
-      namesLabel: 'Namn på gäster som kommer',
-      namesPlaceholder: 't.ex. Johan & Anna Svensson',
-      dietaryLabel: 'Kostbehov? (inkl. namn)',
-      dietaryPlaceholder: 't.ex. Anna – vegetarian',
-      commentsLabel: 'Kommentarer eller frågor',
-      commentsPlaceholder: 'Något du vill att vi ska veta...',
-      submit: 'Skicka OSA',
-      sending: 'Skickar...',
-      thankYou: 'Tack!',
-      received: 'Din OSA har mottagits. Vi ser så mycket fram emot att fira med dig!',
-      fillAgain: 'Skicka ett nytt svar',
-      submitError: 'Något gick fel. Försök igen.',
-      selectAttendance: 'Vänligen välj om du kan komma.',
+      subtitle: 'Tack för Era Svar',
+      title: 'OSA Är Nu Stängd',
+      description: 'Sista dagen för OSA har passerat. Tack till alla som har svarat.',
+      contactTitle: 'Kan du inte komma eller hann du inte svara?',
+      contactUs: 'Hör av dig direkt till oss via telefon – du vet hur du når oss!',
     },
     music: {
       subtitle: 'Hjälp Oss Skapa Spellistan',

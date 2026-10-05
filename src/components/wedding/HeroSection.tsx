@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-lasmananitas.jpg";
 import Countdown from "./Countdown";
@@ -43,20 +41,6 @@ const HeroSection = () => {
         {/* Countdown */}
         <div className="opacity-0 animate-fade-in-up animation-delay-700">
           <Countdown />
-        </div>
-        
-        <div className="opacity-0 animate-fade-in-up animation-delay-800">
-          <Button 
-            variant="wedding" 
-            size="lg"
-            onClick={() => document.getElementById('rsvp')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group w-full sm:w-auto bg-ivory text-charcoal hover:bg-ivory/90 border-none"
-          >
-            {t.hero.rsvp}
-          </Button>
-          <p className="font-body text-sm text-ivory/80 mt-3 drop-shadow-md">
-            {t.hero.rsvpDeadline}
-          </p>
         </div>
       </div>
       
