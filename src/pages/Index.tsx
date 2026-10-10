@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { LanguageProvider } from "@/contexts/LanguageContext";
 import LanguageToggle from "@/components/wedding/LanguageToggle";
 import Navigation from "@/components/wedding/Navigation";
 import HeroSection from "@/components/wedding/HeroSection";
@@ -37,7 +36,7 @@ const Index = () => {
   };
 
   return (
-    <LanguageProvider>
+    <>
       {!introDone && <EnvelopeIntro onFinish={handleIntroFinish} />}
       <main className="min-h-screen">
         <Navigation />
@@ -61,7 +60,7 @@ const Index = () => {
         <PhotoGallery />
         <Footer />
       </main>
-    </LanguageProvider>
+    </>
   );
 };
 

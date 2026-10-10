@@ -1,20 +1,27 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const navItems = [
     { href: "#details", label: t.nav.details },
     { href: "#dress-code", label: t.nav.dressCode },
     { href: "#location", label: t.nav.location },
     { href: "#rsvp", label: t.nav.rsvp },
+    { href: "/gifts", label: t.nav.gifts },
   ];
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
+    if (href.startsWith("/")) {
+      navigate(href);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

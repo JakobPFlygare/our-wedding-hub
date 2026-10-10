@@ -1,4 +1,5 @@
 import { Baby, Gift } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const EventDetails = () => {
@@ -84,6 +85,12 @@ const EventDetails = () => {
             <p className="font-body text-sm text-charcoal/80 leading-relaxed">
               {t.details.giftsDescription}
             </p>
+            <Link
+              to="/gifts"
+              className="inline-block mt-3 font-sans text-xs uppercase tracking-wider text-sage hover:text-charcoal underline underline-offset-4 transition-colors"
+            >
+              {t.gifts.linkFromDetails}
+            </Link>
           </div>
         </div>
       </div>
