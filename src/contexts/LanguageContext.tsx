@@ -90,8 +90,6 @@ interface Translations {
     step2: string;
     step3: string;
     contribute: string;
-    suggested: string;
-    anyAmount: string;
     backHome: string;
     linkFromDetails: string;
     dialogTitle: string;
@@ -114,6 +112,7 @@ interface Translations {
     copy: string;
     copied: string;
     thanks: string;
+    done: string;
     currency: string;
     swishConverted: string;
   };
@@ -208,8 +207,6 @@ const translations: Record<Language, Translations> = {
       step2: 'Pay with Swish, Wise or PayPal – whatever is easiest for you.',
       step3: 'Add your name to the message so we know who to thank!',
       contribute: 'Contribute',
-      suggested: 'Suggested',
-      anyAmount: 'Any amount',
       backHome: 'Back to the invitation',
       linkFromDetails: 'A few ideas, if you’d like →',
       dialogTitle: 'Contribute towards',
@@ -232,6 +229,7 @@ const translations: Record<Language, Translations> = {
       copy: 'Copy',
       copied: 'Copied!',
       thanks: 'Thank you so much – it means the world to us.',
+      done: 'Done',
       currency: 'Currency',
       swishConverted: 'Swish is paid in SEK; the amount below is converted.',
     },
@@ -324,8 +322,6 @@ const translations: Record<Language, Translations> = {
       step2: 'Paga con Wise, PayPal o Swish – lo que te sea más fácil.',
       step3: '¡Pon tu nombre en el mensaje para saber a quién agradecer!',
       contribute: 'Contribuir',
-      suggested: 'Sugerido',
-      anyAmount: 'Cualquier cantidad',
       backHome: 'Volver a la invitación',
       linkFromDetails: 'Algunas ideas, si quieres →',
       dialogTitle: 'Contribuir para',
@@ -348,6 +344,7 @@ const translations: Record<Language, Translations> = {
       copy: 'Copiar',
       copied: '¡Copiado!',
       thanks: 'Muchísimas gracias – significa el mundo para nosotros.',
+      done: 'Listo',
       currency: 'Moneda',
       swishConverted: 'Swish se paga en coronas suecas (SEK); el monto de abajo ya está convertido.',
     },
@@ -440,8 +437,6 @@ const translations: Record<Language, Translations> = {
       step2: 'Betala med Swish, Wise eller PayPal – det som är enklast för er.',
       step3: 'Skriv ert namn i meddelandet så vi vet vem vi ska tacka!',
       contribute: 'Bidra',
-      suggested: 'Förslag',
-      anyAmount: 'Valfritt belopp',
       backHome: 'Tillbaka till inbjudan',
       linkFromDetails: 'Några idéer, om ni vill →',
       dialogTitle: 'Bidra till',
@@ -464,6 +459,7 @@ const translations: Record<Language, Translations> = {
       copy: 'Kopiera',
       copied: 'Kopierat!',
       thanks: 'Tusen tack – det betyder allt för oss.',
+      done: 'Klar',
       currency: 'Valuta',
       swishConverted: 'Swish betalas i SEK; beloppet nedan är omräknat.',
     },

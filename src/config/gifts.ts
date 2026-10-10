@@ -10,18 +10,18 @@ export type Localized = Record<Lang, string>;
 export const payment = {
   /** Swish (Swedish guests). Phone number without +46, e.g. "0701234567". */
   swish: {
-    number: "0701234567", // TODO replace
+    number: "0706943408", 
     holder: "Jakob Flygare", // name guests will see in the Swish app
   },
   /** Wise (international guests). A wise.com/pay link or Wisetag. */
   wise: {
-    payLink: "https://wise.com/pay/me/pauandjakob", // TODO replace
-    tag: "@pauandjakob", // TODO replace
+    payLink: "https://wise.com/pay/me/jakobf7",
+    tag: "@jakobf7", 
     holder: "Jakob Flygare",
   },
   /** PayPal.Me handle (no @). */
   paypal: {
-    handle: "pauandjakob", // TODO replace
+    handle: "jakobflygare", 
   },
 };
 
@@ -47,17 +47,8 @@ export const defaultCurrency: Record<Lang, Currency> = {
   sv: "SEK",
 };
 
-/** Suggested amounts are rounded to a "nice" step per currency. */
-const roundStep: Record<Currency, number> = { SEK: 50, MXN: 50, USD: 5 };
-
 export const convert = (amount: number, from: Currency, to: Currency): number =>
   from === to ? amount : Math.round((amount / perSek[from]) * perSek[to]);
-
-/** Convert a SEK suggestion into a nicely rounded amount in `to`. */
-export const suggestIn = (amountSek: number, to: Currency): number => {
-  const raw = amountSek * perSek[to];
-  return Math.max(roundStep[to], Math.round(raw / roundStep[to]) * roundStep[to]);
-};
 
 export const formatAmount = (amount: number, currency: Currency): string => {
   switch (currency) {
@@ -81,10 +72,6 @@ export interface GiftItem {
   description: Localized;
   /** Short label used in the Swish/payment message, e.g. "Honeymoon dinner". */
   reference: string;
-  /** Suggested amounts in SEK. Other currencies are derived with `perSek`. */
-  amountsSek: number[];
-  /** Hide the amount chips and let guests pick freely. */
-  openAmount?: boolean;
 }
 
 export const giftItems: GiftItem[] = [
@@ -98,7 +85,6 @@ export const giftItems: GiftItem[] = [
       sv: "Bjud oss på en middag i levande ljus någonstans vi aldrig glömmer.",
     },
     reference: "Honeymoon dinner",
-    amountsSek: [300, 600, 1000],
   },
   {
     id: "honeymoon-night",
@@ -110,7 +96,6 @@ export const giftItems: GiftItem[] = [
       sv: "Hjälp oss med en natt på ett speciellt ställe under resan.",
     },
     reference: "Honeymoon night",
-    amountsSek: [500, 1000, 2000],
   },
   {
     id: "cocktails",
@@ -122,7 +107,6 @@ export const giftItems: GiftItem[] = [
       sv: "En runda drinkar med fötterna i sanden.",
     },
     reference: "Sunset cocktails",
-    amountsSek: [150, 300, 500],
   },
   {
     id: "soda-stream",
@@ -134,7 +118,6 @@ export const giftItems: GiftItem[] = [
       sv: "Vår har sett bättre dagar. Håll bubblorna igång i nya lägenheten.",
     },
     reference: "SodaStream",
-    amountsSek: [200, 500, 1200],
   },
   {
     id: "espresso",
@@ -146,7 +129,6 @@ export const giftItems: GiftItem[] = [
       sv: "Gott kaffe är icke förhandlingsbart i ett mexikansk-svenskt hem.",
     },
     reference: "Espresso machine",
-    amountsSek: [300, 700, 1500],
   },
   {
     id: "plants",
@@ -158,7 +140,6 @@ export const giftItems: GiftItem[] = [
       sv: "Gör vår balkong till en liten djungel (vi lovar att vattna).",
     },
     reference: "Plants",
-    amountsSek: [150, 300, 600],
   },
   {
     id: "dinner-table",
@@ -170,7 +151,6 @@ export const giftItems: GiftItem[] = [
       sv: "Så vi kan bjuda hem er ordentligt när ni hälsar på.",
     },
     reference: "Dinner table",
-    amountsSek: [500, 1000, 2500],
   },
   {
     id: "surprise",
@@ -182,7 +162,5 @@ export const giftItems: GiftItem[] = [
       sv: "Valfritt belopp till det vi behöver mest. Tack!",
     },
     reference: "Wedding gift",
-    amountsSek: [],
-    openAmount: true,
   },
 ];

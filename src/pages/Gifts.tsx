@@ -6,11 +6,11 @@ import LanguageToggle from "@/components/wedding/LanguageToggle";
 import Footer from "@/components/wedding/Footer";
 import GiftCard from "@/components/gifts/GiftCard";
 import ContributeDialog from "@/components/gifts/ContributeDialog";
-import { giftItems, type Currency, type GiftItem } from "@/config/gifts";
+import { giftItems, type GiftItem } from "@/config/gifts";
 
 const Gifts = () => {
   const { t } = useLanguage();
-  const [selected, setSelected] = useState<{ item: GiftItem; amount?: number; currency?: Currency } | null>(null);
+  const [selected, setSelected] = useState<GiftItem | null>(null);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-sage-muted to-ivory">
@@ -49,11 +49,7 @@ const Gifts = () => {
       <section className="pb-16 px-4 md:px-6">
         <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {giftItems.map((item) => (
-            <GiftCard
-              key={item.id}
-              item={item}
-              onContribute={(it, amount, currency) => setSelected({ item: it, amount, currency })}
-            />
+            <GiftCard key={item.id} item={item} onContribute={setSelected} />
           ))}
         </div>
       </section>
@@ -61,10 +57,8 @@ const Gifts = () => {
       <Footer />
 
       <ContributeDialog
-        key={selected ? `${selected.item.id}-${selected.amount ?? "any"}-${selected.currency ?? ""}` : "none"}
-        item={selected?.item ?? null}
-        initialAmount={selected?.amount}
-        initialCurrency={selected?.currency}
+        key={selected?.id ?? "none"}
+        item={selected}
         onClose={() => setSelected(null)}
       />
     </main>

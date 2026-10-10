@@ -22,16 +22,14 @@ import CopyField from "./CopyField";
 
 interface Props {
   item: GiftItem | null;
-  initialAmount?: number;
-  initialCurrency?: Currency;
   onClose: () => void;
 }
 
-const ContributeDialog = ({ item, initialAmount, initialCurrency, onClose }: Props) => {
+const ContributeDialog = ({ item, onClose }: Props) => {
   const { t, language } = useLanguage();
   const [name, setName] = useState("");
-  const [currency, setCurrency] = useState<Currency>(initialCurrency ?? defaultCurrency[language]);
-  const [amount, setAmount] = useState<number | "">(initialAmount ?? "");
+  const [currency, setCurrency] = useState<Currency>(defaultCurrency[language]);
+  const [amount, setAmount] = useState<number | "">("");
 
   // Swedes see Swish first, everyone else sees Wise first.
   const defaultTab = language === "sv" ? "swish" : "wise";
@@ -167,6 +165,13 @@ const ContributeDialog = ({ item, initialAmount, initialCurrency, onClose }: Pro
         </Tabs>
 
         <p className="font-body text-sm text-center text-charcoal/60 italic pt-1">{t.gifts.thanks}</p>
+        <Button
+          type="button"
+          onClick={onClose}
+          className="w-full bg-charcoal text-ivory hover:bg-charcoal/90 font-sans uppercase tracking-wider"
+        >
+          {t.gifts.done}
+        </Button>
       </DialogContent>
     </Dialog>
   );

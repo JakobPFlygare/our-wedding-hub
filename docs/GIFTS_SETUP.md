@@ -12,12 +12,12 @@ Swish / Wise / PayPal history.
 
 - `payment` – Swish number, Wise pay link + Wisetag, PayPal.Me handle. All
   values are currently **placeholders marked `TODO`**.
-- `perSek` / `defaultCurrency` – rough SEK→MXN/USD rates and which currency
+- `perSek` / `defaultCurrency` – rough SEK→MXN/USD rates (used when a guest switches currency in the dialog) and which currency
   each language starts with (sv → SEK, es → MXN, en → USD). Guests can switch
   currency in the dialog; Swish always converts to SEK.
 - `giftItems` – the list of things to contribute towards, with trilingual
-  title/description, a short `reference` used in the payment message, and
-  suggested amounts in SEK (shown converted to the guest's currency).
+  title/description and a short `reference` used in the payment message.
+  Guests choose the amount themselves (no suggested amounts).
 
 Page copy (intro, button labels, help texts) is in the `gifts` block of
 `src/contexts/LanguageContext.tsx`, in all three languages. The gifts card on
