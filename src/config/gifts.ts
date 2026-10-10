@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
-// Gift contributions: ONE place to edit payment details and the list of
-// things guests can contribute towards. Nothing here is secret; every value
-// is shown to guests on the /gifts page.
+// Gift contributions: ONE place to edit payment details, currencies and the
+// list of things guests can contribute towards. Nothing here is secret; every
+// value is shown to guests on the /gifts page.
 // ---------------------------------------------------------------------------
 
 export type Lang = "en" | "es" | "sv";
@@ -19,29 +19,69 @@ export const payment = {
     tag: "@pauandjakob", // TODO replace
     holder: "Jakob Flygare",
   },
-  /** Mexican bank account for SPEI transfer. */
-  bankMx: {
-    holder: "Paulina Apellido", // TODO replace
-    bank: "BBVA", // TODO replace
-    clabe: "012345678901234567", // TODO replace (18 digits)
-  },
   /** PayPal.Me handle (no @). */
   paypal: {
     handle: "pauandjakob", // TODO replace
   },
 };
 
-/** Rough SEK→MXN rate used only to show equivalent suggested amounts. */
-export const MXN_PER_SEK = 1.9;
+// ---------------------------------------------------------------------------
+// Currencies. Amounts in the gift list are in SEK; the other currencies are
+// derived with these rough rates (only used for suggested amounts).
+// ---------------------------------------------------------------------------
+
+export type Currency = "SEK" | "MXN" | "USD";
+export const currencies: Currency[] = ["SEK", "MXN", "USD"];
+
+/** How many units of each currency 1 SEK buys. Update occasionally. */
+export const perSek: Record<Currency, number> = {
+  SEK: 1,
+  MXN: 1.9,
+  USD: 0.1,
+};
+
+/** Which currency each language starts with. */
+export const defaultCurrency: Record<Lang, Currency> = {
+  en: "USD",
+  es: "MXN",
+  sv: "SEK",
+};
+
+/** Suggested amounts are rounded to a "nice" step per currency. */
+const roundStep: Record<Currency, number> = { SEK: 50, MXN: 50, USD: 5 };
+
+export const convert = (amount: number, from: Currency, to: Currency): number =>
+  from === to ? amount : Math.round((amount / perSek[from]) * perSek[to]);
+
+/** Convert a SEK suggestion into a nicely rounded amount in `to`. */
+export const suggestIn = (amountSek: number, to: Currency): number => {
+  const raw = amountSek * perSek[to];
+  return Math.max(roundStep[to], Math.round(raw / roundStep[to]) * roundStep[to]);
+};
+
+export const formatAmount = (amount: number, currency: Currency): string => {
+  switch (currency) {
+    case "SEK":
+      return `${amount.toLocaleString("sv-SE")} kr`;
+    case "MXN":
+      return `$${amount.toLocaleString("es-MX")} MXN`;
+    case "USD":
+      return `$${amount.toLocaleString("en-US")} USD`;
+  }
+};
+
+// ---------------------------------------------------------------------------
+// Gift list
+// ---------------------------------------------------------------------------
 
 export interface GiftItem {
   id: string;
   emoji: string;
   title: Localized;
   description: Localized;
-  /** Short label used in the Swish/transfer message, e.g. "Honeymoon dinner". */
+  /** Short label used in the Swish/payment message, e.g. "Honeymoon dinner". */
   reference: string;
-  /** Suggested amounts in SEK. MXN is derived with MXN_PER_SEK. */
+  /** Suggested amounts in SEK. Other currencies are derived with `perSek`. */
   amountsSek: number[];
   /** Hide the amount chips and let guests pick freely. */
   openAmount?: boolean;

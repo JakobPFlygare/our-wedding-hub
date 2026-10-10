@@ -102,7 +102,6 @@ interface Translations {
     message: string;
     swishTab: string;
     wiseTab: string;
-    bankTab: string;
     paypalTab: string;
     swishHelp: string;
     swishScan: string;
@@ -110,17 +109,13 @@ interface Translations {
     swishNumber: string;
     wiseHelp: string;
     openWise: string;
-    bankHelp: string;
-    holder: string;
-    bank: string;
-    clabe: string;
-    concept: string;
     paypalHelp: string;
     openPaypal: string;
     copy: string;
     copied: string;
     thanks: string;
-    approx: string;
+    currency: string;
+    swishConverted: string;
   };
 }
 
@@ -154,7 +149,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: "We believe guests will enjoy the wedding more if they are able to attend childfree. However, we realize this is simply not possible for some and children are of course welcome. Let us know if you are bringing a kid so we can plan accordingly with the menu etc.",
       childrenMexicanNote: '',
       giftsTitle: 'Wedding Gifts',
-      giftsDescription: "Your presence is the greatest gift we could ask for. We kindly ask that you don't bring physical presents – our suitcases simply won't fit them for the journey home!",
+      giftsDescription: "We truly don't expect anything – having you there is all we wish for. If you'd still like to give something, we've put together a few things you can contribute to instead of bringing a present (our suitcases will thank you).",
     },
     location: {
       subtitle: 'The Venue',
@@ -210,13 +205,13 @@ const translations: Record<Language, Translations> = {
       intro: "Your presence is the greatest gift. If you'd still like to give something, we'd love a contribution towards one of these – a fun way to give without filling our suitcases.",
       howItWorks: 'How it works',
       step1: 'Pick something you like below.',
-      step2: 'Pay with Swish, Wise, bank transfer or PayPal – whatever is easiest for you.',
+      step2: 'Pay with Swish, Wise or PayPal – whatever is easiest for you.',
       step3: 'Add your name to the message so we know who to thank!',
       contribute: 'Contribute',
       suggested: 'Suggested',
       anyAmount: 'Any amount',
       backHome: 'Back to the invitation',
-      linkFromDetails: 'See how you can contribute →',
+      linkFromDetails: 'A few ideas, if you’d like →',
       dialogTitle: 'Contribute towards',
       yourName: 'Your name',
       yourNamePlaceholder: 'So we know who to thank',
@@ -225,7 +220,6 @@ const translations: Record<Language, Translations> = {
       message: 'Payment message',
       swishTab: 'Swish',
       wiseTab: 'Wise',
-      bankTab: 'Bank (MX)',
       paypalTab: 'PayPal',
       swishHelp: 'For guests with a Swedish bank. Scan the code with the Swish app, or tap the button on your phone.',
       swishScan: 'Scan with Swish',
@@ -233,17 +227,13 @@ const translations: Record<Language, Translations> = {
       swishNumber: 'Swish number',
       wiseHelp: 'Pay by card or bank transfer in your own currency – no Wise account needed.',
       openWise: 'Pay with Wise',
-      bankHelp: 'SPEI transfer from any Mexican bank. Please add the message as the transfer concept.',
-      holder: 'Account holder',
-      bank: 'Bank',
-      clabe: 'CLABE',
-      concept: 'Concept',
       paypalHelp: 'Pay with your PayPal balance or a card.',
       openPaypal: 'Pay with PayPal',
       copy: 'Copy',
       copied: 'Copied!',
       thanks: 'Thank you so much – it means the world to us.',
-      approx: 'approx.',
+      currency: 'Currency',
+      swishConverted: 'Swish is paid in SEK; the amount below is converted.',
     },
   },
   es: {
@@ -275,7 +265,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: 'Creemos que los invitados disfrutarán más de la boda si pueden asistir sin niños. Sin embargo, entendemos que esto no es posible para todos y los niños son bienvenidos.',
       childrenMexicanNote: '',
       giftsTitle: 'Regalos de Boda',
-      giftsDescription: 'Tu presencia es el mejor regalo que podríamos pedir. Te pedimos que no traigas regalos físicos – ¡nuestras maletas no tendrán espacio para el viaje de regreso!',
+      giftsDescription: 'De verdad no esperamos nada – tenerte ahí es todo lo que deseamos. Si aun así quieres darnos algo, armamos una lista de cosas a las que puedes contribuir en lugar de traer un regalo (nuestras maletas lo agradecerán).',
     },
     location: {
       subtitle: 'El Lugar',
@@ -331,13 +321,13 @@ const translations: Record<Language, Translations> = {
       intro: 'Tu presencia es el mejor regalo. Si aun así quieres darnos algo, nos encantaría una contribución para alguna de estas cosas – una forma divertida de regalar sin llenar nuestras maletas.',
       howItWorks: 'Cómo funciona',
       step1: 'Elige algo que te guste de la lista.',
-      step2: 'Paga con Wise, transferencia bancaria, PayPal o Swish – lo que te sea más fácil.',
+      step2: 'Paga con Wise, PayPal o Swish – lo que te sea más fácil.',
       step3: '¡Pon tu nombre en el mensaje para saber a quién agradecer!',
       contribute: 'Contribuir',
       suggested: 'Sugerido',
       anyAmount: 'Cualquier cantidad',
       backHome: 'Volver a la invitación',
-      linkFromDetails: 'Mira cómo puedes contribuir →',
+      linkFromDetails: 'Algunas ideas, si quieres →',
       dialogTitle: 'Contribuir para',
       yourName: 'Tu nombre',
       yourNamePlaceholder: 'Para saber a quién agradecer',
@@ -346,7 +336,6 @@ const translations: Record<Language, Translations> = {
       message: 'Mensaje del pago',
       swishTab: 'Swish',
       wiseTab: 'Wise',
-      bankTab: 'Banco (MX)',
       paypalTab: 'PayPal',
       swishHelp: 'Para invitados con banco sueco. Escanea el código con la app de Swish o toca el botón desde tu celular.',
       swishScan: 'Escanea con Swish',
@@ -354,17 +343,13 @@ const translations: Record<Language, Translations> = {
       swishNumber: 'Número de Swish',
       wiseHelp: 'Paga con tarjeta o transferencia en pesos – no necesitas cuenta de Wise.',
       openWise: 'Pagar con Wise',
-      bankHelp: 'Transferencia SPEI desde cualquier banco mexicano. Por favor usa el mensaje como concepto.',
-      holder: 'Titular',
-      bank: 'Banco',
-      clabe: 'CLABE',
-      concept: 'Concepto',
       paypalHelp: 'Paga con tu saldo de PayPal o con tarjeta.',
       openPaypal: 'Pagar con PayPal',
       copy: 'Copiar',
       copied: '¡Copiado!',
       thanks: 'Muchísimas gracias – significa el mundo para nosotros.',
-      approx: 'aprox.',
+      currency: 'Moneda',
+      swishConverted: 'Swish se paga en coronas suecas (SEK); el monto de abajo ya está convertido.',
     },
   },
   sv: {
@@ -396,7 +381,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna. Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
       childrenMexicanNote: '',
       giftsTitle: 'Bröllopspresenter',
-      giftsDescription: 'Er närvaro är den bästa presenten vi kan önska oss. Vi ber er att inte ta med fysiska presenter – våra resväskor har helt enkelt inte plats för dem på hemresan!',
+      giftsDescription: 'Vi förväntar oss verkligen ingenting – att ni är där är allt vi önskar. Vill ni ändå ge något har vi samlat några saker ni kan bidra till i stället för en present (våra resväskor tackar).',
     },
     location: {
       subtitle: 'Platsen',
@@ -452,13 +437,13 @@ const translations: Record<Language, Translations> = {
       intro: 'Er närvaro är den finaste presenten. Vill ni ändå ge något blir vi jätteglada för ett bidrag till något av det här – ett roligt sätt att ge utan att fylla våra resväskor.',
       howItWorks: 'Så funkar det',
       step1: 'Välj något ni gillar nedan.',
-      step2: 'Betala med Swish, Wise, banköverföring eller PayPal – det som är enklast för er.',
+      step2: 'Betala med Swish, Wise eller PayPal – det som är enklast för er.',
       step3: 'Skriv ert namn i meddelandet så vi vet vem vi ska tacka!',
       contribute: 'Bidra',
       suggested: 'Förslag',
       anyAmount: 'Valfritt belopp',
       backHome: 'Tillbaka till inbjudan',
-      linkFromDetails: 'Se hur ni kan bidra →',
+      linkFromDetails: 'Några idéer, om ni vill →',
       dialogTitle: 'Bidra till',
       yourName: 'Ert namn',
       yourNamePlaceholder: 'Så vi vet vem vi ska tacka',
@@ -467,7 +452,6 @@ const translations: Record<Language, Translations> = {
       message: 'Meddelande',
       swishTab: 'Swish',
       wiseTab: 'Wise',
-      bankTab: 'Bank (MX)',
       paypalTab: 'PayPal',
       swishHelp: 'Skanna koden med Swish-appen, eller tryck på knappen om du är på mobilen.',
       swishScan: 'Skanna med Swish',
@@ -475,17 +459,13 @@ const translations: Record<Language, Translations> = {
       swishNumber: 'Swishnummer',
       wiseHelp: 'Betala med kort eller banköverföring i valfri valuta – inget Wise-konto behövs.',
       openWise: 'Betala med Wise',
-      bankHelp: 'SPEI-överföring från en mexikansk bank. Ange meddelandet som "concepto".',
-      holder: 'Kontoinnehavare',
-      bank: 'Bank',
-      clabe: 'CLABE',
-      concept: 'Concepto',
       paypalHelp: 'Betala med PayPal-saldo eller kort.',
       openPaypal: 'Betala med PayPal',
       copy: 'Kopiera',
       copied: 'Kopierat!',
       thanks: 'Tusen tack – det betyder allt för oss.',
-      approx: 'ca',
+      currency: 'Valuta',
+      swishConverted: 'Swish betalas i SEK; beloppet nedan är omräknat.',
     },
   },
 };

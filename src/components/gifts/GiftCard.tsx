@@ -1,19 +1,14 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { MXN_PER_SEK, type GiftItem } from "@/config/gifts";
+import { defaultCurrency, formatAmount, suggestIn, type Currency, type GiftItem } from "@/config/gifts";
 
 interface Props {
   item: GiftItem;
-  onContribute: (item: GiftItem, amountSek?: number) => void;
+  onContribute: (item: GiftItem, amount?: number, currency?: Currency) => void;
 }
 
 const GiftCard = ({ item, onContribute }: Props) => {
   const { t, language } = useLanguage();
-  const showMxn = language === "es";
-
-  const fmt = (sek: number) =>
-    showMxn
-      ? `$${(Math.round((sek * MXN_PER_SEK) / 50) * 50).toLocaleString("es-MX")} MXN`
-      : `${sek.toLocaleString("sv-SE")} kr`;
+  const currency = defaultCurrency[language];
 
   return (
     <div className="group flex flex-col bg-ivory/80 backdrop-blur-sm rounded-xl p-5 shadow-soft border border-sage-light/20 hover:shadow-elevated transition-shadow">
@@ -27,21 +22,24 @@ const GiftCard = ({ item, onContribute }: Props) => {
         </p>
         {!item.openAmount && (
           <div className="flex flex-wrap gap-2 mb-3">
-            {item.amountsSek.map((sek) => (
-              <button
-                key={sek}
-                type="button"
-                onClick={() => onContribute(item, sek)}
-                className="font-sans text-xs px-3 py-1.5 rounded-full border border-sage/40 text-charcoal hover:bg-sage hover:text-ivory hover:border-sage transition-colors"
-              >
-                {fmt(sek)}
-              </button>
-            ))}
+            {item.amountsSek.map((sek) => {
+              const amount = suggestIn(sek, currency);
+              return (
+                <button
+                  key={sek}
+                  type="button"
+                  onClick={() => onContribute(item, amount, currency)}
+                  className="font-sans text-xs px-3 py-1.5 rounded-full border border-sage/40 text-charcoal hover:bg-sage hover:text-ivory hover:border-sage transition-colors"
+                >
+                  {formatAmount(amount, currency)}
+                </button>
+              );
+            })}
           </div>
         )}
         <button
           type="button"
-          onClick={() => onContribute(item)}
+          onClick={() => onContribute(item, undefined, currency)}
           className="w-full font-sans text-sm uppercase tracking-wider py-2.5 rounded-lg bg-charcoal text-ivory hover:bg-charcoal/90 transition-colors"
         >
           {t.gifts.contribute}

@@ -3,26 +3,35 @@ import { QRCodeSVG } from "qrcode.react";
 import { ExternalLink, Smartphone } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { payment, MXN_PER_SEK, type GiftItem } from "@/config/gifts";
+import {
+  payment,
+  currencies,
+  convert,
+  defaultCurrency,
+  formatAmount,
+  type Currency,
+  type GiftItem,
+} from "@/config/gifts";
 import { swishDeepLink, swishQrPayload, isMobile } from "@/lib/swish";
 import CopyField from "./CopyField";
 
 interface Props {
   item: GiftItem | null;
-  initialAmountSek?: number;
+  initialAmount?: number;
+  initialCurrency?: Currency;
   onClose: () => void;
 }
 
-const roundMxn = (sek: number) => Math.round((sek * MXN_PER_SEK) / 50) * 50;
-
-const ContributeDialog = ({ item, initialAmountSek, onClose }: Props) => {
+const ContributeDialog = ({ item, initialAmount, initialCurrency, onClose }: Props) => {
   const { t, language } = useLanguage();
   const [name, setName] = useState("");
-  const [amountSek, setAmountSek] = useState<number | "">(initialAmountSek ?? "");
+  const [currency, setCurrency] = useState<Currency>(initialCurrency ?? defaultCurrency[language]);
+  const [amount, setAmount] = useState<number | "">(initialAmount ?? "");
 
   // Swedes see Swish first, everyone else sees Wise first.
   const defaultTab = language === "sv" ? "swish" : "wise";
@@ -32,11 +41,17 @@ const ContributeDialog = ({ item, initialAmountSek, onClose }: Props) => {
     return name.trim() ? `${item.reference} - ${name.trim()}` : item.reference;
   }, [item, name]);
 
-  const amountMxn = amountSek === "" ? "" : roundMxn(amountSek);
+  // Switching currency converts whatever is in the box so the value stays comparable.
+  const changeCurrency = (next: Currency) => {
+    if (amount !== "") setAmount(convert(amount, currency, next));
+    setCurrency(next);
+  };
 
   if (!item) return null;
 
-  const paypalUrl = `https://paypal.me/${payment.paypal.handle}${amountMxn === "" ? "" : `/${amountMxn}MXN`}`;
+  // Swish only takes SEK.
+  const amountSek = amount === "" ? "" : convert(amount, currency, "SEK");
+  const paypalUrl = `https://paypal.me/${payment.paypal.handle}${amount === "" ? "" : `/${amount}${currency}`}`;
 
   return (
     <Dialog open onOpenChange={(open) => !open && onClose()}>
@@ -63,37 +78,48 @@ const ContributeDialog = ({ item, initialAmountSek, onClose }: Props) => {
             />
           </div>
           <div>
-            <Label htmlFor="gift-amount" className="font-sans text-xs text-charcoal/70">{t.gifts.amount} (SEK)</Label>
+            <Label htmlFor="gift-amount" className="font-sans text-xs text-charcoal/70">{t.gifts.amount}</Label>
             <Input
               id="gift-amount"
               type="number"
               inputMode="numeric"
               min={0}
-              value={amountSek}
-              onChange={(e) => setAmountSek(e.target.value === "" ? "" : Math.max(0, Number(e.target.value)))}
+              value={amount}
+              onChange={(e) => setAmount(e.target.value === "" ? "" : Math.max(0, Number(e.target.value)))}
               placeholder={t.gifts.amountPlaceholder}
               className="bg-white/70"
             />
           </div>
           <div>
-            <Label className="font-sans text-xs text-charcoal/70">{t.gifts.approx} MXN</Label>
-            <div className="h-10 flex items-center px-3 rounded-md border border-input bg-white/40 text-sm font-body text-charcoal/70">
-              {amountMxn === "" ? "–" : `$${amountMxn.toLocaleString("es-MX")}`}
-            </div>
+            <Label htmlFor="gift-currency" className="font-sans text-xs text-charcoal/70">{t.gifts.currency}</Label>
+            <Select value={currency} onValueChange={(v) => changeCurrency(v as Currency)}>
+              <SelectTrigger id="gift-currency" className="bg-white/70">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {currencies.map((c) => (
+                  <SelectItem key={c} value={c}>{c}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
         </div>
 
         <Tabs defaultValue={defaultTab} className="mt-2">
-          <TabsList className="grid grid-cols-4 w-full bg-sage-muted">
+          <TabsList className="grid grid-cols-3 w-full bg-sage-muted">
             <TabsTrigger value="swish">{t.gifts.swishTab}</TabsTrigger>
             <TabsTrigger value="wise">{t.gifts.wiseTab}</TabsTrigger>
-            <TabsTrigger value="bank">{t.gifts.bankTab}</TabsTrigger>
             <TabsTrigger value="paypal">{t.gifts.paypalTab}</TabsTrigger>
           </TabsList>
 
           {/* Swish */}
           <TabsContent value="swish" className="space-y-3">
             <p className="font-body text-sm text-charcoal/70">{t.gifts.swishHelp}</p>
+            {currency !== "SEK" && amountSek !== "" && (
+              <p className="font-body text-sm text-charcoal/70">
+                {t.gifts.swishConverted} <strong className="text-charcoal">{formatAmount(amountSek, "SEK")}</strong>
+              </p>
+            )}
             <div className="flex flex-col items-center gap-2 py-2">
               <div className="bg-white p-3 rounded-xl shadow-soft">
                 <QRCodeSVG value={swishQrPayload(payment.swish.number, amountSek, message)} size={168} level="M" />
@@ -125,21 +151,13 @@ const ContributeDialog = ({ item, initialAmountSek, onClose }: Props) => {
             <CopyField label={t.gifts.message} value={message} />
           </TabsContent>
 
-          {/* Mexican bank (SPEI) */}
-          <TabsContent value="bank" className="space-y-3">
-            <p className="font-body text-sm text-charcoal/70">{t.gifts.bankHelp}</p>
-            <CopyField label={t.gifts.holder} value={payment.bankMx.holder} />
-            <CopyField label={t.gifts.bank} value={payment.bankMx.bank} />
-            <CopyField label={t.gifts.clabe} value={payment.bankMx.clabe} mono />
-            <CopyField label={t.gifts.concept} value={message} />
-          </TabsContent>
-
           {/* PayPal */}
           <TabsContent value="paypal" className="space-y-3">
             <p className="font-body text-sm text-charcoal/70">{t.gifts.paypalHelp}</p>
             <Button asChild className="w-full bg-[#0070ba] text-white hover:bg-[#005ea6] font-sans font-semibold">
               <a href={paypalUrl} target="_blank" rel="noopener noreferrer">
                 {t.gifts.openPaypal}
+                {amount !== "" && <span className="ml-1 opacity-80">· {formatAmount(amount, currency)}</span>}
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
             </Button>
