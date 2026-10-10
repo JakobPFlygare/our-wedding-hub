@@ -101,6 +101,7 @@ const ContributeDialog = ({ item, onClose }: Props) => {
               </SelectContent>
             </Select>
           </div>
+          <p className="col-span-2 font-body text-sm text-sage leading-snug">{t.gifts.chipIn}</p>
         </div>
 
         <Tabs defaultValue={defaultTab} className="mt-2">

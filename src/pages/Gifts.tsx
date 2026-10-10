@@ -29,6 +29,7 @@ const Gifts = () => {
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">{t.gifts.subtitle}</p>
           <h1 className="font-display text-3xl md:text-5xl text-charcoal mb-5">{t.gifts.title}</h1>
           <p className="font-body text-base md:text-lg text-charcoal/75 leading-relaxed">{t.gifts.intro}</p>
+          <p className="font-body text-base md:text-lg text-sage leading-relaxed mt-3">{t.gifts.chipIn}</p>
         </div>
 
         <div className="max-w-3xl mx-auto mt-8 bg-ivory/60 backdrop-blur-sm rounded-xl p-5 shadow-soft">
