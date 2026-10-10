@@ -122,7 +122,7 @@ export const giftItems: GiftItem[] = [
   {
     id: "wine-fridge",
     emoji: "🍷",
-    title: { en: "A wine fridge for the new apartment", es: "Una cava para el nuevo depa", sv: "Vinkyl till nya lägenheten" },
+    title: { en: "A wine fridge", es: "Una cava para vinos", sv: "Vinkyl" },
     description: {
       en: "So the good bottles are always at the right temperature when you visit.",
       es: "Para que las buenas botellas siempre estén a la temperatura perfecta cuando nos visites.",
