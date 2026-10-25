@@ -60,21 +60,6 @@ interface Translations {
     weather: string;
     weatherDescription: string;
   };
-  music: {
-    subtitle: string;
-    title: string;
-    description: string;
-    artistPlaceholder: string;
-    songPlaceholder: string;
-    addSong: string;
-    added: string;
-    success: string;
-    thankYou: string;
-    error: string;
-    fillBoth: string;
-    tryAgain: string;
-    hint: string;
-  };
   footer: {
     celebrate: string;
     madeWith: string;
@@ -84,14 +69,11 @@ interface Translations {
     title: string;
     intro: string;
     contact: string;
-    text: string;
-    whatsapp: string;
   };
   activities: {
     subtitle: string;
     title: string;
     intro: string;
-    datesTbd: string;
     signupTitle: string;
     signupHint: string;
     yourName: string;
@@ -177,7 +159,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: "We believe guests will enjoy the wedding more if they are able to attend childfree. However, we realize this is simply not possible for some and children are of course welcome. Let us know if you are bringing a kid so we can plan accordingly with the menu etc.",
       childrenMexicanNote: '',
       giftsTitle: 'Wedding Gifts',
-      giftsDescription: "We truly don't expect anything – having you there is all we wish for. If you'd still like to give something, we've put together a few things you can contribute to instead of bringing a present (our suitcases will thank you).",
+      giftsDescription: "Your presence is the greatest gift we could ask for. We kindly ask that you don't bring physical presents – our suitcases simply won't fit them for the journey home!",
     },
     location: {
       subtitle: 'The Venue',
@@ -201,21 +183,6 @@ const translations: Record<Language, Translations> = {
       weather: 'January Weather',
       weatherDescription: 'Cuernavaca enjoys pleasant spring-like weather year-round. January evenings can be cool, so consider bringing a light jacket or shawl.',
     },
-    music: {
-      subtitle: 'Help Us Create the Playlist',
-      title: 'Song Requests',
-      description: 'What songs will get you on the dance floor? Let us know your favorites and we\'ll do our best to play them!',
-      artistPlaceholder: 'Artist name',
-      songPlaceholder: 'Song title',
-      addSong: 'Add Song',
-      added: 'Added!',
-      success: 'Song Added',
-      thankYou: 'Thanks for your music suggestion!',
-      error: 'Error',
-      fillBoth: 'Please fill in both artist and song name.',
-      tryAgain: 'Something went wrong. Please try again.',
-      hint: 'Add as many songs as you like!',
-    },
     footer: {
       celebrate: "We can't wait to celebrate with you!",
       madeWith: 'Made with love',
@@ -223,16 +190,13 @@ const translations: Record<Language, Translations> = {
     toastmasters: {
       subtitle: 'Meet the',
       title: 'Toastmasters',
-      intro: 'Jesper and Dhamar are running the show on the day. If you have a speech, a song or a little surprise in mind, let them know in advance so they can fit it into the evening. We’re keeping the programme short and sweet, so please reach out early – they will do their best to make room.',
+      intro: 'Jesper and Dhamar are running the day. Planning a speech or a surprise? Let them know early – we’re keeping the programme short.',
       contact: 'Get in touch',
-      text: 'Text',
-      whatsapp: 'WhatsApp',
     },
     activities: {
       subtitle: 'Make a trip of it',
       title: 'Activities',
-      intro: 'If you’re coming from afar, why not stay a few days? We’re planning some outings around the wedding and would love for you to join. Tick what you’d be interested in and we’ll get back with details.',
-      datesTbd: 'Dates and times to be confirmed',
+      intro: 'We’re planning a few activities for anyone who’d like to meet up before the wedding. If you’re interested, let us know and we’ll set dates and details later.',
       signupTitle: 'I’m interested in…',
       signupHint: 'No commitment – this just helps us plan.',
       yourName: 'Your name',
@@ -316,7 +280,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: 'Creemos que los invitados disfrutarán más de la boda si pueden asistir sin niños. Sin embargo, entendemos que esto no es posible para todos y los niños son bienvenidos.',
       childrenMexicanNote: '',
       giftsTitle: 'Regalos de Boda',
-      giftsDescription: 'De verdad no esperamos nada – tenerte ahí es todo lo que deseamos. Si aun así quieres darnos algo, armamos una lista de cosas a las que puedes contribuir en lugar de traer un regalo (nuestras maletas lo agradecerán).',
+      giftsDescription: 'Tu presencia es el mejor regalo que podríamos pedir. Te pedimos que no traigas regalos físicos – ¡nuestras maletas no tendrán espacio para el viaje de regreso!',
     },
     location: {
       subtitle: 'El Lugar',
@@ -340,21 +304,6 @@ const translations: Record<Language, Translations> = {
       weather: 'Clima en Enero',
       weatherDescription: 'Cuernavaca disfruta de un clima primaveral agradable todo el año. Las noches de enero pueden ser frescas, así que considera traer una chaqueta ligera o chal.',
     },
-    music: {
-      subtitle: 'Ayúdanos a Crear la Playlist',
-      title: 'Canciones',
-      description: '¿Qué canciones te harán bailar? ¡Cuéntanos tus favoritas y haremos lo posible por ponerlas!',
-      artistPlaceholder: 'Nombre del artista',
-      songPlaceholder: 'Título de la canción',
-      addSong: 'Agregar',
-      added: '¡Agregada!',
-      success: 'Canción Agregada',
-      thankYou: '¡Gracias por tu sugerencia musical!',
-      error: 'Error',
-      fillBoth: 'Por favor completa el nombre del artista y la canción.',
-      tryAgain: 'Algo salió mal. Por favor intenta de nuevo.',
-      hint: '¡Agrega tantas canciones como quieras!',
-    },
     footer: {
       celebrate: '¡Estamos emocionados de celebrar contigo!',
       madeWith: 'Hecho con amor',
@@ -362,16 +311,13 @@ const translations: Record<Language, Translations> = {
     toastmasters: {
       subtitle: 'Conoce a los',
       title: 'Maestros de ceremonia',
-      intro: 'Jesper y Dhamar llevarán el programa de la noche. Si tienes en mente un discurso, una canción o una pequeña sorpresa, avísales con tiempo para que puedan acomodarlo. Queremos un programa corto y ameno, así que escríbeles pronto – harán lo posible por hacerle espacio.',
+      intro: 'Jesper y Dhamar llevan el programa. ¿Planeas un discurso o una sorpresa? Avísales con tiempo – queremos un programa corto.',
       contact: 'Contacto',
-      text: 'Mensaje',
-      whatsapp: 'WhatsApp',
     },
     activities: {
       subtitle: 'Aprovecha el viaje',
       title: 'Actividades',
-      intro: 'Si vienes de lejos, ¿por qué no quedarte unos días? Estamos planeando algunas salidas alrededor de la boda y nos encantaría que te unieras. Marca lo que te interese y te contactamos con los detalles.',
-      datesTbd: 'Fechas y horarios por confirmar',
+      intro: 'Estamos planeando algunas actividades para quienes quieran reunirse antes de la boda. Si te interesa, avísanos y más adelante fijamos fechas y detalles.',
       signupTitle: 'Me interesa…',
       signupHint: 'Sin compromiso – solo nos ayuda a planear.',
       yourName: 'Tu nombre',
@@ -455,7 +401,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna. Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
       childrenMexicanNote: '',
       giftsTitle: 'Bröllopspresenter',
-      giftsDescription: 'Vi förväntar oss verkligen ingenting – att ni är där är allt vi önskar. Vill ni ändå ge något har vi samlat några saker ni kan bidra till i stället för en present (våra resväskor tackar).',
+      giftsDescription: 'Er närvaro är den bästa presenten vi kan önska oss. Vi ber er att inte ta med fysiska presenter – våra resväskor har helt enkelt inte plats för dem på hemresan!',
     },
     location: {
       subtitle: 'Platsen',
@@ -479,21 +425,6 @@ const translations: Record<Language, Translations> = {
       weather: 'Väder i Januari',
       weatherDescription: 'Cuernavaca har ett behagligt vårliknande klimat året runt. Januarikvällar kan vara svala, så överväg att ta med en lätt jacka eller sjal.',
     },
-    music: {
-      subtitle: 'Hjälp Oss Skapa Spellistan',
-      title: 'Önskelåtar',
-      description: 'Vilka låtar får dig ut på dansgolvet? Berätta dina favoriter så gör vi vårt bästa för att spela dem!',
-      artistPlaceholder: 'Artistnamn',
-      songPlaceholder: 'Låttitel',
-      addSong: 'Lägg Till',
-      added: 'Tillagd!',
-      success: 'Låt Tillagd',
-      thankYou: 'Tack för ditt musikförslag!',
-      error: 'Fel',
-      fillBoth: 'Vänligen fyll i både artist och låtnamn.',
-      tryAgain: 'Något gick fel. Försök igen.',
-      hint: 'Lägg till så många låtar du vill!',
-    },
     footer: {
       celebrate: 'Vi längtar efter att fira med dig!',
       madeWith: 'Gjord med kärlek',
@@ -501,16 +432,13 @@ const translations: Record<Language, Translations> = {
     toastmasters: {
       subtitle: 'Säg hej till våra',
       title: 'Toastmasters',
-      intro: 'Jesper och Dhamar håller i kvällen. Har ni ett tal, en sång eller en liten överraskning på gång – hör av er till dem i god tid så de kan få in det i programmet. Vi vill hålla det kort och gott, så kontakta dem gärna tidigt – de gör sitt bästa för att få plats med allt.',
+      intro: 'Jesper och Dhamar håller i dagen. Planerar ni ett tal eller en överraskning? Säg till i god tid – vi håller programmet kort.',
       contact: 'Kontakt',
-      text: 'SMS',
-      whatsapp: 'WhatsApp',
     },
     activities: {
       subtitle: 'Gör en resa av det',
       title: 'Aktiviteter',
-      intro: 'Kommer ni långväga – stanna gärna några dagar! Vi planerar några utflykter kring bröllopet och vill jättegärna ha med er. Kryssa i vad ni är sugna på så återkommer vi med detaljer.',
-      datesTbd: 'Datum och tider kommer',
+      intro: 'Vi planerar några aktiviteter för er som vill träffas innan bröllopet. Är ni intresserade – säg till, så bestämmer vi datum och detaljer senare.',
       signupTitle: 'Jag är intresserad av…',
       signupHint: 'Inget bindande – det hjälper oss bara att planera.',
       yourName: 'Ert namn',

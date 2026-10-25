@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-lasmananitas.jpg";
 import Countdown from "./Countdown";
@@ -48,22 +47,14 @@ const HeroSection = () => {
             </dl>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-sage-light flex flex-wrap items-center justify-between gap-4">
+          <div className="mt-8 pt-6 border-t border-sage-light flex flex-wrap items-end justify-between gap-5">
             <Countdown />
-            <div className="flex gap-2">
-              <button
-                onClick={() => scrollTo("news")}
-                className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-charcoal text-ivory hover:bg-charcoal/90 transition-colors"
-              >
-                {t.nav.news}
-              </button>
-              <Link
-                to="/gifts"
-                className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 border border-charcoal text-charcoal hover:bg-charcoal hover:text-ivory transition-colors"
-              >
-                {t.nav.gifts}
-              </Link>
-            </div>
+            <button
+              onClick={() => scrollTo("news")}
+              className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-charcoal text-ivory hover:bg-charcoal/90 transition-colors"
+            >
+              {t.nav.news}
+            </button>
           </div>
         </div>
 

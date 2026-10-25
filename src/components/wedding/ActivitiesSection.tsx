@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalendarClock, CheckCircle, Send } from "lucide-react";
+import { CheckCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -56,10 +56,6 @@ const ActivitiesSection = () => {
     <section className="py-10 md:py-14 px-4 md:px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeading eyebrow={t.activities.subtitle} title={t.activities.title} intro={t.activities.intro} />
-        <p className="inline-flex items-center gap-1.5 -mt-4 mb-6 font-sans text-[11px] uppercase tracking-[0.14em] text-sage">
-          <CalendarClock className="w-3.5 h-3.5" />
-          {t.activities.datesTbd}
-        </p>
 
         <form onSubmit={handleSubmit} className="bg-card border border-sage-light p-5 md:p-6 md:max-w-3xl">
           <p className="font-sans text-xs uppercase tracking-wider text-sage mb-3">{t.activities.signupTitle}</p>

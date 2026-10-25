@@ -14,7 +14,6 @@ const Navigation = () => {
     { href: "#details", label: t.nav.details },
     { href: "#location", label: t.nav.location },
     { href: "#news", label: t.nav.news, badge: true },
-    { href: "/gifts", label: t.nav.gifts },
   ];
 
   const go = (href: string) => {
