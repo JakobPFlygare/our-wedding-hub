@@ -67,7 +67,7 @@ const ActivitiesSection = () => {
                 <label
                   key={a.id}
                   htmlFor={`act-${a.id}`}
-                  className={`flex items-start gap-3 p-3 md:p-4 cursor-pointer border transition-colors ${
+                  className={`flex items-center gap-4 p-3 md:p-4 cursor-pointer border transition-colors ${
                     on ? "bg-sage/10 border-sage" : "bg-ivory/60 border-sage-light hover:bg-ivory"
                   }`}
                 >
@@ -75,9 +75,14 @@ const ActivitiesSection = () => {
                     id={`act-${a.id}`}
                     checked={on}
                     onCheckedChange={(v) => toggle(a.id, v === true)}
-                    className="mt-1 border-sage data-[state=checked]:bg-sage data-[state=checked]:border-sage"
+                    className="border-sage data-[state=checked]:bg-sage data-[state=checked]:border-sage"
                   />
-                  <span className="text-2xl leading-none mt-0.5" aria-hidden>{a.emoji}</span>
+                  <img
+                    src={a.image}
+                    alt=""
+                    loading="lazy"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shrink-0 -my-1"
+                  />
                   <span className="min-w-0">
                     <span className="block font-display text-lg text-charcoal leading-tight">{a.title[language]}</span>
                     <span className="block font-body text-sm text-muted-foreground leading-snug mt-0.5">

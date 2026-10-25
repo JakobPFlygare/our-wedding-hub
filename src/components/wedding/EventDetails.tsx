@@ -28,8 +28,16 @@ const EventDetails = () => {
           ))}
         </ol>
 
+        {/* Dress code illustration */}
+        <img
+          src="/dress-code.webp"
+          alt="Guests in formal attire: long dresses and suits"
+          loading="lazy"
+          className="w-full max-h-[320px] object-contain object-bottom mt-12"
+        />
+
         {/* Dress code, children, gifts */}
-        <div className="grid md:grid-cols-3 gap-8 md:gap-10 mt-12">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-10 mt-8">
           <div>
             <h3 className="font-display text-xl text-charcoal mb-2">
               {t.dressCode.formal} <span className="text-charcoal/60">· 18–26 °C</span>

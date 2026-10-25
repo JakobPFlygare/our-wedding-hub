@@ -159,7 +159,7 @@ const translations: Record<Language, Translations> = {
     },
     dressCode: {
       formal: 'Formal Attire',
-      formalDescription: 'We invite you to dress in elegant formal attire. Think cocktail dresses, suits, or traditional formal wear. Light fabrics are recommended due to the warm weather.',
+      formalDescription: 'Cocktail dresses, suits or traditional formal wear. Light fabrics – warm days, cool evenings.',
     },
     footer: {
       celebrate: "We can't wait to celebrate with you!",
@@ -267,7 +267,7 @@ const translations: Record<Language, Translations> = {
     },
     dressCode: {
       formal: 'Vestimenta Formal',
-      formalDescription: 'Te invitamos a vestir elegante formal. Piensa en vestidos de cóctel, trajes o vestimenta formal tradicional. Se recomiendan telas ligeras debido al clima cálido.',
+      formalDescription: 'Vestidos de cóctel, trajes o vestimenta formal tradicional. Telas ligeras – días cálidos, noches frescas.',
     },
     footer: {
       celebrate: '¡Estamos emocionados de celebrar contigo!',
@@ -375,7 +375,7 @@ const translations: Record<Language, Translations> = {
     },
     dressCode: {
       formal: 'Formell Klädsel',
-      formalDescription: 'Vi bjuder in dig att klä dig i elegant formell klädsel. Tänk cocktailklänningar, kostymer eller traditionell formell klädsel. Lätta tyger rekommenderas på grund av det varma vädret.',
+      formalDescription: 'Cocktailklänningar, kostymer eller traditionell högtidsdräkt. Lätta tyger – varma dagar, svala kvällar.',
     },
     footer: {
       celebrate: 'Vi längtar efter att fira med dig!',

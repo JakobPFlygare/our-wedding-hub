@@ -43,6 +43,8 @@ export const toastmasters: Toastmaster[] = [
 export interface Activity {
   id: string;
   emoji: string;
+  /** Path under public/, shown as a round thumbnail. */
+  image: string;
   title: Localized;
   description: Localized;
   /** Value sent to the Google Form checkbox question (must match an option there). */
@@ -53,6 +55,7 @@ export const activities: Activity[] = [
   {
     id: "friday-dinner",
     emoji: "🍽️",
+    image: "/activities/friday-dinner.jpg",
     title: { en: "Dinner on Friday, January 8", es: "Cena el viernes 8 de enero", sv: "Middag fredag 8 januari" },
     description: {
       en: "A relaxed dinner at Las Mañanitas the evening before the wedding, for everyone already in town. Each guest covers their own meal.",
@@ -64,6 +67,7 @@ export const activities: Activity[] = [
   {
     id: "shuttle",
     emoji: "🚌",
+    image: "/activities/shuttle.jpg",
     title: { en: "Shuttle bus", es: "Autobús", sv: "Buss" },
     description: {
       en: "Mexico City → Cuernavaca on January 8, back on January 10.",
@@ -75,17 +79,19 @@ export const activities: Activity[] = [
   {
     id: "xochimilco",
     emoji: "🛶",
+    image: "/activities/xochimilco.jpg",
     title: { en: "Trajinera in Xochimilco", es: "Trajinera en Xochimilco", sv: "Trajinera i Xochimilco" },
     description: {
-      en: "A floating party on the canals of Mexico City – colourful boats, mariachi and micheladas.",
-      es: "Fiesta flotante por los canales de la ciudad – trajineras de colores, mariachi y micheladas.",
-      sv: "Flytande fest på kanalerna i Mexico City – färgglada båtar, mariachi och micheladas.",
+      en: "A floating party on the canals of Mexico City – colourful boats and micheladas.",
+      es: "Fiesta flotante por los canales de la ciudad – trajineras de colores y micheladas.",
+      sv: "Flytande fest på kanalerna i Mexico City – färgglada båtar och micheladas.",
     },
     formValue: "Xochimilco",
   },
   {
     id: "teotihuacan",
     emoji: "🏛️",
+    image: "/activities/teotihuacan.jpg",
     title: { en: "Teotihuacán", es: "Teotihuacán", sv: "Teotihuacán" },
     description: {
       en: "Climb the Pyramids of the Sun and the Moon, an hour outside the city.",
@@ -97,6 +103,7 @@ export const activities: Activity[] = [
   {
     id: "tepoztlan",
     emoji: "⛰️",
+    image: "/activities/tepoztlan.jpg",
     title: { en: "Tepoztlán", es: "Tepoztlán", sv: "Tepoztlán" },
     description: {
       en: "Magical mountain town near Cuernavaca – hike up to the Tepozteco and eat your way through the market.",
