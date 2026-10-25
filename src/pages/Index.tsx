@@ -7,7 +7,6 @@ import EventDetails from "@/components/wedding/EventDetails";
 import LocationSection from "@/components/wedding/LocationSection";
 import ToastmastersSection from "@/components/wedding/ToastmastersSection";
 import ActivitiesSection from "@/components/wedding/ActivitiesSection";
-import GiftsNote from "@/components/wedding/GiftsNote";
 import Footer from "@/components/wedding/Footer";
 import EnvelopeIntro from "@/components/wedding/EnvelopeIntro";
 
@@ -59,7 +58,6 @@ const Index = () => {
           <ToastmastersSection />
           <ActivitiesSection />
         </div>
-        <GiftsNote />
         <PhotoGallery />
         <Footer />
       </main>

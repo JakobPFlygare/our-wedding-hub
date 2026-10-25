@@ -30,7 +30,7 @@ const ToastmastersSection = () => {
   return (
     <section className="py-10 md:py-14 px-4 md:px-6">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading eyebrow={t.toastmasters.subtitle} title={t.toastmasters.title} intro={t.toastmasters.intro} />
+        <SectionHeading eyebrow={t.toastmasters.subtitle} title={t.toastmasters.title} />
 
         <div className="grid sm:grid-cols-2 gap-4 md:gap-6 md:max-w-3xl">
           {toastmasters.map((person) => (

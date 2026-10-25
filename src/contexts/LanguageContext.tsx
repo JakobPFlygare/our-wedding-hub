@@ -11,7 +11,6 @@ interface Translations {
     gifts: string;
   };
   hero: {
-    together: string;
     gettingMarried: string;
     daysToGo: string;
     when: string;
@@ -47,18 +46,14 @@ interface Translations {
     parkingTitle: string;
     parkingInfo: string;
     accommodationTitle: string;
-    venueHotelInfo: string;
-    guestDiscount: string;
-    otherHotels: string;
-    moreOptionsSoon: string;
+    shuttleSignup: string;
+    stayInfo: string;
   };
   dressCode: {
     subtitle: string;
     title: string;
     formal: string;
     formalDescription: string;
-    weather: string;
-    weatherDescription: string;
   };
   footer: {
     celebrate: string;
@@ -67,7 +62,6 @@ interface Translations {
   toastmasters: {
     subtitle: string;
     title: string;
-    intro: string;
     contact: string;
   };
   activities: {
@@ -134,7 +128,6 @@ const translations: Record<Language, Translations> = {
       gifts: 'Gifts',
     },
     hero: {
-      together: 'Together with their families',
       gettingMarried: 'Are getting married',
       daysToGo: 'days to go',
       when: 'When',
@@ -166,22 +159,18 @@ const translations: Record<Language, Translations> = {
       title: 'Location',
       transportTitle: 'Getting There',
       shuttleTitle: 'Shuttle Bus',
-      shuttleInfo: 'We will provide a shuttle bus from Mexico City for guests without a car. Details will be shared closer to the date.',
+      shuttleInfo: 'Shuttle bus from Mexico City to Cuernavaca on January 8, returning from Cuernavaca to Mexico City on January 10.',
+      shuttleSignup: 'Sign up here if you’re interested.',
+      stayInfo: 'We recommend staying in Cuernavaca centre. Getting back to Mexico City straight after the wedding isn’t a good idea, so plan to stay nearby.',
       parkingTitle: 'By Car',
       parkingInfo: 'Valet parking is available at the venue for guests arriving by car.',
       accommodationTitle: 'Where to Stay',
-      venueHotelInfo: 'Stay at the wedding venue itself for ultimate convenience.',
-      guestDiscount: 'Guest Discount Available',
-      otherHotels: 'Other Options',
-      moreOptionsSoon: 'More hotel recommendations coming soon...',
     },
     dressCode: {
       subtitle: 'What to Wear',
       title: 'Dress Code',
       formal: 'Formal Attire',
       formalDescription: 'We invite you to dress in elegant formal attire. Think cocktail dresses, suits, or traditional formal wear. Light fabrics are recommended due to the warm weather.',
-      weather: 'January Weather',
-      weatherDescription: 'Cuernavaca enjoys pleasant spring-like weather year-round. January evenings can be cool, so consider bringing a light jacket or shawl.',
     },
     footer: {
       celebrate: "We can't wait to celebrate with you!",
@@ -190,7 +179,6 @@ const translations: Record<Language, Translations> = {
     toastmasters: {
       subtitle: 'Meet the',
       title: 'Toastmasters',
-      intro: 'Jesper and Dhamar are running the day. Planning a speech or a surprise? Let them know early – we’re keeping the programme short.',
       contact: 'Get in touch',
     },
     activities: {
@@ -255,7 +243,6 @@ const translations: Record<Language, Translations> = {
       gifts: 'Regalos',
     },
     hero: {
-      together: 'Junto con sus familias',
       gettingMarried: 'Se casan',
       daysToGo: 'días para la boda',
       when: 'Cuándo',
@@ -287,22 +274,18 @@ const translations: Record<Language, Translations> = {
       title: 'Ubicación',
       transportTitle: 'Cómo Llegar',
       shuttleTitle: 'Autobús',
-      shuttleInfo: 'Proporcionaremos un autobús desde la Ciudad de México para invitados sin coche. Los detalles se compartirán más cerca de la fecha.',
+      shuttleInfo: 'Autobús desde la Ciudad de México a Cuernavaca el 8 de enero, y de regreso de Cuernavaca a la Ciudad de México el 10 de enero.',
+      shuttleSignup: 'Regístrate aquí si te interesa.',
+      stayInfo: 'Recomendamos hospedarse en el centro de Cuernavaca. No es buena idea volver a la Ciudad de México justo después de la boda, así que mejor quédate cerca.',
       parkingTitle: 'En Coche',
       parkingInfo: 'El lugar cuenta con servicio de valet parking para invitados que lleguen en coche.',
       accommodationTitle: 'Dónde Hospedarse',
-      venueHotelInfo: 'Hospédate en el mismo lugar de la boda para mayor comodidad.',
-      guestDiscount: 'Descuento para Invitados',
-      otherHotels: 'Otras Opciones',
-      moreOptionsSoon: 'Más recomendaciones de hoteles próximamente...',
     },
     dressCode: {
       subtitle: 'Qué Vestir',
       title: 'Código de Vestimenta',
       formal: 'Vestimenta Formal',
       formalDescription: 'Te invitamos a vestir elegante formal. Piensa en vestidos de cóctel, trajes o vestimenta formal tradicional. Se recomiendan telas ligeras debido al clima cálido.',
-      weather: 'Clima en Enero',
-      weatherDescription: 'Cuernavaca disfruta de un clima primaveral agradable todo el año. Las noches de enero pueden ser frescas, así que considera traer una chaqueta ligera o chal.',
     },
     footer: {
       celebrate: '¡Estamos emocionados de celebrar contigo!',
@@ -311,7 +294,6 @@ const translations: Record<Language, Translations> = {
     toastmasters: {
       subtitle: 'Conoce a los',
       title: 'Maestros de ceremonia',
-      intro: 'Jesper y Dhamar llevan el programa. ¿Planeas un discurso o una sorpresa? Avísales con tiempo – queremos un programa corto.',
       contact: 'Contacto',
     },
     activities: {
@@ -376,7 +358,6 @@ const translations: Record<Language, Translations> = {
       gifts: 'Presenter',
     },
     hero: {
-      together: 'Tillsammans med sina familjer',
       gettingMarried: 'Gifter sig',
       daysToGo: 'dagar kvar',
       when: 'När',
@@ -408,22 +389,18 @@ const translations: Record<Language, Translations> = {
       title: 'Plats',
       transportTitle: 'Hitta Dit',
       shuttleTitle: 'Shuttlebuss',
-      shuttleInfo: 'Vi tillhandahåller en shuttlebuss från Mexico City för gäster utan bil. Detaljer kommer närmare datumet.',
+      shuttleInfo: 'Buss från Mexico City till Cuernavaca den 8 januari, och tillbaka från Cuernavaca till Mexico City den 10 januari.',
+      shuttleSignup: 'Anmäl er här om ni är intresserade.',
+      stayInfo: 'Vi rekommenderar att bo i centrala Cuernavaca. Det är ingen bra idé att åka tillbaka till Mexico City direkt efter bröllopet, så bo gärna i närheten.',
       parkingTitle: 'Med Bil',
       parkingInfo: 'Valet parking finns tillgängligt på platsen för gäster som kommer med bil.',
       accommodationTitle: 'Boende',
-      venueHotelInfo: 'Bo på bröllopslokalen för ultimat bekvämlighet.',
-      guestDiscount: 'Gästrabatt Tillgänglig',
-      otherHotels: 'Andra Alternativ',
-      moreOptionsSoon: 'Fler hotellrekommendationer kommer snart...',
     },
     dressCode: {
       subtitle: 'Klädkod',
       title: 'Klädsel',
       formal: 'Formell Klädsel',
       formalDescription: 'Vi bjuder in dig att klä dig i elegant formell klädsel. Tänk cocktailklänningar, kostymer eller traditionell formell klädsel. Lätta tyger rekommenderas på grund av det varma vädret.',
-      weather: 'Väder i Januari',
-      weatherDescription: 'Cuernavaca har ett behagligt vårliknande klimat året runt. Januarikvällar kan vara svala, så överväg att ta med en lätt jacka eller sjal.',
     },
     footer: {
       celebrate: 'Vi längtar efter att fira med dig!',
@@ -432,7 +409,6 @@ const translations: Record<Language, Translations> = {
     toastmasters: {
       subtitle: 'Säg hej till våra',
       title: 'Toastmasters',
-      intro: 'Jesper och Dhamar håller i dagen. Planerar ni ett tal eller en överraskning? Säg till i god tid – vi håller programmet kort.',
       contact: 'Kontakt',
     },
     activities: {

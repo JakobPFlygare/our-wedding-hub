@@ -51,6 +51,17 @@ export interface Activity {
 
 export const activities: Activity[] = [
   {
+    id: "shuttle",
+    emoji: "🚌",
+    title: { en: "Shuttle bus", es: "Autobús", sv: "Buss" },
+    description: {
+      en: "Mexico City → Cuernavaca on January 8, back on January 10.",
+      es: "Ciudad de México → Cuernavaca el 8 de enero, regreso el 10 de enero.",
+      sv: "Mexico City → Cuernavaca den 8 januari, tillbaka den 10 januari.",
+    },
+    formValue: "Shuttle",
+  },
+  {
     id: "xochimilco",
     emoji: "🛶",
     title: { en: "Trajinera in Xochimilco", es: "Trajinera en Xochimilco", sv: "Trajinera i Xochimilco" },

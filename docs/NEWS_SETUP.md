@@ -19,14 +19,14 @@ page copy is in the `toastmasters` and `activities` blocks of
 
 - The list is `activities` (emoji, trilingual title + description, and
   `formValue`, the exact option text in the Google Form).
-- Dates/times are not shown yet; the page says "to be confirmed". When known,
-  add them to the description text.
+- Dates/times are not shown yet. When known, add them to the description
+  text. The shuttle bus is also an option here so guests can sign up for it.
 
 ### Sign-up form (Google Form, same trick as the song requests)
 
 1. Create a Google Form with two questions:
    - Short answer: "Name"
-   - Checkboxes: "Activities" with the options `Xochimilco`, `Teotihuacan`,
+   - Checkboxes: "Activities" with the options `Shuttle`, `Xochimilco`, `Teotihuacan`,
      `Tepoztlan` (must match `formValue` exactly).
 2. Open the form's public link, view page source, and find:
    - the `formResponse` action URL

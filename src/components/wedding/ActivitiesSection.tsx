@@ -53,7 +53,7 @@ const ActivitiesSection = () => {
   };
 
   return (
-    <section className="py-10 md:py-14 px-4 md:px-6">
+    <section id="activities" className="py-10 md:py-14 px-4 md:px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeading eyebrow={t.activities.subtitle} title={t.activities.title} intro={t.activities.intro} />
 

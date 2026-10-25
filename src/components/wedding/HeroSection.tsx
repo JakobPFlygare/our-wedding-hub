@@ -15,7 +15,6 @@ const HeroSection = () => {
         {/* The card */}
         <div className="bg-card border border-sage-light p-7 md:p-10 flex flex-col justify-between">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold mb-5">{t.hero.together}</p>
             <h1 className="font-display text-5xl md:text-7xl leading-[0.95] text-charcoal mb-3">
               Pau <span className="italic text-sage">&amp;</span> Jakob
             </h1>

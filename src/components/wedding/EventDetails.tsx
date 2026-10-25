@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "./SectionHeading";
 
@@ -27,17 +28,13 @@ const EventDetails = () => {
           ))}
         </ol>
 
-        {/* Dress code, weather, children */}
+        {/* Dress code, children, gifts */}
         <div className="grid md:grid-cols-3 gap-8 md:gap-10 mt-12">
           <div>
-            <h3 className="font-display text-xl text-charcoal mb-2">{t.dressCode.formal}</h3>
-            <p className="font-body text-sm text-charcoal/75 leading-relaxed">{t.dressCode.formalDescription}</p>
-          </div>
-          <div>
             <h3 className="font-display text-xl text-charcoal mb-2">
-              {t.dressCode.weather} <span className="text-charcoal/60">· 18–26 °C</span>
+              {t.dressCode.formal} <span className="text-charcoal/60">· 18–26 °C</span>
             </h3>
-            <p className="font-body text-sm text-charcoal/75 leading-relaxed">{t.dressCode.weatherDescription}</p>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed">{t.dressCode.formalDescription}</p>
           </div>
           <div>
             <h3 className="font-display text-xl text-charcoal mb-2">{t.details.childrenTitle}</h3>
@@ -45,6 +42,16 @@ const EventDetails = () => {
             {t.details.childrenMexicanNote && (
               <p className="font-body text-sm text-charcoal/60 leading-relaxed mt-2">{t.details.childrenMexicanNote}</p>
             )}
+          </div>
+          <div>
+            <h3 className="font-display text-xl text-charcoal mb-2">{t.details.giftsTitle}</h3>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed">{t.details.giftsDescription}</p>
+            <Link
+              to="/gifts"
+              className="inline-block mt-2 font-body text-sm text-charcoal/55 underline underline-offset-4 decoration-sage-light hover:text-charcoal hover:decoration-sage"
+            >
+              {t.gifts.linkFromDetails}
+            </Link>
           </div>
         </div>
       </div>

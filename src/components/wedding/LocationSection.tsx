@@ -29,7 +29,14 @@ const LocationSection = () => {
           <div>
             <h3 className="font-display text-xl text-charcoal mb-2">{t.location.transportTitle}</h3>
             <p className="font-body text-sm text-charcoal/75 leading-relaxed">
-              <span className="text-charcoal">{t.location.shuttleTitle}.</span> {t.location.shuttleInfo}
+              <span className="text-charcoal">{t.location.shuttleTitle}.</span> {t.location.shuttleInfo}{" "}
+              <button
+                type="button"
+                onClick={() => document.getElementById("activities")?.scrollIntoView({ behavior: "smooth" })}
+                className="text-charcoal underline underline-offset-4 decoration-sage-light hover:decoration-sage"
+              >
+                {t.location.shuttleSignup}
+              </button>
             </p>
             <p className="font-body text-sm text-charcoal/75 leading-relaxed mt-2">
               <span className="text-charcoal">{t.location.parkingTitle}.</span> {t.location.parkingInfo}
@@ -37,12 +44,7 @@ const LocationSection = () => {
           </div>
           <div>
             <h3 className="font-display text-xl text-charcoal mb-2">{t.location.accommodationTitle}</h3>
-            <p className="font-body text-sm text-charcoal/75 leading-relaxed">
-              {t.location.venueHotelInfo} <span className="text-sage">{t.location.guestDiscount}.</span>
-            </p>
-            <p className="font-body text-sm text-charcoal/60 leading-relaxed mt-2">
-              <span className="text-charcoal/75">{t.location.otherHotels}.</span> {t.location.moreOptionsSoon}
-            </p>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed">{t.location.stayInfo}</p>
           </div>
         </div>
       </div>
