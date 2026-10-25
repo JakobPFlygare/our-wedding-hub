@@ -58,12 +58,12 @@ const HeroSection = () => {
         </div>
 
         {/* The photo */}
-        <div className="relative min-h-[260px] md:min-h-0">
+        <div className="relative">
           <img
             src={heroImage}
             alt="Las Mañanitas, Cuernavaca"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: "center 60%" }}
+            className="w-full h-auto md:absolute md:inset-0 md:h-full md:object-cover"
+            style={{ objectPosition: "center 50%" }}
           />
         </div>
       </div>
