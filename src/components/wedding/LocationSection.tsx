@@ -10,7 +10,7 @@ const LocationSection = () => {
   return (
     <section className="px-4 md:px-6 py-10 md:py-14">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading eyebrow={t.location.subtitle} title={t.location.title} />
+        <SectionHeading title={t.location.title} />
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-10">
           <div>

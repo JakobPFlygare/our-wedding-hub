@@ -16,7 +16,7 @@ const EventDetails = () => {
   return (
     <section className="px-4 md:px-6 py-10 md:py-14">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading eyebrow={t.details.weddingDetails} title={t.details.schedule} />
+        <SectionHeading title={t.details.schedule} />
 
         {/* Timeline */}
         <ol className="grid grid-cols-2 sm:grid-cols-5 gap-y-6">

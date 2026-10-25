@@ -40,9 +40,8 @@ const PhotoGallery = () => {
   return (
     <section className="py-10 md:py-14">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
-        <div className="border-t border-charcoal/70 pt-5 mb-6 flex items-baseline justify-between gap-4">
+        <div className="border-t border-charcoal/70 pt-5 mb-6">
           <h2 className="font-display text-3xl md:text-4xl text-charcoal leading-tight">{t.gallery.title}</h2>
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold">{t.gallery.subtitle}</p>
         </div>
       </div>
       <div className="overflow-x-auto px-4 md:px-6 pb-3 [scrollbar-width:thin]">

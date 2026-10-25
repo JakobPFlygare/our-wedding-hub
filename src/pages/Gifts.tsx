@@ -15,19 +15,14 @@ const Gifts = () => {
       <Navigation />
       <main className="min-h-screen">
         <section className="px-4 md:px-6 pt-10 md:pt-16 pb-8">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 md:gap-10">
-            <div>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold mb-2">{t.gifts.subtitle}</p>
-              <h1 className="font-display text-4xl md:text-6xl text-charcoal leading-[0.95]">{t.gifts.title}</h1>
-            </div>
-            <div className="md:col-span-2 md:pt-[30px]">
-              <p className="font-body text-sm md:text-base text-charcoal/75 leading-relaxed">{t.gifts.intro}</p>
-              <p className="font-body text-sm md:text-base text-sage leading-relaxed mt-3">{t.gifts.chipIn}</p>
-            </div>
+          <div className="max-w-5xl mx-auto">
+            <h1 className="font-display text-4xl md:text-6xl text-charcoal leading-[0.95]">{t.gifts.title}</h1>
+            <p className="font-body text-base text-charcoal/75 leading-relaxed max-w-[60ch] mt-4">{t.gifts.intro}</p>
+            <p className="font-body text-base text-sage leading-relaxed max-w-[60ch] mt-2">{t.gifts.chipIn}</p>
           </div>
 
           <div className="max-w-5xl mx-auto mt-10 border-t border-charcoal/70 pt-5">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold mb-4">{t.gifts.howItWorks}</p>
+            <h2 className="font-display text-2xl text-charcoal mb-4">{t.gifts.howItWorks}</h2>
             <ol className="grid sm:grid-cols-3 gap-4 md:gap-10">
               {[t.gifts.step1, t.gifts.step2, t.gifts.step3].map((step, i) => (
                 <li key={i} className="flex gap-3">

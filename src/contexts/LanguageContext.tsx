@@ -19,7 +19,6 @@ interface Translations {
     openMaps: string;
   };
   gallery: {
-    subtitle: string;
     title: string;
     comingSoon: string;
   };
@@ -38,7 +37,6 @@ interface Translations {
     giftsDescription: string;
   };
   location: {
-    subtitle: string;
     title: string;
     transportTitle: string;
     shuttleTitle: string;
@@ -50,8 +48,6 @@ interface Translations {
     stayInfo: string;
   };
   dressCode: {
-    subtitle: string;
-    title: string;
     formal: string;
     formalDescription: string;
   };
@@ -60,12 +56,10 @@ interface Translations {
     madeWith: string;
   };
   toastmasters: {
-    subtitle: string;
     title: string;
     contact: string;
   };
   activities: {
-    subtitle: string;
     title: string;
     intro: string;
     signupTitle: string;
@@ -81,7 +75,6 @@ interface Translations {
     tryAgain: string;
   };
   gifts: {
-    subtitle: string;
     title: string;
     intro: string;
     howItWorks: string;
@@ -136,7 +129,6 @@ const translations: Record<Language, Translations> = {
       openMaps: 'Open in Maps',
     },
     gallery: {
-      subtitle: 'Our Story',
       title: 'Moments Together',
       comingSoon: 'Photos coming soon...',
     },
@@ -155,7 +147,6 @@ const translations: Record<Language, Translations> = {
       giftsDescription: "Your presence is the greatest gift we could ask for. We kindly ask that you don't bring physical presents – our suitcases simply won't fit them for the journey home!",
     },
     location: {
-      subtitle: 'The Venue',
       title: 'Location',
       transportTitle: 'Getting There',
       shuttleTitle: 'Shuttle Bus',
@@ -167,8 +158,6 @@ const translations: Record<Language, Translations> = {
       accommodationTitle: 'Where to Stay',
     },
     dressCode: {
-      subtitle: 'What to Wear',
-      title: 'Dress Code',
       formal: 'Formal Attire',
       formalDescription: 'We invite you to dress in elegant formal attire. Think cocktail dresses, suits, or traditional formal wear. Light fabrics are recommended due to the warm weather.',
     },
@@ -177,12 +166,10 @@ const translations: Record<Language, Translations> = {
       madeWith: 'Made with love',
     },
     toastmasters: {
-      subtitle: 'Meet the',
       title: 'Toastmasters',
       contact: 'Get in touch',
     },
     activities: {
-      subtitle: 'Make a trip of it',
       title: 'Activities',
       intro: 'We’re planning a few activities for anyone who’d like to meet up before the wedding. If you’re interested, let us know and we’ll set dates and details later.',
       signupTitle: 'I’m interested in…',
@@ -198,7 +185,6 @@ const translations: Record<Language, Translations> = {
       tryAgain: 'Something went wrong. Please try again.',
     },
     gifts: {
-      subtitle: 'Wedding Gifts',
       title: 'Contribute to Our Adventure',
       intro: "Your presence is the greatest gift. If you'd still like to give something, we'd love a contribution towards one of these – a fun way to give without filling our suitcases.",
       howItWorks: 'How it works',
@@ -251,7 +237,6 @@ const translations: Record<Language, Translations> = {
       openMaps: 'Abrir en Maps',
     },
     gallery: {
-      subtitle: 'Nuestra Historia',
       title: 'Momentos Juntos',
       comingSoon: 'Fotos próximamente...',
     },
@@ -270,7 +255,6 @@ const translations: Record<Language, Translations> = {
       giftsDescription: 'Tu presencia es el mejor regalo que podríamos pedir. Te pedimos que no traigas regalos físicos – ¡nuestras maletas no tendrán espacio para el viaje de regreso!',
     },
     location: {
-      subtitle: 'El Lugar',
       title: 'Ubicación',
       transportTitle: 'Cómo Llegar',
       shuttleTitle: 'Autobús',
@@ -282,8 +266,6 @@ const translations: Record<Language, Translations> = {
       accommodationTitle: 'Dónde Hospedarse',
     },
     dressCode: {
-      subtitle: 'Qué Vestir',
-      title: 'Código de Vestimenta',
       formal: 'Vestimenta Formal',
       formalDescription: 'Te invitamos a vestir elegante formal. Piensa en vestidos de cóctel, trajes o vestimenta formal tradicional. Se recomiendan telas ligeras debido al clima cálido.',
     },
@@ -292,12 +274,10 @@ const translations: Record<Language, Translations> = {
       madeWith: 'Hecho con amor',
     },
     toastmasters: {
-      subtitle: 'Conoce a los',
       title: 'Maestros de ceremonia',
       contact: 'Contacto',
     },
     activities: {
-      subtitle: 'Aprovecha el viaje',
       title: 'Actividades',
       intro: 'Estamos planeando algunas actividades para quienes quieran reunirse antes de la boda. Si te interesa, avísanos y más adelante fijamos fechas y detalles.',
       signupTitle: 'Me interesa…',
@@ -313,7 +293,6 @@ const translations: Record<Language, Translations> = {
       tryAgain: 'Algo salió mal. Inténtalo de nuevo.',
     },
     gifts: {
-      subtitle: 'Regalos de Boda',
       title: 'Contribuye a Nuestra Aventura',
       intro: 'Tu presencia es el mejor regalo. Si aun así quieres darnos algo, nos encantaría una contribución para alguna de estas cosas – una forma divertida de regalar sin llenar nuestras maletas.',
       howItWorks: 'Cómo funciona',
@@ -366,7 +345,6 @@ const translations: Record<Language, Translations> = {
       openMaps: 'Öppna i Maps',
     },
     gallery: {
-      subtitle: 'Vår Historia',
       title: 'Stunder Tillsammans',
       comingSoon: 'Foton kommer snart...',
     },
@@ -385,7 +363,6 @@ const translations: Record<Language, Translations> = {
       giftsDescription: 'Er närvaro är den bästa presenten vi kan önska oss. Vi ber er att inte ta med fysiska presenter – våra resväskor har helt enkelt inte plats för dem på hemresan!',
     },
     location: {
-      subtitle: 'Platsen',
       title: 'Plats',
       transportTitle: 'Hitta Dit',
       shuttleTitle: 'Shuttlebuss',
@@ -397,8 +374,6 @@ const translations: Record<Language, Translations> = {
       accommodationTitle: 'Boende',
     },
     dressCode: {
-      subtitle: 'Klädkod',
-      title: 'Klädsel',
       formal: 'Formell Klädsel',
       formalDescription: 'Vi bjuder in dig att klä dig i elegant formell klädsel. Tänk cocktailklänningar, kostymer eller traditionell formell klädsel. Lätta tyger rekommenderas på grund av det varma vädret.',
     },
@@ -407,12 +382,10 @@ const translations: Record<Language, Translations> = {
       madeWith: 'Gjord med kärlek',
     },
     toastmasters: {
-      subtitle: 'Säg hej till våra',
       title: 'Toastmasters',
       contact: 'Kontakt',
     },
     activities: {
-      subtitle: 'Gör en resa av det',
       title: 'Aktiviteter',
       intro: 'Vi planerar några aktiviteter för er som vill träffas innan bröllopet. Är ni intresserade – säg till, så bestämmer vi datum och detaljer senare.',
       signupTitle: 'Jag är intresserad av…',
@@ -428,7 +401,6 @@ const translations: Record<Language, Translations> = {
       tryAgain: 'Något gick fel. Försök igen.',
     },
     gifts: {
-      subtitle: 'Bröllopspresenter',
       title: 'Bidra till vårt äventyr',
       intro: 'Er närvaro är den finaste presenten. Vill ni ändå ge något blir vi jätteglada för ett bidrag till något av det här – ett roligt sätt att ge utan att fylla våra resväskor.',
       howItWorks: 'Så funkar det',
