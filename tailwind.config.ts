@@ -62,13 +62,6 @@ export default {
           light: "hsl(var(--gold-light))",
         },
         charcoal: "hsl(var(--charcoal))",
-        wash: {
-          sage: "#e4ead8",
-          sky: "#e0e8f0",
-          blush: "#f6e6e9",
-          marigold: "#f7edd5",
-          paper: "#f3ede3",
-        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

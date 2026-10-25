@@ -53,11 +53,11 @@ const ActivitiesSection = () => {
   };
 
   return (
-    <section id="activities" className="bg-wash-blush py-10 md:py-14 px-4 md:px-6">
+    <section id="activities" className="py-10 md:py-14 px-4 md:px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeading title={t.activities.title} intro={t.activities.intro} />
 
-        <form onSubmit={handleSubmit} className="bg-card border border-charcoal/10 p-5 md:p-6 md:w-[calc((100%-5rem)/3*2+2.5rem)]">
+        <form onSubmit={handleSubmit} className="bg-card border border-sage-light p-5 md:p-6 md:w-[calc((100%-5rem)/3*2+2.5rem)]">
           <p className="font-sans text-xs uppercase tracking-wider text-sage mb-3">{t.activities.signupTitle}</p>
 
           <div className="space-y-2">
@@ -68,7 +68,7 @@ const ActivitiesSection = () => {
                   key={a.id}
                   htmlFor={`act-${a.id}`}
                   className={`flex items-center gap-4 p-3 md:p-4 cursor-pointer border transition-colors ${
-                    on ? "bg-wash-sage border-sage" : "bg-wash-paper/60 border-charcoal/10 hover:bg-wash-paper"
+                    on ? "bg-sage/10 border-sage" : "bg-ivory/60 border-sage-light hover:bg-ivory"
                   }`}
                 >
                   <Checkbox
@@ -105,7 +105,7 @@ const ActivitiesSection = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-sage text-ivory hover:bg-sage/90 font-sans uppercase tracking-[0.14em] text-[11px] sm:w-auto"
+              className="bg-charcoal text-ivory hover:bg-charcoal/90 font-sans uppercase tracking-[0.14em] text-[11px] sm:w-auto"
             >
               {submitted ? (
                 <>

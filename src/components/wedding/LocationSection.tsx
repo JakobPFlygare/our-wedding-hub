@@ -8,7 +8,7 @@ const LocationSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-wash-sky px-4 md:px-6 py-10 md:py-14">
+    <section className="px-4 md:px-6 py-10 md:py-14">
       <div className="max-w-5xl mx-auto">
         <SectionHeading title={t.location.title} />
 
@@ -20,7 +20,7 @@ const LocationSection = () => {
               href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 mt-3 font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-sage text-ivory hover:bg-sage/90 transition-colors"
+              className="inline-flex items-center gap-1 mt-3 font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 border border-charcoal text-charcoal hover:bg-charcoal hover:text-ivory transition-colors"
             >
               {t.hero.openMaps}
               <ArrowUpRight className="w-3.5 h-3.5" />
