@@ -26,7 +26,7 @@ page copy is in the `toastmasters` and `activities` blocks of
 
 1. Create a Google Form with two questions:
    - Short answer: "Name"
-   - Checkboxes: "Activities" with the options `Shuttle`, `Xochimilco`, `Teotihuacan`,
+   - Checkboxes: "Activities" with the options `Friday dinner`, `Shuttle`, `Xochimilco`, `Teotihuacan`,
      `Tepoztlan` (must match `formValue` exactly).
 2. Open the form's public link, view page source, and find:
    - the `formResponse` action URL

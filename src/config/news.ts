@@ -51,6 +51,17 @@ export interface Activity {
 
 export const activities: Activity[] = [
   {
+    id: "friday-dinner",
+    emoji: "🍽️",
+    title: { en: "Dinner on Friday, January 8", es: "Cena el viernes 8 de enero", sv: "Middag fredag 8 januari" },
+    description: {
+      en: "A relaxed dinner at Las Mañanitas the evening before the wedding, for everyone already in town. Each guest covers their own meal.",
+      es: "Una cena relajada en Las Mañanitas la noche antes de la boda, para quienes ya estén en la ciudad. Cada quien cubre su propia cena.",
+      sv: "En avslappnad middag på Las Mañanitas kvällen före bröllopet, för alla som redan är på plats. Var och en betalar för sin egen mat.",
+    },
+    formValue: "Friday dinner",
+  },
+  {
     id: "shuttle",
     emoji: "🚌",
     title: { en: "Shuttle bus", es: "Autobús", sv: "Buss" },

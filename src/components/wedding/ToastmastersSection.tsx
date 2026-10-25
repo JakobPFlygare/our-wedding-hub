@@ -32,7 +32,7 @@ const ToastmastersSection = () => {
       <div className="max-w-5xl mx-auto">
         <SectionHeading eyebrow={t.toastmasters.subtitle} title={t.toastmasters.title} />
 
-        <div className="grid sm:grid-cols-2 gap-4 md:gap-6 md:max-w-3xl">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
           {toastmasters.map((person) => (
             <div key={person.name} className="flex items-center gap-5 bg-card border border-sage-light p-5">
               <Portrait person={person} />

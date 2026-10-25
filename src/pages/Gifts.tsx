@@ -15,12 +15,12 @@ const Gifts = () => {
       <Navigation />
       <main className="min-h-screen">
         <section className="px-4 md:px-6 pt-10 md:pt-16 pb-8">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-6 md:gap-10 items-end">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 md:gap-10">
             <div>
               <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold mb-2">{t.gifts.subtitle}</p>
               <h1 className="font-display text-4xl md:text-6xl text-charcoal leading-[0.95]">{t.gifts.title}</h1>
             </div>
-            <div>
+            <div className="md:col-span-2 md:pt-[30px]">
               <p className="font-body text-sm md:text-base text-charcoal/75 leading-relaxed">{t.gifts.intro}</p>
               <p className="font-body text-sm md:text-base text-sage leading-relaxed mt-3">{t.gifts.chipIn}</p>
             </div>

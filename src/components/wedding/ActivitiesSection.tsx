@@ -57,7 +57,7 @@ const ActivitiesSection = () => {
       <div className="max-w-5xl mx-auto">
         <SectionHeading eyebrow={t.activities.subtitle} title={t.activities.title} intro={t.activities.intro} />
 
-        <form onSubmit={handleSubmit} className="bg-card border border-sage-light p-5 md:p-6 md:max-w-3xl">
+        <form onSubmit={handleSubmit} className="bg-card border border-sage-light p-5 md:p-6 md:w-[calc((100%-5rem)/3*2+2.5rem)]">
           <p className="font-sans text-xs uppercase tracking-wider text-sage mb-3">{t.activities.signupTitle}</p>
 
           <div className="space-y-2">
