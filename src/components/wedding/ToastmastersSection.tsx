@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toastmasters, type Toastmaster } from "@/config/news";
 import SectionHeading from "./SectionHeading";
-import Watercolor from "./Watercolor";
 
 const initials = (name: string) =>
   name
@@ -29,14 +28,13 @@ const ToastmastersSection = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section className="relative py-10 md:py-14 px-4 md:px-6 overflow-hidden">
-      <Watercolor palette="bougainvillea" className="absolute -bottom-20 -left-28 w-[340px] md:w-[460px]" opacity={0.4} flip />
-      <div className="relative max-w-5xl mx-auto">
+    <section className="bg-wash-blush pt-10 md:pt-14 pb-4 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto">
         <SectionHeading title={t.toastmasters.title} />
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
           {toastmasters.map((person) => (
-            <div key={person.name} className="flex items-center gap-5 bg-card border border-sage-light p-5">
+            <div key={person.name} className="flex items-center gap-5 bg-card border border-charcoal/10 p-5">
               <Portrait person={person} />
               <div className="min-w-0">
                 <h3 className="font-display text-xl text-charcoal leading-tight">{person.name}</h3>

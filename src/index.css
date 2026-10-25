@@ -132,6 +132,18 @@
     font-family: var(--font-body);
   }
 
+  /* Faint paper grain over everything, like watercolour paper. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.07;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 1 0'/></filter><rect width='240' height='240' filter='url(%23g)'/></svg>");
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }

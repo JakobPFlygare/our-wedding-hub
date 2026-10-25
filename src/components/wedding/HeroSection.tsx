@@ -1,7 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-lasmananitas.jpg";
 import Countdown from "./Countdown";
-import Watercolor from "./Watercolor";
 
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Las+Ma%C3%B1anitas+Cuernavaca";
 
@@ -11,12 +10,10 @@ const HeroSection = () => {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section className="relative px-4 md:px-6 pt-8 md:pt-14 pb-10 md:pb-16 overflow-hidden">
-      <Watercolor palette="sunset" className="absolute -top-16 -left-24 w-[420px] md:w-[560px]" opacity={0.5} />
-      <Watercolor palette="garden" className="absolute -bottom-24 right-[30%] w-[380px] md:w-[520px]" opacity={0.45} flip />
-      <div className="relative max-w-5xl mx-auto grid md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] gap-6 md:gap-10 items-stretch">
+    <section className="bg-wash-marigold px-4 md:px-6 pt-8 md:pt-14 pb-10 md:pb-16">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] gap-6 md:gap-10 items-stretch">
         {/* The card */}
-        <div className="bg-card/90 border border-sage-light p-7 md:p-10 flex flex-col justify-between">
+        <div className="bg-card border border-charcoal/15 p-7 md:p-10 flex flex-col justify-between">
           <div>
             <h1 className="font-display text-5xl md:text-7xl leading-[0.95] text-charcoal mb-3">
               Pau <span className="italic text-sage">&amp;</span> Jakob
@@ -49,11 +46,11 @@ const HeroSection = () => {
             </dl>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-sage-light flex flex-wrap items-end justify-between gap-5">
+          <div className="mt-8 pt-6 border-t border-charcoal/15 flex flex-wrap items-end justify-between gap-5">
             <Countdown />
             <button
               onClick={() => scrollTo("news")}
-              className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-charcoal text-ivory hover:bg-charcoal/90 transition-colors"
+              className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-sage text-ivory hover:bg-sage/90 transition-colors"
             >
               {t.nav.news}
             </button>
