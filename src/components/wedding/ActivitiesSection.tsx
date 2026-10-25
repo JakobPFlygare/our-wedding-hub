@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { activities, activitiesForm } from "@/config/news";
 import SectionHeading from "./SectionHeading";
+import Watercolor from "./Watercolor";
 
 const ActivitiesSection = () => {
   const { t, language } = useLanguage();
@@ -53,8 +54,9 @@ const ActivitiesSection = () => {
   };
 
   return (
-    <section id="activities" className="py-10 md:py-14 px-4 md:px-6">
-      <div className="max-w-5xl mx-auto">
+    <section id="activities" className="relative py-10 md:py-14 px-4 md:px-6 overflow-hidden">
+      <Watercolor palette="garden" className="absolute top-24 -right-32 w-[380px] md:w-[520px]" opacity={0.4} />
+      <div className="relative max-w-5xl mx-auto">
         <SectionHeading title={t.activities.title} intro={t.activities.intro} />
 
         <form onSubmit={handleSubmit} className="bg-card border border-sage-light p-5 md:p-6 md:w-[calc((100%-5rem)/3*2+2.5rem)]">

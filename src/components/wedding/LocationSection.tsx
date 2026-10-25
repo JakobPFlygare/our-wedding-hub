@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "./SectionHeading";
+import Watercolor from "./Watercolor";
 
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Las+Ma%C3%B1anitas+Cuernavaca";
 
@@ -8,8 +9,9 @@ const LocationSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="px-4 md:px-6 py-10 md:py-14">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative px-4 md:px-6 py-10 md:py-14 overflow-hidden">
+      <Watercolor palette="sky" className="absolute -top-10 -right-28 w-[360px] md:w-[480px]" opacity={0.45} />
+      <div className="relative max-w-5xl mx-auto">
         <SectionHeading title={t.location.title} />
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-10">
