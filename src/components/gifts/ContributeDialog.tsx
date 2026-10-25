@@ -19,6 +19,7 @@ import {
 } from "@/config/gifts";
 import { swishDeepLink, swishQrPayload, isMobile } from "@/lib/swish";
 import CopyField from "./CopyField";
+import GiftIcon from "./GiftIcon";
 
 interface Props {
   item: GiftItem | null;
@@ -57,7 +58,7 @@ const ContributeDialog = ({ item, onClose }: Props) => {
         <DialogHeader>
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">{t.gifts.dialogTitle}</p>
           <DialogTitle className="font-display text-2xl text-charcoal">
-            <span className="mr-2">{item.emoji}</span>
+            <GiftIcon id={item.id} className="w-9 h-9 mr-2 align-middle" />
             {item.title[language]}
           </DialogTitle>
           <DialogDescription className="font-body text-charcoal/70">{item.description[language]}</DialogDescription>
