@@ -20,7 +20,7 @@ const LocationSection = () => {
               href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 mt-3 font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 border border-charcoal text-charcoal hover:bg-charcoal hover:text-ivory transition-colors"
+              className="inline-flex items-center gap-1 mt-3 font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 border border-terracotta text-terracotta hover:bg-terracotta hover:text-card transition-colors"
             >
               {t.hero.openMaps}
               <ArrowUpRight className="w-3.5 h-3.5" />

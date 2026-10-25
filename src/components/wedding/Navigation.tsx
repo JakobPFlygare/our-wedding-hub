@@ -33,7 +33,7 @@ const Navigation = () => {
     <header className="sticky top-0 z-40 bg-ivory/90 backdrop-blur-sm border-b border-sage-light/60">
       <div className="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-4">
         <Link to="/" className="font-display text-xl text-charcoal" onClick={() => setIsOpen(false)}>
-          Pau <span className="italic text-sage">&amp;</span> Jakob
+          Pau <span className="italic text-terracotta">&amp;</span> Jakob
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

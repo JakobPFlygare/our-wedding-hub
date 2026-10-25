@@ -62,6 +62,10 @@ export default {
           light: "hsl(var(--gold-light))",
         },
         charcoal: "hsl(var(--charcoal))",
+        terracotta: {
+          DEFAULT: "hsl(var(--terracotta))",
+          dark: "hsl(var(--terracotta-dark))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

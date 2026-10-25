@@ -105,7 +105,7 @@ const ActivitiesSection = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-charcoal text-ivory hover:bg-charcoal/90 font-sans uppercase tracking-[0.14em] text-[11px] sm:w-auto"
+              className="bg-terracotta text-card hover:bg-terracotta-dark font-sans uppercase tracking-[0.14em] text-[11px] sm:w-auto"
             >
               {submitted ? (
                 <>

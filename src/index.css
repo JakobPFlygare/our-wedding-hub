@@ -6,54 +6,56 @@
 
 @layer base {
   :root {
-    --background: 37 40% 93%;
-    --foreground: 30 10% 11%;
+    --background: 38 55% 92%;
+    --foreground: 22 30% 15%;
 
-    --card: 40 45% 97%;
-    --card-foreground: 30 10% 11%;
+    --card: 40 60% 97%;
+    --card-foreground: 22 30% 15%;
 
-    --popover: 40 33% 98%;
-    --popover-foreground: 100 12% 22%;
+    --popover: 40 60% 98%;
+    --popover-foreground: 22 30% 15%;
 
-    --primary: 155 43% 21%;
-    --primary-foreground: 40 33% 98%;
+    --primary: 82 22% 33%;
+    --primary-foreground: 40 60% 97%;
 
-    --secondary: 330 68% 50%;
-    --secondary-foreground: 100 12% 22%;
+    --secondary: 16 58% 47%;
+    --secondary-foreground: 40 60% 97%;
 
-    --muted: 38 30% 89%;
-    --muted-foreground: 30 8% 36%;
+    --muted: 38 40% 88%;
+    --muted-foreground: 24 18% 38%;
 
-    --accent: 155 43% 21%;
-    --accent-foreground: 100 12% 18%;
+    --accent: 82 22% 33%;
+    --accent-foreground: 40 60% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 36 22% 78%;
-    --input: 36 22% 78%;
-    --ring: 155 43% 21%;
+    --border: 34 38% 76%;
+    --input: 34 38% 76%;
+    --ring: 82 22% 33%;
 
     --radius: 0.125rem;
 
     /* Wedding specific tokens */
-    --sage: 155 43% 21%;
-    --sage-light: 36 22% 78%;
-    --sage-muted: 40 45% 97%;
-    --blush: 330 68% 50%;
-    --blush-dark: 330 68% 40%;
-    --ivory: 37 40% 93%;
-    --gold: 30 8% 45%;
-    --gold-light: 36 22% 78%;
-    --charcoal: 30 10% 11%;
+    --sage: 82 22% 33%;
+    --sage-light: 34 38% 76%;
+    --sage-muted: 40 60% 97%;
+    --blush: 16 58% 47%;
+    --blush-dark: 16 58% 38%;
+    --ivory: 38 55% 92%;
+    --gold: 32 48% 40%;
+    --gold-light: 36 45% 70%;
+    --charcoal: 22 30% 15%;
+    --terracotta: 16 58% 47%;
+    --terracotta-dark: 16 58% 38%;
 
     /* Gradients */
     --gradient-hero: none;
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 1px 2px hsl(30 10% 11% / 0.06);
-    --shadow-elevated: 0 10px 30px hsl(30 10% 11% / 0.12);
+    --shadow-soft: 0 1px 2px hsl(22 30% 15% / 0.06);
+    --shadow-elevated: 0 10px 30px hsl(22 30% 15% / 0.12);
 
     /* Typography */
     --font-display: 'Instrument Serif', Georgia, serif;

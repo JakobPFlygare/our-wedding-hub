@@ -16,7 +16,7 @@ const HeroSection = () => {
         <div className="bg-card border border-sage-light p-7 md:p-10 flex flex-col justify-between">
           <div>
             <h1 className="font-display text-5xl md:text-7xl leading-[0.95] text-charcoal mb-3">
-              Pau <span className="italic text-sage">&amp;</span> Jakob
+              Pau <span className="italic text-terracotta">&amp;</span> Jakob
             </h1>
             <p className="font-display italic text-xl md:text-2xl text-charcoal/70 mb-8">{t.hero.gettingMarried}</p>
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
             <Countdown />
             <button
               onClick={() => scrollTo("news")}
-              className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-charcoal text-ivory hover:bg-charcoal/90 transition-colors"
+              className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-terracotta text-card hover:bg-terracotta-dark transition-colors"
             >
               {t.nav.news}
             </button>

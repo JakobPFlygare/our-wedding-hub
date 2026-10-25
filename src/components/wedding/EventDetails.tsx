@@ -21,7 +21,7 @@ const EventDetails = () => {
         {/* Timeline */}
         <ol className="grid grid-cols-2 sm:grid-cols-5 gap-y-6">
           {milestones.map((m) => (
-            <li key={m.titleKey} className="border-l border-charcoal pl-3 pr-4">
+            <li key={m.titleKey} className="border-l border-sage pl-3 pr-4">
               <span className="block font-display text-2xl md:text-3xl text-charcoal leading-none mb-1">{m.time}</span>
               <span className="font-body text-sm text-charcoal/75">{t.details[m.titleKey]}</span>
             </li>

@@ -126,7 +126,7 @@ const ContributeDialog = ({ item, onClose }: Props) => {
               <p className="font-sans text-[11px] uppercase tracking-wider text-sage">{t.gifts.swishScan}</p>
             </div>
             {isMobile() && (
-              <Button asChild className="w-full bg-charcoal text-ivory hover:bg-charcoal/90">
+              <Button asChild className="w-full bg-terracotta text-card hover:bg-terracotta-dark">
                 <a href={swishDeepLink(payment.swish.number, amountSek, message)}>
                   <Smartphone className="w-4 h-4 mr-2" />
                   {t.gifts.openSwish}
@@ -169,7 +169,7 @@ const ContributeDialog = ({ item, onClose }: Props) => {
         <Button
           type="button"
           onClick={onClose}
-          className="w-full bg-charcoal text-ivory hover:bg-charcoal/90 font-sans uppercase tracking-wider"
+          className="w-full bg-terracotta text-card hover:bg-terracotta-dark font-sans uppercase tracking-wider"
         >
           {t.gifts.done}
         </Button>
