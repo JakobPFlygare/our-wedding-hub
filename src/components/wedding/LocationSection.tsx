@@ -1,68 +1,50 @@
-import { Bus } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SectionHeading from "./SectionHeading";
+
+const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Las+Ma%C3%B1anitas+Cuernavaca";
 
 const LocationSection = () => {
   const { t } = useLanguage();
-  
-  const embedMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d963000!2d-100.0971273!3d18.9670186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdde4be03ddc85%3A0x320d8cf523d46538!2sLas%20Ma%C3%B1anitas!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx";
 
   return (
-    <section className="py-10 md:py-14 px-4 md:px-6 bg-gradient-hero">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-6 md:mb-8">
-          <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">
-            {t.location.subtitle}
-          </p>
-          <h2 className="font-display text-2xl md:text-3xl text-charcoal">
-            {t.location.title}
-          </h2>
-        </div>
+    <section className="px-4 md:px-6 py-10 md:py-14">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeading eyebrow={t.location.subtitle} title={t.location.title} />
 
-        {/* Map Embed */}
-        <div className="mb-6 rounded-lg overflow-hidden shadow-elevated">
-          <iframe
-            src={embedMapUrl}
-            width="100%"
-            height="250"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Las Mañanitas Location"
-            className="w-full md:h-[300px]"
-          />
-        </div>
-
-        {/* Transportation Section */}
-        <div className="bg-ivory/80 backdrop-blur-sm rounded-lg p-5 md:p-6 shadow-soft mb-4 md:mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Bus className="w-5 h-5 text-sage" />
-            <h3 className="font-display text-lg md:text-xl text-charcoal">
-              {t.location.transportTitle}
-            </h3>
+        <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+          <div>
+            <h3 className="font-display text-xl text-charcoal mb-2">Las Mañanitas</h3>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed">Ricardo Linares 107, Centro, Cuernavaca, Morelos</p>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 mt-3 font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 border border-charcoal text-charcoal hover:bg-charcoal hover:text-ivory transition-colors"
+            >
+              {t.hero.openMaps}
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
           </div>
-          
-          <div className="space-y-3">
-            <div className="border-l-2 border-sage pl-3">
-              <h4 className="font-sans text-xs uppercase tracking-wider text-sage mb-1">
-                {t.location.shuttleTitle}
-              </h4>
-              <p className="font-body text-sm text-muted-foreground">
-                {t.location.shuttleInfo}
-              </p>
-            </div>
-            
-            <div className="border-l-2 border-sage pl-3">
-              <h4 className="font-sans text-xs uppercase tracking-wider text-sage mb-1">
-                {t.location.parkingTitle}
-              </h4>
-              <p className="font-body text-sm text-muted-foreground">
-                {t.location.parkingInfo}
-              </p>
-            </div>
+          <div>
+            <h3 className="font-display text-xl text-charcoal mb-2">{t.location.transportTitle}</h3>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed">
+              <span className="text-charcoal">{t.location.shuttleTitle}.</span> {t.location.shuttleInfo}
+            </p>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed mt-2">
+              <span className="text-charcoal">{t.location.parkingTitle}.</span> {t.location.parkingInfo}
+            </p>
+          </div>
+          <div>
+            <h3 className="font-display text-xl text-charcoal mb-2">{t.location.accommodationTitle}</h3>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed">
+              {t.location.venueHotelInfo} <span className="text-sage">{t.location.guestDiscount}.</span>
+            </p>
+            <p className="font-body text-sm text-charcoal/60 leading-relaxed mt-2">
+              <span className="text-charcoal/75">{t.location.otherHotels}.</span> {t.location.moreOptionsSoon}
+            </p>
           </div>
         </div>
-
       </div>
     </section>
   );

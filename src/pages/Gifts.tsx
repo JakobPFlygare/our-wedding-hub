@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageToggle from "@/components/wedding/LanguageToggle";
+import Navigation from "@/components/wedding/Navigation";
 import Footer from "@/components/wedding/Footer";
 import GiftCard from "@/components/gifts/GiftCard";
 import ContributeDialog from "@/components/gifts/ContributeDialog";
@@ -13,56 +11,47 @@ const Gifts = () => {
   const [selected, setSelected] = useState<GiftItem | null>(null);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sage-muted to-ivory">
-      <LanguageToggle />
+    <>
+      <Navigation />
+      <main className="min-h-screen">
+        <section className="px-4 md:px-6 pt-10 md:pt-16 pb-8">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-6 md:gap-10 items-end">
+            <div>
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold mb-2">{t.gifts.subtitle}</p>
+              <h1 className="font-display text-4xl md:text-6xl text-charcoal leading-[0.95]">{t.gifts.title}</h1>
+            </div>
+            <div>
+              <p className="font-body text-sm md:text-base text-charcoal/75 leading-relaxed">{t.gifts.intro}</p>
+              <p className="font-body text-sm md:text-base text-sage leading-relaxed mt-3">{t.gifts.chipIn}</p>
+            </div>
+          </div>
 
-      <Link
-        to="/"
-        className="fixed top-4 left-4 z-50 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-ivory/90 backdrop-blur-sm shadow-soft border border-sage-light/30 font-sans text-xs uppercase tracking-wider text-charcoal hover:shadow-elevated transition-all"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        <span className="hidden sm:inline">{t.gifts.backHome}</span>
-      </Link>
+          <div className="max-w-5xl mx-auto mt-10 border-t border-charcoal/70 pt-5">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold mb-4">{t.gifts.howItWorks}</p>
+            <ol className="grid sm:grid-cols-3 gap-4 md:gap-10">
+              {[t.gifts.step1, t.gifts.step2, t.gifts.step3].map((step, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="font-display text-2xl text-sage leading-none">{i + 1}</span>
+                  <span className="font-body text-sm text-charcoal/75 leading-snug">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
 
-      <section className="pt-24 pb-10 px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">{t.gifts.subtitle}</p>
-          <h1 className="font-display text-3xl md:text-5xl text-charcoal mb-5">{t.gifts.title}</h1>
-          <p className="font-body text-base md:text-lg text-charcoal/75 leading-relaxed">{t.gifts.intro}</p>
-          <p className="font-body text-base md:text-lg text-sage leading-relaxed mt-3">{t.gifts.chipIn}</p>
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-8 bg-ivory/60 backdrop-blur-sm rounded-xl p-5 shadow-soft">
-          <p className="font-sans text-xs uppercase tracking-wider text-sage mb-3 text-center">{t.gifts.howItWorks}</p>
-          <ol className="grid sm:grid-cols-3 gap-4 text-center">
-            {[t.gifts.step1, t.gifts.step2, t.gifts.step3].map((step, i) => (
-              <li key={i} className="flex flex-col items-center gap-2">
-                <span className="w-7 h-7 rounded-full bg-gold/80 text-ivory font-sans text-xs flex items-center justify-center">
-                  {i + 1}
-                </span>
-                <span className="font-body text-sm text-charcoal/75 leading-snug">{step}</span>
-              </li>
+        <section className="px-4 md:px-6 pb-16">
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {giftItems.map((item) => (
+              <GiftCard key={item.id} item={item} onContribute={setSelected} />
             ))}
-          </ol>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section className="pb-16 px-4 md:px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {giftItems.map((item) => (
-            <GiftCard key={item.id} item={item} onContribute={setSelected} />
-          ))}
-        </div>
-      </section>
+        <Footer />
+      </main>
 
-      <Footer />
-
-      <ContributeDialog
-        key={selected?.id ?? "none"}
-        item={selected}
-        onClose={() => setSelected(null)}
-      />
-    </main>
+      <ContributeDialog key={selected?.id ?? "none"} item={selected} onClose={() => setSelected(null)} />
+    </>
   );
 };
 

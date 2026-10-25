@@ -1,53 +1,80 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-lasmananitas.jpg";
 import Countdown from "./Countdown";
 
+const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Las+Ma%C3%B1anitas+Cuernavaca";
+
 const HeroSection = () => {
   const { t } = useLanguage();
 
+  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
-      {/* Overlay - slightly darker for better contrast */}
-      <div className="absolute inset-0 bg-charcoal/30" />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 md:px-6 py-16 md:py-20">
-        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-ivory drop-shadow-lg mb-4 opacity-0 animate-fade-in-up">
-          Pau & Jakob
-        </h1>
-        
-        <div className="flex items-center justify-center gap-2 md:gap-4 mb-6 md:mb-8 opacity-0 animate-fade-in-up animation-delay-400">
-          <div className="h-px w-8 md:w-16 bg-ivory/70" />
-          <p className="font-body text-lg md:text-xl lg:text-2xl text-ivory/90 italic drop-shadow-md">
-            {t.hero.gettingMarried}
-          </p>
-          <div className="h-px w-8 md:w-16 bg-ivory/70" />
+    <section className="px-4 md:px-6 pt-8 md:pt-14 pb-10 md:pb-16">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] gap-6 md:gap-10 items-stretch">
+        {/* The card */}
+        <div className="bg-card border border-sage-light p-7 md:p-10 flex flex-col justify-between">
+          <div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold mb-5">{t.hero.together}</p>
+            <h1 className="font-display text-5xl md:text-7xl leading-[0.95] text-charcoal mb-3">
+              Pau <span className="italic text-sage">&amp;</span> Jakob
+            </h1>
+            <p className="font-display italic text-xl md:text-2xl text-charcoal/70 mb-8">{t.hero.gettingMarried}</p>
+
+            <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 font-body text-sm md:text-base text-charcoal">
+              <dt className="font-sans text-[10px] uppercase tracking-[0.16em] text-gold pt-1">{t.hero.when}</dt>
+              <dd>
+                <span className="font-display text-lg md:text-xl">{t.details.weddingDetails}</span>
+                <span className="text-charcoal/70"> · 15:00</span>
+              </dd>
+              <dt className="font-sans text-[10px] uppercase tracking-[0.16em] text-gold pt-1">{t.hero.where}</dt>
+              <dd>
+                Las Mañanitas, Cuernavaca
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 underline underline-offset-4 decoration-sage-light hover:decoration-sage text-charcoal/80"
+                >
+                  {t.hero.openMaps}
+                </a>
+              </dd>
+              <dt className="font-sans text-[10px] uppercase tracking-[0.16em] text-gold pt-1">{t.hero.dress}</dt>
+              <dd>
+                {t.dressCode.formal}
+                <span className="text-charcoal/70"> · 18–26 °C</span>
+              </dd>
+            </dl>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-sage-light flex flex-wrap items-center justify-between gap-4">
+            <Countdown />
+            <div className="flex gap-2">
+              <button
+                onClick={() => scrollTo("news")}
+                className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 bg-charcoal text-ivory hover:bg-charcoal/90 transition-colors"
+              >
+                {t.nav.news}
+              </button>
+              <Link
+                to="/gifts"
+                className="font-sans text-[11px] uppercase tracking-[0.14em] px-4 py-2 border border-charcoal text-charcoal hover:bg-charcoal hover:text-ivory transition-colors"
+              >
+                {t.nav.gifts}
+              </Link>
+            </div>
+          </div>
         </div>
-        
-        <p className="font-display text-xl md:text-2xl lg:text-3xl text-ivory drop-shadow-md mb-2 opacity-0 animate-fade-in-up animation-delay-600">
-          January 9, 2027
-        </p>
-        
-        <p className="font-body text-base md:text-lg text-ivory/90 drop-shadow-md mb-8 md:mb-10 opacity-0 animate-fade-in-up animation-delay-600">
-          Las Mañanitas • Cuernavaca, Mexico
-        </p>
-        
-        {/* Countdown */}
-        <div className="opacity-0 animate-fade-in-up animation-delay-700">
-          <Countdown />
-        </div>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <div className="w-5 md:w-6 h-8 md:h-10 border-2 border-ivory/60 rounded-full flex justify-center">
-          <div className="w-1 h-2 md:h-3 bg-ivory/60 rounded-full mt-2 animate-bounce" />
+
+        {/* The photo */}
+        <div className="relative min-h-[260px] md:min-h-0">
+          <img
+            src={heroImage}
+            alt="Las Mañanitas, Cuernavaca"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: "center 60%" }}
+          />
         </div>
       </div>
     </section>

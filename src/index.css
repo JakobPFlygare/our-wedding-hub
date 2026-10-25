@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 100 12% 22%;
+    --background: 37 40% 93%;
+    --foreground: 30 10% 11%;
 
-    --card: 40 33% 98%;
-    --card-foreground: 100 12% 22%;
+    --card: 40 45% 97%;
+    --card-foreground: 30 10% 11%;
 
     --popover: 40 33% 98%;
     --popover-foreground: 100 12% 22%;
 
-    --primary: 95 18% 42%;
+    --primary: 155 43% 21%;
     --primary-foreground: 40 33% 98%;
 
-    --secondary: 350 30% 85%;
+    --secondary: 330 68% 50%;
     --secondary-foreground: 100 12% 22%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 100 10% 42%;
+    --muted: 38 30% 89%;
+    --muted-foreground: 30 8% 36%;
 
-    --accent: 38 50% 65%;
+    --accent: 155 43% 21%;
     --accent-foreground: 100 12% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 95 14% 80%;
-    --input: 95 14% 80%;
-    --ring: 95 18% 42%;
+    --border: 36 22% 78%;
+    --input: 36 22% 78%;
+    --ring: 155 43% 21%;
 
-    --radius: 0.5rem;
+    --radius: 0.125rem;
 
     /* Wedding specific tokens */
-    --sage: 95 18% 42%;
-    --sage-light: 95 16% 72%;
-    --sage-muted: 95 14% 86%;
-    --blush: 350 30% 85%;
-    --blush-dark: 350 25% 70%;
-    --ivory: 40 33% 98%;
-    --gold: 38 50% 65%;
-    --gold-light: 38 40% 80%;
-    --charcoal: 100 12% 22%;
+    --sage: 155 43% 21%;
+    --sage-light: 36 22% 78%;
+    --sage-muted: 40 45% 97%;
+    --blush: 330 68% 50%;
+    --blush-dark: 330 68% 40%;
+    --ivory: 37 40% 93%;
+    --gold: 30 8% 45%;
+    --gold-light: 36 22% 78%;
+    --charcoal: 30 10% 11%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(var(--sage-muted)) 0%, hsl(var(--ivory)) 100%);
+    --gradient-hero: none;
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--sage) / 0.1);
-    --shadow-elevated: 0 10px 40px hsl(var(--sage) / 0.15);
+    --shadow-soft: 0 1px 2px hsl(30 10% 11% / 0.06);
+    --shadow-elevated: 0 10px 30px hsl(30 10% 11% / 0.12);
 
     /* Typography */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Cormorant Garamond', serif;
-    --font-sans: 'Montserrat', sans-serif;
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Instrument Sans', system-ui, sans-serif;
+    --font-sans: 'Instrument Sans', system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

@@ -1,14 +1,13 @@
-import { useState } from "react";
-import LanguageToggle from "@/components/wedding/LanguageToggle";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Navigation from "@/components/wedding/Navigation";
 import HeroSection from "@/components/wedding/HeroSection";
 import PhotoGallery from "@/components/wedding/PhotoGallery";
 import EventDetails from "@/components/wedding/EventDetails";
-import DressCodeSection from "@/components/wedding/DressCodeSection";
 import LocationSection from "@/components/wedding/LocationSection";
-import MusicRequestSection from "@/components/wedding/MusicRequestSection";
 import ToastmastersSection from "@/components/wedding/ToastmastersSection";
 import ActivitiesSection from "@/components/wedding/ActivitiesSection";
+import ExtrasSection from "@/components/wedding/ExtrasSection";
 import Footer from "@/components/wedding/Footer";
 import EnvelopeIntro from "@/components/wedding/EnvelopeIntro";
 
@@ -18,6 +17,7 @@ const ENABLE_ENVELOPE_INTRO = true;
 const INTRO_SEEN_KEY = "envelopeIntroSeen";
 
 const Index = () => {
+  const { hash } = useLocation();
   const [introDone, setIntroDone] = useState(() => {
     if (!ENABLE_ENVELOPE_INTRO) return true;
     try {
@@ -36,18 +36,21 @@ const Index = () => {
     setIntroDone(true);
   };
 
+  // Arriving from another page (e.g. /gifts) with a #section: scroll there once rendered.
+  useEffect(() => {
+    if (!hash || !introDone) return;
+    const el = document.querySelector(hash);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 50);
+  }, [hash, introDone]);
+
   return (
     <>
       {!introDone && <EnvelopeIntro onFinish={handleIntroFinish} />}
+      <Navigation />
       <main className="min-h-screen">
-        <Navigation />
-        <LanguageToggle />
         <HeroSection />
         <div id="details">
           <EventDetails />
-        </div>
-        <div id="dress-code">
-          <DressCodeSection />
         </div>
         <div id="location">
           <LocationSection />
@@ -56,9 +59,7 @@ const Index = () => {
           <ToastmastersSection />
           <ActivitiesSection />
         </div>
-        <div id="music">
-          <MusicRequestSection />
-        </div>
+        <ExtrasSection />
         <PhotoGallery />
         <Footer />
       </main>

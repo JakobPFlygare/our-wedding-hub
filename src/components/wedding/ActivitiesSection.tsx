@@ -6,6 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { activities, activitiesForm } from "@/config/news";
+import SectionHeading from "./SectionHeading";
 
 const ActivitiesSection = () => {
   const { t, language } = useLanguage();
@@ -52,21 +53,15 @@ const ActivitiesSection = () => {
   };
 
   return (
-    <section className="py-10 md:py-14 px-4 md:px-6 bg-gradient-hero">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-6 md:mb-8">
-          <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">{t.activities.subtitle}</p>
-          <h2 className="font-display text-2xl md:text-3xl text-charcoal mb-3">{t.activities.title}</h2>
-          <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {t.activities.intro}
-          </p>
-          <p className="inline-flex items-center gap-1.5 mt-3 font-sans text-[11px] uppercase tracking-wider text-sage">
-            <CalendarClock className="w-3.5 h-3.5" />
-            {t.activities.datesTbd}
-          </p>
-        </div>
+    <section className="py-10 md:py-14 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeading eyebrow={t.activities.subtitle} title={t.activities.title} intro={t.activities.intro} />
+        <p className="inline-flex items-center gap-1.5 -mt-4 mb-6 font-sans text-[11px] uppercase tracking-[0.14em] text-sage">
+          <CalendarClock className="w-3.5 h-3.5" />
+          {t.activities.datesTbd}
+        </p>
 
-        <form onSubmit={handleSubmit} className="bg-ivory/80 backdrop-blur-sm rounded-xl p-5 md:p-6 shadow-soft">
+        <form onSubmit={handleSubmit} className="bg-card border border-sage-light p-5 md:p-6 md:max-w-3xl">
           <p className="font-sans text-xs uppercase tracking-wider text-sage mb-3">{t.activities.signupTitle}</p>
 
           <div className="space-y-2">
@@ -76,8 +71,8 @@ const ActivitiesSection = () => {
                 <label
                   key={a.id}
                   htmlFor={`act-${a.id}`}
-                  className={`flex items-start gap-3 rounded-lg p-3 md:p-4 cursor-pointer border transition-colors ${
-                    on ? "bg-sage/15 border-sage/50" : "bg-white/50 border-sage-light/30 hover:bg-white/80"
+                  className={`flex items-start gap-3 p-3 md:p-4 cursor-pointer border transition-colors ${
+                    on ? "bg-sage/10 border-sage" : "bg-ivory/60 border-sage-light hover:bg-ivory"
                   }`}
                 >
                   <Checkbox
@@ -109,7 +104,7 @@ const ActivitiesSection = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-charcoal text-ivory hover:bg-charcoal/90 font-sans uppercase tracking-wider text-xs sm:w-auto"
+              className="bg-charcoal text-ivory hover:bg-charcoal/90 font-sans uppercase tracking-[0.14em] text-[11px] sm:w-auto"
             >
               {submitted ? (
                 <>

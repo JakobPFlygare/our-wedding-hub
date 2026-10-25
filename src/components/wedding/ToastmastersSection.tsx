@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MessageCircle, MessageSquare } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toastmasters, type Toastmaster } from "@/config/news";
+import SectionHeading from "./SectionHeading";
 
 const initials = (name: string) =>
   name
@@ -33,21 +34,15 @@ const ToastmastersSection = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section className="py-10 md:py-14 px-4 md:px-6 bg-ivory">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-6 md:mb-8">
-          <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-2">{t.toastmasters.subtitle}</p>
-          <h2 className="font-display text-2xl md:text-3xl text-charcoal mb-3">{t.toastmasters.title}</h2>
-          <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {t.toastmasters.intro}
-          </p>
-        </div>
+    <section className="py-10 md:py-14 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeading eyebrow={t.toastmasters.subtitle} title={t.toastmasters.title} intro={t.toastmasters.intro} />
 
-        <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-6 md:max-w-3xl">
           {toastmasters.map((person) => (
             <div
               key={person.name}
-              className="flex flex-col items-center text-center bg-sage-muted/60 backdrop-blur-sm rounded-xl p-6 shadow-soft"
+              className="flex flex-col items-center text-center bg-card border border-sage-light p-6"
             >
               <Portrait person={person} />
               <h3 className="font-display text-xl text-charcoal mt-4">{person.name}</h3>

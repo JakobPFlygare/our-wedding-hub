@@ -1,83 +1,85 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageToggle from "./LanguageToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useLanguage();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const navItems = [
     { href: "#details", label: t.nav.details },
-    { href: "#dress-code", label: t.nav.dressCode },
     { href: "#location", label: t.nav.location },
     { href: "#news", label: t.nav.news, badge: true },
     { href: "/gifts", label: t.nav.gifts },
   ];
 
-  const handleNavClick = (href: string) => {
+  const go = (href: string) => {
     setIsOpen(false);
     if (href.startsWith("/")) {
       navigate(href);
       return;
     }
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (pathname !== "/") {
+      navigate(`/${href}`);
+      return;
     }
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <>
-      {/* Hamburger Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-50 p-2 rounded-full bg-ivory/90 backdrop-blur-sm shadow-soft border border-sage-light/30 transition-all hover:shadow-elevated"
-        aria-label="Toggle menu"
-      >
-        {isOpen ? (
-          <X className="w-6 h-6 text-charcoal" />
-        ) : (
-          <Menu className="w-6 h-6 text-charcoal" />
-        )}
-      </button>
+    <header className="sticky top-0 z-40 bg-ivory/90 backdrop-blur-sm border-b border-sage-light/60">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-4">
+        <Link to="/" className="font-display text-xl text-charcoal" onClick={() => setIsOpen(false)}>
+          Pau <span className="italic text-sage">&amp;</span> Jakob
+        </Link>
 
-      {/* Overlay */}
+        <nav className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => (
+            <button
+              key={item.href}
+              onClick={() => go(item.href)}
+              className="font-sans text-[11px] uppercase tracking-[0.16em] text-charcoal/80 hover:text-charcoal transition-colors"
+            >
+              {item.label}
+              {item.badge && <span className="ml-1.5 inline-block align-middle w-1.5 h-1.5 rounded-full bg-blush" aria-hidden />}
+            </button>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <LanguageToggle inline />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 -mr-2 text-charcoal"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </div>
+
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-charcoal/50 backdrop-blur-sm z-40 animate-fade-in"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-
-      {/* Menu Panel */}
-      <nav
-        className={`fixed top-0 left-0 h-full w-72 bg-ivory/95 backdrop-blur-md shadow-elevated z-40 transform transition-transform duration-300 ease-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="pt-20 px-6">
-          <p className="font-display text-2xl text-charcoal mb-8">Pau & Jakob</p>
-          
-          <ul className="space-y-2">
+        <nav className="md:hidden border-t border-sage-light/60 bg-ivory">
+          <ul className="max-w-5xl mx-auto px-4 py-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <button
-                  onClick={() => handleNavClick(item.href)}
-                  className="w-full text-left py-3 px-4 font-body text-lg text-charcoal hover:bg-sage-muted rounded-lg transition-colors"
+                  onClick={() => go(item.href)}
+                  className="w-full text-left py-3 font-sans text-xs uppercase tracking-[0.16em] text-charcoal"
                 >
                   {item.label}
-                  {item.badge && (
-                    <span className="ml-2 inline-block align-middle w-2 h-2 rounded-full bg-gold" aria-hidden />
-                  )}
+                  {item.badge && <span className="ml-1.5 inline-block align-middle w-1.5 h-1.5 rounded-full bg-blush" aria-hidden />}
                 </button>
               </li>
             ))}
           </ul>
-        </div>
-      </nav>
-    </>
+        </nav>
+      )}
+    </header>
   );
 };
 

@@ -13,6 +13,11 @@ interface Translations {
   hero: {
     together: string;
     gettingMarried: string;
+    daysToGo: string;
+    when: string;
+    where: string;
+    dress: string;
+    openMaps: string;
   };
   gallery: {
     subtitle: string;
@@ -149,6 +154,11 @@ const translations: Record<Language, Translations> = {
     hero: {
       together: 'Together with their families',
       gettingMarried: 'Are getting married',
+      daysToGo: 'days to go',
+      when: 'When',
+      where: 'Where',
+      dress: 'Dress',
+      openMaps: 'Open in Maps',
     },
     gallery: {
       subtitle: 'Our Story',
@@ -283,6 +293,11 @@ const translations: Record<Language, Translations> = {
     hero: {
       together: 'Junto con sus familias',
       gettingMarried: 'Se casan',
+      daysToGo: 'días para la boda',
+      when: 'Cuándo',
+      where: 'Dónde',
+      dress: 'Vestimenta',
+      openMaps: 'Abrir en Maps',
     },
     gallery: {
       subtitle: 'Nuestra Historia',
@@ -417,6 +432,11 @@ const translations: Record<Language, Translations> = {
     hero: {
       together: 'Tillsammans med sina familjer',
       gettingMarried: 'Gifter sig',
+      daysToGo: 'dagar kvar',
+      when: 'När',
+      where: 'Var',
+      dress: 'Klädsel',
+      openMaps: 'Öppna i Maps',
     },
     gallery: {
       subtitle: 'Vår Historia',
