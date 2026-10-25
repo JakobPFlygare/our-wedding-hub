@@ -6,11 +6,11 @@ const EventDetails = () => {
   const { t } = useLanguage();
 
   const milestones = [
-    { time: "15:00", titleKey: "ceremony" as const },
-    { time: "16:00", titleKey: "cocktail" as const },
-    { time: "18:00", titleKey: "dinner" as const },
-    { time: "23:00", titleKey: "tornafiesta" as const },
-    { time: "01:00", titleKey: "venueCloses" as const },
+    { time: "15:00", titleKey: "ceremony" as const, icon: "/schedule/ceremony.webp" },
+    { time: "16:00", titleKey: "cocktail" as const, icon: "/schedule/cocktail.webp" },
+    { time: "18:00", titleKey: "dinner" as const, icon: "/schedule/dinner.webp" },
+    { time: "23:00", titleKey: "tornafiesta" as const, icon: "/schedule/tornafiesta.webp" },
+    { time: "01:00", titleKey: "venueCloses" as const, icon: "/schedule/venue-closes.webp" },
   ];
 
   return (
@@ -22,6 +22,7 @@ const EventDetails = () => {
         <ol className="grid grid-cols-2 sm:grid-cols-5 gap-y-6">
           {milestones.map((m) => (
             <li key={m.titleKey} className="border-l border-sage pl-3 pr-4">
+              <img src={m.icon} alt="" loading="lazy" className="h-24 md:h-28 w-auto max-w-full object-contain object-left-bottom mb-3" />
               <span className="block font-display text-2xl md:text-3xl text-charcoal leading-none mb-1">{m.time}</span>
               <span className="font-body text-sm text-charcoal/75">{t.details[m.titleKey]}</span>
             </li>
