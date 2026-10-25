@@ -7,7 +7,8 @@ import EventDetails from "@/components/wedding/EventDetails";
 import DressCodeSection from "@/components/wedding/DressCodeSection";
 import LocationSection from "@/components/wedding/LocationSection";
 import MusicRequestSection from "@/components/wedding/MusicRequestSection";
-import RSVPSection from "@/components/wedding/RSVPSection";
+import ToastmastersSection from "@/components/wedding/ToastmastersSection";
+import ActivitiesSection from "@/components/wedding/ActivitiesSection";
 import Footer from "@/components/wedding/Footer";
 import EnvelopeIntro from "@/components/wedding/EnvelopeIntro";
 
@@ -51,11 +52,12 @@ const Index = () => {
         <div id="location">
           <LocationSection />
         </div>
+        <div id="news">
+          <ToastmastersSection />
+          <ActivitiesSection />
+        </div>
         <div id="music">
           <MusicRequestSection />
-        </div>
-        <div id="rsvp">
-          <RSVPSection />
         </div>
         <PhotoGallery />
         <Footer />

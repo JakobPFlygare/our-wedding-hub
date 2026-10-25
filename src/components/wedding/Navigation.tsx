@@ -12,7 +12,7 @@ const Navigation = () => {
     { href: "#details", label: t.nav.details },
     { href: "#dress-code", label: t.nav.dressCode },
     { href: "#location", label: t.nav.location },
-    { href: "#rsvp", label: t.nav.rsvp },
+    { href: "#news", label: t.nav.news, badge: true },
     { href: "/gifts", label: t.nav.gifts },
   ];
 
@@ -68,6 +68,9 @@ const Navigation = () => {
                   className="w-full text-left py-3 px-4 font-body text-lg text-charcoal hover:bg-sage-muted rounded-lg transition-colors"
                 >
                   {item.label}
+                  {item.badge && (
+                    <span className="ml-2 inline-block align-middle w-2 h-2 rounded-full bg-gold" aria-hidden />
+                  )}
                 </button>
               </li>
             ))}

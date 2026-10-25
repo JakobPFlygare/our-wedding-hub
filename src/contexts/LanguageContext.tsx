@@ -7,7 +7,7 @@ interface Translations {
     details: string;
     dressCode: string;
     location: string;
-    rsvp: string;
+    news: string;
     gifts: string;
   };
   hero: {
@@ -55,13 +55,6 @@ interface Translations {
     weather: string;
     weatherDescription: string;
   };
-  rsvp: {
-    subtitle: string;
-    title: string;
-    description: string;
-    contactTitle: string;
-    contactUs: string;
-  };
   music: {
     subtitle: string;
     title: string;
@@ -80,6 +73,31 @@ interface Translations {
   footer: {
     celebrate: string;
     madeWith: string;
+  };
+  toastmasters: {
+    subtitle: string;
+    title: string;
+    intro: string;
+    contact: string;
+    text: string;
+    whatsapp: string;
+  };
+  activities: {
+    subtitle: string;
+    title: string;
+    intro: string;
+    datesTbd: string;
+    signupTitle: string;
+    signupHint: string;
+    yourName: string;
+    yourNamePlaceholder: string;
+    submit: string;
+    submitting: string;
+    success: string;
+    thankYou: string;
+    error: string;
+    fillIn: string;
+    tryAgain: string;
   };
   gifts: {
     subtitle: string;
@@ -125,7 +143,7 @@ const translations: Record<Language, Translations> = {
       details: 'Wedding Details',
       dressCode: 'Dress Code',
       location: 'Location',
-      rsvp: 'RSVP',
+      news: 'What’s new',
       gifts: 'Gifts',
     },
     hero: {
@@ -173,13 +191,6 @@ const translations: Record<Language, Translations> = {
       weather: 'January Weather',
       weatherDescription: 'Cuernavaca enjoys pleasant spring-like weather year-round. January evenings can be cool, so consider bringing a light jacket or shawl.',
     },
-    rsvp: {
-      subtitle: 'Thank You for Responding',
-      title: 'RSVP Is Now Closed',
-      description: 'The deadline to RSVP has passed. Thank you to everyone who responded.',
-      contactTitle: 'Can\'t make it or didn\'t have time to respond?',
-      contactUs: 'Please contact us directly by phone – you know how to find us!',
-    },
     music: {
       subtitle: 'Help Us Create the Playlist',
       title: 'Song Requests',
@@ -198,6 +209,31 @@ const translations: Record<Language, Translations> = {
     footer: {
       celebrate: "We can't wait to celebrate with you!",
       madeWith: 'Made with love',
+    },
+    toastmasters: {
+      subtitle: 'Meet the',
+      title: 'Toastmasters',
+      intro: 'Jesper and Dhamar are running the show on the day. If you have a speech, a song or a little surprise in mind, let them know in advance so they can fit it into the evening. We’re keeping the programme short and sweet, so please reach out early – they will do their best to make room.',
+      contact: 'Get in touch',
+      text: 'Text',
+      whatsapp: 'WhatsApp',
+    },
+    activities: {
+      subtitle: 'Make a trip of it',
+      title: 'Activities',
+      intro: 'If you’re coming from afar, why not stay a few days? We’re planning some outings around the wedding and would love for you to join. Tick what you’d be interested in and we’ll get back with details.',
+      datesTbd: 'Dates and times to be confirmed',
+      signupTitle: 'I’m interested in…',
+      signupHint: 'No commitment – this just helps us plan.',
+      yourName: 'Your name',
+      yourNamePlaceholder: 'Name (and who you’re bringing)',
+      submit: 'Send',
+      submitting: 'Sending…',
+      success: 'Got it!',
+      thankYou: 'Thanks, we’ll be in touch with details.',
+      error: 'Error',
+      fillIn: 'Please add your name and tick at least one activity.',
+      tryAgain: 'Something went wrong. Please try again.',
     },
     gifts: {
       subtitle: 'Wedding Gifts',
@@ -241,7 +277,7 @@ const translations: Record<Language, Translations> = {
       details: 'Detalles',
       dressCode: 'Vestimenta',
       location: 'Ubicación',
-      rsvp: 'Confirmar',
+      news: 'Novedades',
       gifts: 'Regalos',
     },
     hero: {
@@ -289,13 +325,6 @@ const translations: Record<Language, Translations> = {
       weather: 'Clima en Enero',
       weatherDescription: 'Cuernavaca disfruta de un clima primaveral agradable todo el año. Las noches de enero pueden ser frescas, así que considera traer una chaqueta ligera o chal.',
     },
-    rsvp: {
-      subtitle: 'Gracias por Responder',
-      title: 'Confirmaciones Cerradas',
-      description: 'El plazo para confirmar asistencia ha terminado. Gracias a todos los que respondieron.',
-      contactTitle: '¿No puedes asistir o no alcanzaste a responder?',
-      contactUs: 'Por favor contáctanos directamente por teléfono – ¡ya sabes cómo encontrarnos!',
-    },
     music: {
       subtitle: 'Ayúdanos a Crear la Playlist',
       title: 'Canciones',
@@ -314,6 +343,31 @@ const translations: Record<Language, Translations> = {
     footer: {
       celebrate: '¡Estamos emocionados de celebrar contigo!',
       madeWith: 'Hecho con amor',
+    },
+    toastmasters: {
+      subtitle: 'Conoce a los',
+      title: 'Maestros de ceremonia',
+      intro: 'Jesper y Dhamar llevarán el programa de la noche. Si tienes en mente un discurso, una canción o una pequeña sorpresa, avísales con tiempo para que puedan acomodarlo. Queremos un programa corto y ameno, así que escríbeles pronto – harán lo posible por hacerle espacio.',
+      contact: 'Contacto',
+      text: 'Mensaje',
+      whatsapp: 'WhatsApp',
+    },
+    activities: {
+      subtitle: 'Aprovecha el viaje',
+      title: 'Actividades',
+      intro: 'Si vienes de lejos, ¿por qué no quedarte unos días? Estamos planeando algunas salidas alrededor de la boda y nos encantaría que te unieras. Marca lo que te interese y te contactamos con los detalles.',
+      datesTbd: 'Fechas y horarios por confirmar',
+      signupTitle: 'Me interesa…',
+      signupHint: 'Sin compromiso – solo nos ayuda a planear.',
+      yourName: 'Tu nombre',
+      yourNamePlaceholder: 'Nombre (y con quién vienes)',
+      submit: 'Enviar',
+      submitting: 'Enviando…',
+      success: '¡Listo!',
+      thankYou: 'Gracias, te contactamos con los detalles.',
+      error: 'Error',
+      fillIn: 'Pon tu nombre y marca al menos una actividad.',
+      tryAgain: 'Algo salió mal. Inténtalo de nuevo.',
     },
     gifts: {
       subtitle: 'Regalos de Boda',
@@ -357,7 +411,7 @@ const translations: Record<Language, Translations> = {
       details: 'Detaljer',
       dressCode: 'Klädsel',
       location: 'Plats',
-      rsvp: 'OSA',
+      news: 'Nytt',
       gifts: 'Presenter',
     },
     hero: {
@@ -405,13 +459,6 @@ const translations: Record<Language, Translations> = {
       weather: 'Väder i Januari',
       weatherDescription: 'Cuernavaca har ett behagligt vårliknande klimat året runt. Januarikvällar kan vara svala, så överväg att ta med en lätt jacka eller sjal.',
     },
-    rsvp: {
-      subtitle: 'Tack för Era Svar',
-      title: 'OSA Är Nu Stängd',
-      description: 'Sista dagen för OSA har passerat. Tack till alla som har svarat.',
-      contactTitle: 'Kan du inte komma eller hann du inte svara?',
-      contactUs: 'Hör av dig direkt till oss via telefon – du vet hur du når oss!',
-    },
     music: {
       subtitle: 'Hjälp Oss Skapa Spellistan',
       title: 'Önskelåtar',
@@ -430,6 +477,31 @@ const translations: Record<Language, Translations> = {
     footer: {
       celebrate: 'Vi längtar efter att fira med dig!',
       madeWith: 'Gjord med kärlek',
+    },
+    toastmasters: {
+      subtitle: 'Säg hej till våra',
+      title: 'Toastmasters',
+      intro: 'Jesper och Dhamar håller i kvällen. Har ni ett tal, en sång eller en liten överraskning på gång – hör av er till dem i god tid så de kan få in det i programmet. Vi vill hålla det kort och gott, så kontakta dem gärna tidigt – de gör sitt bästa för att få plats med allt.',
+      contact: 'Kontakt',
+      text: 'SMS',
+      whatsapp: 'WhatsApp',
+    },
+    activities: {
+      subtitle: 'Gör en resa av det',
+      title: 'Aktiviteter',
+      intro: 'Kommer ni långväga – stanna gärna några dagar! Vi planerar några utflykter kring bröllopet och vill jättegärna ha med er. Kryssa i vad ni är sugna på så återkommer vi med detaljer.',
+      datesTbd: 'Datum och tider kommer',
+      signupTitle: 'Jag är intresserad av…',
+      signupHint: 'Inget bindande – det hjälper oss bara att planera.',
+      yourName: 'Ert namn',
+      yourNamePlaceholder: 'Namn (och vem ni tar med)',
+      submit: 'Skicka',
+      submitting: 'Skickar…',
+      success: 'Tack!',
+      thankYou: 'Vi återkommer med detaljer.',
+      error: 'Fel',
+      fillIn: 'Fyll i namn och kryssa i minst en aktivitet.',
+      tryAgain: 'Något gick fel. Försök igen.',
     },
     gifts: {
       subtitle: 'Bröllopspresenter',
