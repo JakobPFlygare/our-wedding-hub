@@ -33,6 +33,4 @@ page copy is in the `toastmasters` and `activities` blocks of
    - the `entry.NNNNN` id of each question
 3. Paste them into `activitiesForm` in `src/config/news.ts`.
 
-Until this is done the form still "succeeds" in the browser (the request is
-sent with `no-cors` so failures are invisible) but nothing is recorded. Do
-this before going live.
+The form is wired to the "Wedding activities" Google Form (ids filled in on 2026-10-25).

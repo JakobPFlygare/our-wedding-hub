@@ -114,9 +114,9 @@ export const activities: Activity[] = [
  * See docs/NEWS_SETUP.md.
  */
 export const activitiesForm = {
-  url: "https://docs.google.com/forms/d/e/TODO/formResponse", // TODO replace
-  nameEntry: "entry.TODO", // TODO replace
-  activitiesEntry: "entry.TODO", // TODO replace
+  url: "https://docs.google.com/forms/d/e/1FAIpQLSezEC4ECK_gn6uPdsY1a4PEh6uZ2qSq9g8I8kZ6uvaaCxMlcg/formResponse",
+  nameEntry: "entry.260784579",
+  activitiesEntry: "entry.1355089442",
 };
 
 export type { Lang };
