@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,59 +6,61 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 100 12% 22%;
+    --background: 38 55% 92%;
+    --foreground: 22 30% 15%;
 
-    --card: 40 33% 98%;
-    --card-foreground: 100 12% 22%;
+    --card: 40 60% 97%;
+    --card-foreground: 22 30% 15%;
 
-    --popover: 40 33% 98%;
-    --popover-foreground: 100 12% 22%;
+    --popover: 40 60% 98%;
+    --popover-foreground: 22 30% 15%;
 
-    --primary: 95 18% 42%;
-    --primary-foreground: 40 33% 98%;
+    --primary: 82 22% 33%;
+    --primary-foreground: 40 60% 97%;
 
-    --secondary: 350 30% 85%;
-    --secondary-foreground: 100 12% 22%;
+    --secondary: 16 58% 47%;
+    --secondary-foreground: 40 60% 97%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 100 10% 42%;
+    --muted: 38 40% 88%;
+    --muted-foreground: 24 18% 38%;
 
-    --accent: 38 50% 65%;
-    --accent-foreground: 100 12% 18%;
+    --accent: 82 22% 33%;
+    --accent-foreground: 40 60% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 95 14% 80%;
-    --input: 95 14% 80%;
-    --ring: 95 18% 42%;
+    --border: 34 38% 76%;
+    --input: 34 38% 76%;
+    --ring: 82 22% 33%;
 
-    --radius: 0.5rem;
+    --radius: 0.125rem;
 
     /* Wedding specific tokens */
-    --sage: 95 18% 42%;
-    --sage-light: 95 16% 72%;
-    --sage-muted: 95 14% 86%;
-    --blush: 350 30% 85%;
-    --blush-dark: 350 25% 70%;
-    --ivory: 40 33% 98%;
-    --gold: 38 50% 65%;
-    --gold-light: 38 40% 80%;
-    --charcoal: 100 12% 22%;
+    --sage: 82 22% 33%;
+    --sage-light: 34 38% 76%;
+    --sage-muted: 40 60% 97%;
+    --blush: 16 58% 47%;
+    --blush-dark: 16 58% 38%;
+    --ivory: 38 55% 92%;
+    --gold: 32 48% 40%;
+    --gold-light: 36 45% 70%;
+    --charcoal: 22 30% 15%;
+    --terracotta: 16 58% 47%;
+    --terracotta-dark: 16 58% 38%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(var(--sage-muted)) 0%, hsl(var(--ivory)) 100%);
+    --gradient-hero: none;
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--sage) / 0.1);
-    --shadow-elevated: 0 10px 40px hsl(var(--sage) / 0.15);
+    --shadow-soft: 0 1px 2px hsl(22 30% 15% / 0.06);
+    --shadow-elevated: 0 10px 30px hsl(22 30% 15% / 0.12);
 
     /* Typography */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Cormorant Garamond', serif;
-    --font-sans: 'Montserrat', sans-serif;
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Instrument Sans', system-ui, sans-serif;
+    --font-sans: 'Instrument Sans', system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

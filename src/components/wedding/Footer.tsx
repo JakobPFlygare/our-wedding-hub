@@ -1,22 +1,16 @@
-import { PawPrint } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
-    <footer className="py-8 md:py-12 px-4 md:px-6 bg-charcoal text-ivory/80">
-      <div className="max-w-4xl mx-auto text-center">
-        <h3 className="font-display text-2xl md:text-3xl text-ivory mb-3 md:mb-4">
-          Pau & Jakob
-        </h3>
-        
-        <p className="font-body text-base md:text-lg mb-4 md:mb-6">
-          January 9, 2027
+    <footer className="px-4 md:px-6 py-8 border-t border-charcoal/70">
+      <div className="max-w-5xl mx-auto flex flex-wrap items-baseline justify-between gap-3">
+        <p className="font-display text-xl text-charcoal">
+          Pau <span className="italic text-terracotta">&amp;</span> Jakob
         </p>
-        
-        <div className="flex items-center justify-center gap-2">
-          <div className="h-px w-8 md:w-12 bg-ivory/30" />
-          <PawPrint className="w-4 h-4 text-blush fill-blush" />
-          <div className="h-px w-8 md:w-12 bg-ivory/30" />
-        </div>
+        <p className="font-body text-sm text-charcoal/70">{t.footer.celebrate}</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-gold">9 · 1 · 2027 · Cuernavaca</p>
       </div>
     </footer>
   );

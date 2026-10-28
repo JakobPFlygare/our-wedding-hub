@@ -33,13 +33,19 @@ const flags = {
   ),
 };
 
-const LanguageToggle = () => {
+const LanguageToggle = ({ inline = false }: { inline?: boolean }) => {
   const { language, setLanguage } = useLanguage();
 
   const languages: Array<'en' | 'es' | 'sv'> = ['en', 'es', 'sv'];
 
   return (
-    <div className="fixed top-4 right-4 z-50 flex items-center gap-1 bg-ivory/90 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
+    <div
+      className={
+        inline
+          ? 'flex items-center gap-0.5'
+          : 'fixed top-4 right-4 z-50 flex items-center gap-1 bg-ivory/90 backdrop-blur-sm rounded-full p-1.5 shadow-soft'
+      }
+    >
       {languages.map((lang) => (
         <button
           key={lang}
