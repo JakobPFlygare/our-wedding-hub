@@ -255,8 +255,8 @@ const translations: Record<Language, Translations> = {
       childrenTitle: 'Niños',
       childrenDescription: 'Creemos que los invitados disfrutarán más de la boda si pueden asistir sin niños. Sin embargo, entendemos que esto no es posible para todos y los niños son bienvenidos.',
       childrenMexicanNote: '',
-      giftsTitle: 'Regalos de Boda',
-      giftsDescription: 'Tu presencia es el mejor regalo que podríamos pedir. Te pedimos que no traigas regalos físicos – ¡nuestras maletas no tendrán espacio para el viaje de regreso!',
+      giftsTitle: 'Nota sobre regalos',
+      giftsDescription: 'Tu presencia en nuestra boda es el mejor regalo de todos. Si aun así quieres honrarnos con un regalo, te pedimos amablemente que no sea un regalo físico – no podremos llevarlo con nosotros a casa.',
     },
     location: {
       title: 'Ubicación',
@@ -365,8 +365,8 @@ const translations: Record<Language, Translations> = {
       childrenTitle: 'Barn',
       childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna. Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
       childrenMexicanNote: '',
-      giftsTitle: 'Bröllopspresenter',
-      giftsDescription: 'Er närvaro är den bästa presenten vi kan önska oss. Vi ber er att inte ta med fysiska presenter – våra resväskor har helt enkelt inte plats för dem på hemresan!',
+      giftsTitle: 'Om presenter',
+      giftsDescription: 'Er närvaro på vårt bröllop är den finaste presenten av alla. Om ni ändå vill hedra oss med en present ber vi er vänligen att inte ge något fysiskt – vi kommer inte att kunna ta det med oss hem.',
     },
     location: {
       title: 'Plats',

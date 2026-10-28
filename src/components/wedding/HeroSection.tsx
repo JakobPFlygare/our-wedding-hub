@@ -16,7 +16,7 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Las Mañanitas, Cuernavaca"
-          className="absolute inset-0 w-full h-full object-cover [object-position:40%_45%] md:[object-position:center_78%]"
+          className="absolute inset-0 w-full h-full object-cover [object-position:center_60%]"
         />
         <div
           className="absolute inset-x-0 bottom-0 h-28 md:h-36 pointer-events-none"
