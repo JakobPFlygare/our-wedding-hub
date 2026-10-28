@@ -55,7 +55,7 @@ export const activities: Activity[] = [
   {
     id: "friday-dinner",
     emoji: "🍽️",
-    image: "/activities/friday-dinner.jpg",
+    image: "/activities/friday-dinner.webp",
     title: { en: "Dinner on Friday, January 8", es: "Cena el viernes 8 de enero", sv: "Middag fredag 8 januari" },
     description: {
       en: "A relaxed dinner at Las Mañanitas the evening before the wedding, for everyone already in town. Each guest covers their own meal.",
@@ -67,7 +67,7 @@ export const activities: Activity[] = [
   {
     id: "shuttle",
     emoji: "🚌",
-    image: "/activities/shuttle.jpg",
+    image: "/activities/shuttle.webp",
     title: { en: "Shuttle bus", es: "Autobús", sv: "Buss" },
     description: {
       en: "Mexico City → Cuernavaca on January 8, back on January 10. We're still exploring options depending on how many sign up – a stop in Tepoztlán on the way could be fun too (it's really close).",
@@ -79,7 +79,7 @@ export const activities: Activity[] = [
   {
     id: "xochimilco",
     emoji: "🛶",
-    image: "/activities/xochimilco.jpg",
+    image: "/activities/xochimilco.webp",
     title: { en: "Trajinera in Xochimilco", es: "Trajinera en Xochimilco", sv: "Trajinera i Xochimilco" },
     description: {
       en: "We get on a river boat together and ride around the canals while being served mysterious drinks from canoes nearby. It's quite fun!",
@@ -91,7 +91,7 @@ export const activities: Activity[] = [
   {
     id: "teotihuacan",
     emoji: "🏛️",
-    image: "/activities/teotihuacan.jpg",
+    image: "/activities/teotihuacan.webp",
     title: { en: "Teotihuacán", es: "Teotihuacán", sv: "Teotihuacán" },
     description: {
       en: "Mexico's own pyramids – and you can even climb them! An hour and a half outside the city.",

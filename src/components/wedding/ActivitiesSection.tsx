@@ -81,7 +81,7 @@ const ActivitiesSection = () => {
                     src={a.image}
                     alt=""
                     loading="lazy"
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shrink-0 -my-1"
+                    className="w-24 h-16 md:w-28 md:h-20 object-contain shrink-0"
                   />
                   <span className="min-w-0">
                     <span className="block font-display text-lg text-charcoal leading-tight">{a.title[language]}</span>
