@@ -70,9 +70,9 @@ export const activities: Activity[] = [
     image: "/activities/shuttle.jpg",
     title: { en: "Shuttle bus", es: "Autobús", sv: "Buss" },
     description: {
-      en: "Mexico City → Cuernavaca on January 8, back on January 10.",
-      es: "Ciudad de México → Cuernavaca el 8 de enero, regreso el 10 de enero.",
-      sv: "Mexico City → Cuernavaca den 8 januari, tillbaka den 10 januari.",
+      en: "Mexico City → Cuernavaca on January 8, back on January 10. We're still exploring options depending on how many sign up – a stop in Tepoztlán on the way could be fun too (it's really close).",
+      es: "Ciudad de México → Cuernavaca el 8 de enero, regreso el 10 de enero. Seguimos viendo opciones según cuántos se apunten – una parada en Tepoztlán en el camino también podría estar divertida (está muy cerca).",
+      sv: "Mexico City → Cuernavaca den 8 januari, tillbaka den 10 januari. Vi tittar fortfarande på alternativ beroende på hur många som anmäler sig – ett stopp i Tepoztlán på vägen skulle också kunna vara kul (det ligger riktigt nära).",
     },
     formValue: "Shuttle",
   },
@@ -99,18 +99,6 @@ export const activities: Activity[] = [
       sv: "Bestig Sol- och Månpyramiden, en timme utanför staden.",
     },
     formValue: "Teotihuacan",
-  },
-  {
-    id: "tepoztlan",
-    emoji: "⛰️",
-    image: "/activities/tepoztlan.jpg",
-    title: { en: "Tepoztlán", es: "Tepoztlán", sv: "Tepoztlán" },
-    description: {
-      en: "Magical mountain town near Cuernavaca – hike up to the Tepozteco and eat your way through the market.",
-      es: "Pueblo mágico cerca de Cuernavaca – sube al Tepozteco y recorre el mercado comiendo.",
-      sv: "Magisk bergsby nära Cuernavaca – vandra upp till Tepozteco och ät er igenom marknaden.",
-    },
-    formValue: "Tepoztlan",
   },
 ];
 

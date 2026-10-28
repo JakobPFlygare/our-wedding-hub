@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "@/components/wedding/Navigation";
 import HeroSection from "@/components/wedding/HeroSection";
-import PhotoGallery from "@/components/wedding/PhotoGallery";
 import EventDetails from "@/components/wedding/EventDetails";
 import LocationSection from "@/components/wedding/LocationSection";
 import ToastmastersSection from "@/components/wedding/ToastmastersSection";
@@ -58,7 +57,6 @@ const Index = () => {
           <ToastmastersSection />
           <ActivitiesSection />
         </div>
-        <PhotoGallery />
         <Footer />
       </main>
     </>
