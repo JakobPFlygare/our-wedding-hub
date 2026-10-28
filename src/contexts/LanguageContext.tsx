@@ -59,6 +59,7 @@ interface Translations {
   };
   toastmasters: {
     title: string;
+    intro: string;
     contact: string;
   };
   activities: {
@@ -171,6 +172,7 @@ const translations: Record<Language, Translations> = {
     },
     toastmasters: {
       title: 'Toastmasters',
+      intro: "We're happy to introduce Dhamar & Jesper as our toastmasters! If you'd like to give a speech, sing, or suggest a game or activity, please reach out to them.",
       contact: 'Get in touch',
     },
     activities: {
@@ -281,6 +283,7 @@ const translations: Record<Language, Translations> = {
     },
     toastmasters: {
       title: 'Maestros de ceremonia',
+      intro: '¡Nos alegra presentar a Dhamar y Jesper como nuestros maestros de ceremonia! Si quieres dar un discurso, cantar o proponer un juego o actividad, ponte en contacto con ellos.',
       contact: 'Contacto',
     },
     activities: {
@@ -391,6 +394,7 @@ const translations: Record<Language, Translations> = {
     },
     toastmasters: {
       title: 'Toastmasters',
+      intro: 'Vi är glada att presentera Dhamar & Jesper som våra toastmasters! Om ni vill hålla tal, sjunga eller föreslå en lek eller aktivitet, hör av er till dem.',
       contact: 'Kontakt',
     },
     activities: {
