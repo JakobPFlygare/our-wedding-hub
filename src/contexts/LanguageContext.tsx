@@ -41,6 +41,8 @@ interface Translations {
     transportTitle: string;
     shuttleTitle: string;
     shuttleInfo: string;
+    busTitle: string;
+    busInfo: string;
     parkingTitle: string;
     parkingInfo: string;
     accommodationTitle: string;
@@ -153,6 +155,8 @@ const translations: Record<Language, Translations> = {
       shuttleInfo: 'Shuttle bus from Mexico City to Cuernavaca on January 8, returning from Cuernavaca to Mexico City on January 10.',
       shuttleSignup: 'Sign up here if you’re interested.',
       stayInfo: 'We recommend staying in Cuernavaca centre. Getting back to Mexico City straight after the wedding isn’t a good idea, so plan to stay nearby.',
+      busTitle: 'By Bus',
+      busInfo: 'There are also direct buses from Mexico City to Cuernavaca, with frequent departures from the Taxqueña terminal and from the airport – about 1.5 hours.',
       parkingTitle: 'By Car',
       parkingInfo: 'Valet parking is available at the venue for guests arriving by car.',
       accommodationTitle: 'Where to Stay',
@@ -261,6 +265,8 @@ const translations: Record<Language, Translations> = {
       shuttleInfo: 'Autobús desde la Ciudad de México a Cuernavaca el 8 de enero, y de regreso de Cuernavaca a la Ciudad de México el 10 de enero.',
       shuttleSignup: 'Regístrate aquí si te interesa.',
       stayInfo: 'Recomendamos hospedarse en el centro de Cuernavaca. No es buena idea volver a la Ciudad de México justo después de la boda, así que mejor quédate cerca.',
+      busTitle: 'En Autobús',
+      busInfo: 'También hay autobuses directos de la Ciudad de México a Cuernavaca, con salidas frecuentes desde la terminal de Taxqueña y desde el aeropuerto – aproximadamente 1.5 horas.',
       parkingTitle: 'En Coche',
       parkingInfo: 'El lugar cuenta con servicio de valet parking para invitados que lleguen en coche.',
       accommodationTitle: 'Dónde Hospedarse',
@@ -369,6 +375,8 @@ const translations: Record<Language, Translations> = {
       shuttleInfo: 'Buss från Mexico City till Cuernavaca den 8 januari, och tillbaka från Cuernavaca till Mexico City den 10 januari.',
       shuttleSignup: 'Anmäl er här om ni är intresserade.',
       stayInfo: 'Vi rekommenderar att bo i centrala Cuernavaca. Det är ingen bra idé att åka tillbaka till Mexico City direkt efter bröllopet, så bo gärna i närheten.',
+      busTitle: 'Med Buss',
+      busInfo: 'Det går även direktbussar från Mexico City till Cuernavaca, med täta avgångar från terminalen Taxqueña och från flygplatsen – cirka 1,5 timme.',
       parkingTitle: 'Med Bil',
       parkingInfo: 'Valet parking finns tillgängligt på platsen för gäster som kommer med bil.',
       accommodationTitle: 'Boende',

@@ -39,6 +39,9 @@ const LocationSection = () => {
               </button>
             </p>
             <p className="font-body text-sm text-charcoal/75 leading-relaxed mt-2">
+              <span className="text-charcoal">{t.location.busTitle}.</span> {t.location.busInfo}
+            </p>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed mt-2">
               <span className="text-charcoal">{t.location.parkingTitle}.</span> {t.location.parkingInfo}
             </p>
           </div>
