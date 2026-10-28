@@ -76,17 +76,6 @@ export interface GiftItem {
 
 export const giftItems: GiftItem[] = [
   {
-    id: "honeymoon-dinner",
-    emoji: "🍽️",
-    title: { en: "A dinner on our honeymoon", es: "Una cena en nuestra luna de miel", sv: "En middag på smekmånaden" },
-    description: {
-      en: "Treat us to a candle-lit dinner somewhere we'll remember forever.",
-      es: "Invítanos a una cena a la luz de las velas en un lugar que recordaremos siempre.",
-      sv: "Bjud oss på en middag i levande ljus någonstans vi aldrig glömmer.",
-    },
-    reference: "Honeymoon dinner",
-  },
-  {
     id: "honeymoon-adventures",
     emoji: "🏝️",
     title: { en: "Honeymoon adventures", es: "Aventuras de luna de miel", sv: "Äventyr på smekmånaden" },
@@ -100,24 +89,13 @@ export const giftItems: GiftItem[] = [
   {
     id: "cocktails",
     emoji: "🍹",
-    title: { en: "Sunset cocktails", es: "Cocteles al atardecer", sv: "Drinkar i solnedgången" },
+    title: { en: "Bottomless cocktails", es: "Cocteles sin fin", sv: "Oändligt med drinkar" },
     description: {
-      en: "A round of drinks with our feet in the sand.",
-      es: "Una ronda de bebidas con los pies en la arena.",
-      sv: "En runda drinkar med fötterna i sanden.",
+      en: "Rounds of drinks with our feet in the sand.",
+      es: "Rondas de bebidas con los pies en la arena.",
+      sv: "Drinkar på drinkar med fötterna i sanden.",
     },
-    reference: "Sunset cocktails",
-  },
-  {
-    id: "soda-stream",
-    emoji: "🫧",
-    title: { en: "A new SodaStream", es: "Una SodaStream nueva", sv: "En ny SodaStream" },
-    description: {
-      en: "Ours has seen better days. Keep the bubbles flowing in the new apartment.",
-      es: "La nuestra ya vivió sus mejores días. Que no falten las burbujas en el nuevo depa.",
-      sv: "Vår har sett bättre dagar. Håll bubblorna igång i nya lägenheten.",
-    },
-    reference: "SodaStream",
+    reference: "Bottomless cocktails",
   },
   {
     id: "wine-fridge",
@@ -140,38 +118,5 @@ export const giftItems: GiftItem[] = [
       sv: "Det nuvarande är mer klös än träd. Hugo förtjänar en takvåning.",
     },
     reference: "Cat tree for Hugo",
-  },
-  {
-    id: "cat-treats",
-    emoji: "🐟",
-    title: { en: "Treats for Hugo", es: "Premios para Hugo", sv: "Godis till Hugo" },
-    description: {
-      en: "He has been very patient with all the wedding planning.",
-      es: "Ha tenido mucha paciencia con todos los preparativos de la boda.",
-      sv: "Han har haft stort tålamod med all bröllopsplanering.",
-    },
-    reference: "Treats for Hugo",
-  },
-  {
-    id: "board-games",
-    emoji: "🎲",
-    title: { en: "Board games", es: "Juegos de mesa", sv: "Brädspel" },
-    description: {
-      en: "For long evenings with friends in the new apartment.",
-      es: "Para largas noches con amigos en el nuevo depa.",
-      sv: "För långa kvällar med vänner i nya lägenheten.",
-    },
-    reference: "Board games",
-  },
-  {
-    id: "surprise",
-    emoji: "🎁",
-    title: { en: "Surprise us", es: "Sorpréndenos", sv: "Överraska oss" },
-    description: {
-      en: "Any amount, towards whatever we need most. Thank you!",
-      es: "Cualquier cantidad, para lo que más necesitemos. ¡Gracias!",
-      sv: "Valfritt belopp till det vi behöver mest. Tack!",
-    },
-    reference: "Wedding gift",
   },
 ];
