@@ -10,43 +10,44 @@ const HeroSection = () => {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section className="px-4 md:px-6 pt-8 md:pt-14 pb-10 md:pb-16">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] gap-6 md:gap-10 items-stretch">
-        {/* The card */}
-        <div className="bg-card border border-sage-light p-7 md:p-10 flex flex-col justify-between">
+    <section>
+      {/* Full-width picture, fading into the page at the bottom */}
+      <div className="relative h-[52vh] min-h-[280px] max-h-[560px]">
+        <img
+          src={heroImage}
+          alt="Las Mañanitas, Cuernavaca"
+          className="absolute inset-0 w-full h-full object-cover [object-position:40%_45%] md:[object-position:center_78%]"
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-28 md:h-36 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, hsl(var(--background) / 0), hsl(var(--background)))" }}
+        />
+      </div>
+
+      {/* Names and the facts, overlapping the faded edge */}
+      <div className="px-4 md:px-6 -mt-10 md:-mt-14 relative pb-4 md:pb-6">
+        <div className="max-w-5xl mx-auto flex flex-wrap items-end justify-between gap-x-10 gap-y-5">
           <div>
-            <h1 className="font-display text-5xl md:text-7xl leading-[0.95] text-charcoal mb-3">
+            <h1 className="font-display text-5xl md:text-7xl leading-[0.95] text-charcoal">
               Pau <span className="italic text-terracotta">&amp;</span> Jakob
             </h1>
-            <p className="font-display italic text-xl md:text-2xl text-charcoal/70 mb-8">{t.hero.gettingMarried}</p>
-
-            <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 font-body text-sm md:text-base text-charcoal">
-              <dt className="font-sans text-[10px] uppercase tracking-[0.16em] text-gold pt-1">{t.hero.when}</dt>
-              <dd>
-                <span className="font-display text-lg md:text-xl">{t.details.weddingDetails}</span>
-                <span className="text-charcoal/70"> · 15:00</span>
-              </dd>
-              <dt className="font-sans text-[10px] uppercase tracking-[0.16em] text-gold pt-1">{t.hero.where}</dt>
-              <dd>
-                Las Mañanitas, Cuernavaca
-                <a
-                  href={MAPS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-2 underline underline-offset-4 decoration-sage-light hover:decoration-sage text-charcoal/80"
-                >
-                  {t.hero.openMaps}
-                </a>
-              </dd>
-              <dt className="font-sans text-[10px] uppercase tracking-[0.16em] text-gold pt-1">{t.hero.dress}</dt>
-              <dd>
-                {t.dressCode.formal}
-                <span className="text-charcoal/70"> · 18–26 °C</span>
-              </dd>
-            </dl>
+            <p className="font-body text-sm md:text-base text-charcoal/75 mt-3 leading-relaxed">
+              {t.details.weddingDetails} · 15:00
+              <span className="hidden sm:inline"> · </span>
+              <br className="sm:hidden" />
+              Las Mañanitas, Cuernavaca ·{" "}
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal underline underline-offset-4 decoration-sage-light hover:decoration-sage"
+              >
+                {t.hero.openMaps}
+              </a>
+            </p>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-sage-light flex flex-wrap items-end justify-between gap-5">
+          <div className="flex flex-col items-start sm:items-end gap-3">
             <Countdown />
             <button
               onClick={() => scrollTo("news")}
@@ -55,16 +56,6 @@ const HeroSection = () => {
               {t.nav.news}
             </button>
           </div>
-        </div>
-
-        {/* The photo */}
-        <div className="relative">
-          <img
-            src={heroImage}
-            alt="Las Mañanitas, Cuernavaca"
-            className="w-full h-auto md:absolute md:inset-0 md:h-full md:object-cover"
-            style={{ objectPosition: "center 50%" }}
-          />
         </div>
       </div>
     </section>
