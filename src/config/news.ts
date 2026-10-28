@@ -21,21 +21,21 @@ export interface Toastmaster {
 
 export const toastmasters: Toastmaster[] = [
   {
-    name: "Jesper Ericsson",
-    role: { en: "", es: "", sv: "" },
-    phoneDisplay: "+46 73-970 92 00",
-    phoneE164: "46739709200",
-    photo: "/toastmasters/jesper.jpg",
-    text: true,
-    whatsapp: true,
-  },
-  {
     name: "Dhamar Rios",
     role: { en: "", es: "", sv: "" },
     phoneDisplay: "+52 55 2865 0710",
     phoneE164: "525528650710",
     photo: "/toastmasters/dhamar.jpg",
     text: false,
+    whatsapp: true,
+  },
+  {
+    name: "Jesper Ericsson",
+    role: { en: "", es: "", sv: "" },
+    phoneDisplay: "+46 73-970 92 00",
+    phoneE164: "46739709200",
+    photo: "/toastmasters/jesper.jpg",
+    text: true,
     whatsapp: true,
   },
 ];
