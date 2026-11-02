@@ -147,7 +147,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: "We believe guests will enjoy the wedding more if they are able to attend childfree. However, we realize this is simply not possible for some and children are of course welcome. Let us know if you are bringing a kid so we can plan accordingly with the menu etc.",
       childrenMexicanNote: '',
       giftsTitle: 'Note on gifts',
-      giftsDescription: "Your presence at our wedding is the greatest gift of all. Should you still wish to honour us with a gift, we kindly ask for no physical presents – we won't be able to carry them home with us.",
+      giftsDescription: "Please don’t feel the need to bring a gift! Having you celebrate with us is the greatest gift of all. If you’d still like to give us something, we’d kindly ask for no physical presents, as we won’t be able to bring them home with us.",
     },
     location: {
       title: 'Location',
@@ -155,7 +155,7 @@ const translations: Record<Language, Translations> = {
       shuttleTitle: 'Shuttle Bus',
       shuttleInfo: 'Shuttle bus from Mexico City to Cuernavaca on January 8, returning from Cuernavaca to Mexico City on January 10.',
       shuttleSignup: 'Sign up here if you’re interested.',
-      stayInfo: 'We recommend staying in Cuernavaca centre. Getting back to Mexico City straight after the wedding isn’t a good idea, so plan to stay nearby.',
+      stayInfo: 'We recommend staying in Cuernavaca centre. Getting back to Mexico City straight after the wedding isn’t a good idea, so plan to stay nearby. The wedding venue has some rooms, but they’re quite expensive and they didn’t offer us any discount. We will be staying at a house nearby instead.',
       busTitle: 'By Bus',
       busInfo: 'There are also direct buses from Mexico City to Cuernavaca, with frequent departures from the Taxqueña terminal and from the airport – about 1.5 hours.',
       parkingTitle: 'By Car',
@@ -164,7 +164,7 @@ const translations: Record<Language, Translations> = {
     },
     dressCode: {
       formal: 'Formal Attire',
-      formalDescription: 'Cocktail dresses, suits or traditional formal wear. Light fabrics – warm days, cool evenings.',
+      formalDescription: 'Long dresses, suits or traditional formal wear. We recommend light fabrics for the warm daytime weather and a light layer for the cooler evening.',
     },
     footer: {
       celebrate: "We can't wait to celebrate with you!",
@@ -255,10 +255,10 @@ const translations: Record<Language, Translations> = {
       tornafiesta: 'Torna Fiesta aka Vickning',
       venueCloses: 'Cierre del Lugar',
       childrenTitle: 'Niños',
-      childrenDescription: 'Creemos que los invitados disfrutarán más de la boda si pueden asistir sin niños. Sin embargo, entendemos que esto no es posible para todos y los niños son bienvenidos.',
+      childrenDescription: 'Creemos que los invitados disfrutarán más de la boda si pueden asistir sin niños. Sin embargo, entendemos que esto no es posible para todos y los niños son bienvenidos. Solo les pedimos que nos avisen con anticipación si asistirán con niños para poder tomarlo en cuenta en la organización.',
       childrenMexicanNote: '',
       giftsTitle: 'Nota sobre regalos',
-      giftsDescription: 'Tu presencia en nuestra boda es el mejor regalo de todos. Si aun así quieres honrarnos con un regalo, te pedimos amablemente que no sea un regalo físico – no podremos llevarlo con nosotros a casa.',
+      giftsDescription: '¡No hace falta que nos lleven regalo! Para nosotros, lo más importante es que nos acompañen a celebrar este día. Pero si aun así les gustaría regalarnos algo, les agradeceríamos que no fuera algo físico, ya que no podremos llevarlo de regreso a casa.',
     },
     location: {
       title: 'Ubicación',
@@ -266,7 +266,7 @@ const translations: Record<Language, Translations> = {
       shuttleTitle: 'Autobús',
       shuttleInfo: 'Autobús desde la Ciudad de México a Cuernavaca el 8 de enero, y de regreso de Cuernavaca a la Ciudad de México el 10 de enero.',
       shuttleSignup: 'Regístrate aquí si te interesa.',
-      stayInfo: 'Recomendamos hospedarse en el centro de Cuernavaca. No es buena idea volver a la Ciudad de México justo después de la boda, así que mejor quédate cerca.',
+      stayInfo: 'Recomendamos hospedarse en el centro de Cuernavaca. No es buena idea volver a la Ciudad de México justo después de la boda, así que mejor quédate cerca. El lugar de la boda tiene algunas habitaciones, pero son bastante caras y no nos ofrecieron ningún descuento. Nosotros nos quedaremos en una casa cerca.',
       busTitle: 'En Autobús',
       busInfo: 'También hay autobuses directos de la Ciudad de México a Cuernavaca, con salidas frecuentes desde la terminal de Taxqueña y desde el aeropuerto – aproximadamente 1.5 horas.',
       parkingTitle: 'En Coche',
@@ -275,7 +275,7 @@ const translations: Record<Language, Translations> = {
     },
     dressCode: {
       formal: 'Vestimenta Formal',
-      formalDescription: 'Vestidos de cóctel, trajes o vestimenta formal tradicional. Telas ligeras – días cálidos, noches frescas.',
+      formalDescription: 'Vestidos largos, trajes o vestimenta tradicional formal. Les recomendamos telas ligeras para el calor durante el día y llevar algo para cubrirse por la noche, ya que puede refrescar.',
     },
     footer: {
       celebrate: '¡Estamos emocionados de celebrar contigo!',
@@ -369,7 +369,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna. Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
       childrenMexicanNote: '',
       giftsTitle: 'Om presenter',
-      giftsDescription: 'Er närvaro på vårt bröllop är den finaste presenten av alla. Om ni ändå vill hedra oss med en present ber vi er vänligen att inte ge något fysiskt – vi kommer inte att kunna ta det med oss hem.',
+      giftsDescription: 'Ni behöver verkligen inte ge oss någon present. Att ni tagit er hela vägen till Mexiko för att fira med oss är mer än tillräckligt! Om ni ändå verkligen vill ge oss något så ber vi om inga fysiska presenter då vi inte får plats med det i väskorna.',
     },
     location: {
       title: 'Plats',
@@ -377,7 +377,7 @@ const translations: Record<Language, Translations> = {
       shuttleTitle: 'Shuttlebuss',
       shuttleInfo: 'Buss från Mexico City till Cuernavaca den 8 januari, och tillbaka från Cuernavaca till Mexico City den 10 januari.',
       shuttleSignup: 'Anmäl er här om ni är intresserade.',
-      stayInfo: 'Vi rekommenderar att bo i centrala Cuernavaca. Det är ingen bra idé att åka tillbaka till Mexico City direkt efter bröllopet, så bo gärna i närheten.',
+      stayInfo: 'Vi rekommenderar att bo i centrala Cuernavaca. Det är ingen bra idé att åka tillbaka till Mexico City direkt efter bröllopet, så bo gärna i närheten. Bröllopsstället har en del rum, men det var väldigt dyrt och de hade inga rabatter. Vi kommer att bo i ett hus i närheten istället.',
       busTitle: 'Med Buss',
       busInfo: 'Det går även direktbussar från Mexico City till Cuernavaca, med täta avgångar från terminalen Taxqueña och från flygplatsen – cirka 1,5 timme.',
       parkingTitle: 'Med Bil',
@@ -385,8 +385,8 @@ const translations: Record<Language, Translations> = {
       accommodationTitle: 'Boende',
     },
     dressCode: {
-      formal: 'Formell Klädsel',
-      formalDescription: 'Cocktailklänningar, kostymer eller traditionell högtidsdräkt. Lätta tyger – varma dagar, svala kvällar.',
+      formal: 'Klädkod: kostym',
+      formalDescription: 'Valfri färg! Mot kvällen kan det bli något svalare, så har ni klänning kan det vara smart att ha med sig en sjal eller liknande.',
     },
     footer: {
       celebrate: 'Vi längtar efter att fira med dig!',

@@ -18,13 +18,24 @@ const EventDetails = () => {
       <div className="max-w-5xl mx-auto">
         <SectionHeading title={t.details.schedule} />
 
-        {/* Timeline */}
-        <ol className="grid grid-cols-2 sm:grid-cols-5 gap-y-6">
+        {/* Timeline: one vertical line on phones, five columns from sm up */}
+        <ol className="ml-1 border-l border-sage space-y-5 sm:ml-0 sm:border-l-0 sm:space-y-0 sm:grid sm:grid-cols-5">
           {milestones.map((m) => (
-            <li key={m.titleKey} className="border-l border-sage pl-3 pr-4">
-              <img src={m.icon} alt="" loading="lazy" className="h-24 md:h-28 w-auto max-w-full object-contain object-left-bottom mb-3" />
-              <span className="block font-display text-2xl md:text-3xl text-charcoal leading-none mb-1">{m.time}</span>
-              <span className="font-body text-sm text-charcoal/75">{t.details[m.titleKey]}</span>
+            <li
+              key={m.titleKey}
+              className="relative flex items-center justify-between gap-4 pl-5 sm:block sm:border-l sm:border-sage sm:pl-3 sm:pr-4"
+            >
+              <span className="absolute -left-[5px] top-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full bg-sage sm:hidden" />
+              <img
+                src={m.icon}
+                alt=""
+                loading="lazy"
+                className="order-2 h-20 w-32 object-contain object-right-bottom sm:h-24 md:h-28 sm:w-auto sm:max-w-full sm:object-left-bottom sm:mb-3"
+              />
+              <div className="order-1">
+                <span className="block font-display text-2xl md:text-3xl text-charcoal leading-none mb-1">{m.time}</span>
+                <span className="font-body text-sm text-charcoal/75">{t.details[m.titleKey]}</span>
+              </div>
             </li>
           ))}
         </ol>
