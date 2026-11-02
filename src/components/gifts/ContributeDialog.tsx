@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
-import { ExternalLink, Smartphone } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -17,7 +17,7 @@ import {
   type Currency,
   type GiftItem,
 } from "@/config/gifts";
-import { swishDeepLink, swishQrPayload, isMobile } from "@/lib/swish";
+import { swishQrPayload } from "@/lib/swish";
 import CopyField from "./CopyField";
 import GiftIcon from "./GiftIcon";
 
@@ -126,14 +126,6 @@ const ContributeDialog = ({ item, onClose }: Props) => {
               </div>
               <p className="font-sans text-[11px] uppercase tracking-wider text-sage">{t.gifts.swishScan}</p>
             </div>
-            {isMobile() && (
-              <Button asChild className="w-full bg-terracotta text-card hover:bg-terracotta-dark">
-                <a href={swishDeepLink(payment.swish.number, amountSek, message)}>
-                  <Smartphone className="w-4 h-4 mr-2" />
-                  {t.gifts.openSwish}
-                </a>
-              </Button>
-            )}
             <CopyField label={t.gifts.swishNumber} value={payment.swish.number} mono />
             <CopyField label={t.gifts.message} value={message} />
           </TabsContent>

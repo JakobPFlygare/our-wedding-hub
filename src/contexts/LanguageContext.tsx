@@ -98,7 +98,6 @@ interface Translations {
     paypalTab: string;
     swishHelp: string;
     swishScan: string;
-    openSwish: string;
     swishNumber: string;
     wiseHelp: string;
     openWise: string;
@@ -209,9 +208,8 @@ const translations: Record<Language, Translations> = {
       swishTab: 'Swish',
       wiseTab: 'Wise',
       paypalTab: 'PayPal',
-      swishHelp: 'For guests with a Swedish bank. Scan the code with the Swish app, or tap the button on your phone.',
+      swishHelp: 'For guests with a Swedish bank. Scan the code with the Swish app. On your phone, copy the number and message below into Swish instead.',
       swishScan: 'Scan with Swish',
-      openSwish: 'Open Swish',
       swishNumber: 'Swish number',
       wiseHelp: 'Pay by card or bank transfer in your own currency – no Wise account needed.',
       openWise: 'Pay with Wise',
@@ -320,9 +318,8 @@ const translations: Record<Language, Translations> = {
       swishTab: 'Swish',
       wiseTab: 'Wise',
       paypalTab: 'PayPal',
-      swishHelp: 'Para invitados con banco sueco. Escanea el código con la app de Swish o toca el botón desde tu celular.',
+      swishHelp: 'Para invitados con banco sueco. Escanea el código con la app de Swish. Desde tu celular, copia el número y el mensaje de abajo en Swish.',
       swishScan: 'Escanea con Swish',
-      openSwish: 'Abrir Swish',
       swishNumber: 'Número de Swish',
       wiseHelp: 'Paga con tarjeta o transferencia en pesos – no necesitas cuenta de Wise.',
       openWise: 'Pagar con Wise',
@@ -431,9 +428,8 @@ const translations: Record<Language, Translations> = {
       swishTab: 'Swish',
       wiseTab: 'Wise',
       paypalTab: 'PayPal',
-      swishHelp: 'Skanna koden med Swish-appen, eller tryck på knappen om du är på mobilen.',
+      swishHelp: 'Skanna koden med Swish-appen. Är du på mobilen, kopiera numret och meddelandet nedan till Swish istället.',
       swishScan: 'Skanna med Swish',
-      openSwish: 'Öppna Swish',
       swishNumber: 'Swishnummer',
       wiseHelp: 'Betala med kort eller banköverföring i valfri valuta – inget Wise-konto behövs.',
       openWise: 'Betala med Wise',
