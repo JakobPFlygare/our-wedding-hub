@@ -43,6 +43,7 @@ interface Translations {
     shuttleInfo: string;
     busTitle: string;
     busInfo: string;
+    busLink: string;
     parkingTitle: string;
     parkingInfo: string;
     accommodationTitle: string;
@@ -66,6 +67,7 @@ interface Translations {
     title: string;
     intro: string;
     signupTitle: string;
+    moreInfo: string;
     signupHint: string;
     yourName: string;
     yourNamePlaceholder: string;
@@ -146,17 +148,18 @@ const translations: Record<Language, Translations> = {
       childrenDescription: "We believe guests will enjoy the wedding more if they are able to attend childfree. However, we realize this is simply not possible for some and children are of course welcome. Let us know if you are bringing a kid so we can plan accordingly with the menu etc.",
       childrenMexicanNote: '',
       giftsTitle: 'Note on gifts',
-      giftsDescription: "Please don’t feel the need to bring a gift! Having you celebrate with us is the greatest gift of all. If you’d still like to give us something, we’d kindly ask for no physical presents, as we won’t be able to bring them home with us.",
+      giftsDescription: "You are our gift! Having you with us in Mexico to celebrate means the world, so please don’t feel you need to bring anything else.",
     },
     location: {
       title: 'Location',
       transportTitle: 'Getting There',
       shuttleTitle: 'Shuttle Bus',
-      shuttleInfo: 'Shuttle bus from Mexico City to Cuernavaca on January 8, returning from Cuernavaca to Mexico City on January 10.',
+      shuttleInfo: 'The shuttle leaves Mexico City on Friday, January 8 at 10:00 am, and we’ll confirm the exact pick-up point closer to the date. The ride to Cuernavaca takes about an hour and twenty minutes.\nFor the trip back, it leaves from the main entrance of Las Mañanitas on Sunday, January 10 at 12:30 pm.\nPlease pack light so there’s room for everyone’s bags.',
       shuttleSignup: 'Sign up here if you’re interested.',
-      stayInfo: 'We recommend staying in Cuernavaca centre. Getting back to Mexico City straight after the wedding isn’t a good idea, so plan to stay nearby. The wedding venue has some rooms, but they’re quite expensive and they didn’t offer us any discount. We will be staying at a house nearby instead.',
+      stayInfo: 'We recommend staying in Cuernavaca’s city centre. Las Mañanitas has rooms of its own, and there are lots of hotels nearby. Wherever you stay, we recommend booking through Booking.com. Getting back to Mexico City late at night isn’t easy, and after a long day of celebrating it’s a tiring drive, so we think it’s nicest to stay over in Cuernavaca.',
       busTitle: 'By Bus',
-      busInfo: 'There are also direct buses from Mexico City to Cuernavaca, with frequent departures from the Taxqueña terminal and from the airport – about 1.5 hours.',
+      busInfo: 'Pullman de Morelos runs frequent direct buses to Cuernavaca from the Taxqueña bus terminal and from the airport. The trip takes about an hour and a half.',
+      busLink: 'Buy tickets here.',
       parkingTitle: 'By Car',
       parkingInfo: 'Valet parking is available at the venue for guests arriving by car.',
       accommodationTitle: 'Where to Stay',
@@ -176,8 +179,9 @@ const translations: Record<Language, Translations> = {
     },
     activities: {
       title: 'Activities',
-      intro: 'We’re planning a few activities for anyone who’d like to meet up before the wedding. If you’re interested, let us know and we’ll set dates and details later.',
+      intro: 'We’re planning a few activities for anyone who’d like to meet up before the wedding. If you’re interested, let us know – we’ll share times and meeting points closer to the date.',
       signupTitle: 'I’m interested in…',
+      moreInfo: 'Info',
       signupHint: 'No commitment – this just helps us plan.',
       yourName: 'Your name',
       yourNamePlaceholder: 'Name(s)',
@@ -198,7 +202,8 @@ const translations: Record<Language, Translations> = {
       step3: 'Add your name to the message so we know who to thank!',
       contribute: 'Chip in',
       backHome: 'Back to the invitation',
-      linkFromDetails: 'A few ideas, if you’d like →',
+      // Empty hides the link to the gifts page (Spanish only).
+      linkFromDetails: '',
       dialogTitle: 'Chip in towards',
       yourName: 'Your name',
       yourNamePlaceholder: 'So we know who to thank',
@@ -262,11 +267,12 @@ const translations: Record<Language, Translations> = {
       title: 'Ubicación',
       transportTitle: 'Cómo Llegar',
       shuttleTitle: 'Autobús',
-      shuttleInfo: 'Autobús desde la Ciudad de México a Cuernavaca el 8 de enero, y de regreso de Cuernavaca a la Ciudad de México el 10 de enero.',
+      shuttleInfo: 'El autobús sale de la Ciudad de México el viernes 8 de enero a las 10:00 a.m., y confirmaremos el punto de salida exacto más adelante. El trayecto a Cuernavaca dura aproximadamente una hora y veinte minutos.\nPara el regreso, sale de la entrada principal de Las Mañanitas el domingo 10 de enero a las 12:30 p.m.\nTe pedimos llevar poco equipaje para que haya espacio para todos.',
       shuttleSignup: 'Regístrate aquí si te interesa.',
-      stayInfo: 'Recomendamos hospedarse en el centro de Cuernavaca. No es buena idea volver a la Ciudad de México justo después de la boda, así que mejor quédate cerca. El lugar de la boda tiene algunas habitaciones, pero son bastante caras y no nos ofrecieron ningún descuento. Nosotros nos quedaremos en una casa cerca.',
+      stayInfo: 'Te recomendamos hospedarte en el centro de Cuernavaca. Las Mañanitas tiene habitaciones propias y hay muchos hoteles cerca. Dondequiera que te quedes, te recomendamos reservar por Booking.com. Regresar a la Ciudad de México tarde en la noche no es fácil, y después de un largo día de fiesta el camino se hace pesado, así que creemos que lo mejor es quedarse a dormir en Cuernavaca.',
       busTitle: 'En Autobús',
-      busInfo: 'También hay autobuses directos de la Ciudad de México a Cuernavaca, con salidas frecuentes desde la terminal de Taxqueña y desde el aeropuerto – aproximadamente 1.5 horas.',
+      busInfo: 'Pullman de Morelos tiene autobuses directos y frecuentes a Cuernavaca desde la terminal de Taxqueña y desde el aeropuerto. El viaje dura alrededor de una hora y media.',
+      busLink: 'Compra tus boletos aquí.',
       parkingTitle: 'En Coche',
       parkingInfo: 'El lugar cuenta con servicio de valet parking para invitados que lleguen en coche.',
       accommodationTitle: 'Dónde Hospedarse',
@@ -286,8 +292,9 @@ const translations: Record<Language, Translations> = {
     },
     activities: {
       title: 'Actividades',
-      intro: 'Estamos planeando algunas actividades para quienes quieran reunirse antes de la boda. Si te interesa, avísanos y más adelante fijamos fechas y detalles.',
+      intro: 'Estamos planeando algunas actividades para quienes quieran reunirse antes de la boda. Si te interesa, avísanos – compartiremos horarios y puntos de encuentro más cerca de la fecha.',
       signupTitle: 'Me interesa…',
+      moreInfo: 'Info',
       signupHint: 'Sin compromiso – solo nos ayuda a planear.',
       yourName: 'Tu nombre',
       yourNamePlaceholder: 'Nombre(s)',
@@ -366,17 +373,18 @@ const translations: Record<Language, Translations> = {
       childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna. Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
       childrenMexicanNote: '',
       giftsTitle: 'Om presenter',
-      giftsDescription: 'Ni behöver verkligen inte ge oss någon present. Att ni tagit er hela vägen till Mexiko för att fira med oss är mer än tillräckligt! Om ni ändå verkligen vill ge oss något så ber vi om inga fysiska presenter då vi inte får plats med det i väskorna.',
+      giftsDescription: 'Ni är vår finaste present! Att ni tar er hela vägen till Mexiko för att fira med oss betyder allt, så ni behöver inte ta med något annat.',
     },
     location: {
       title: 'Plats',
       transportTitle: 'Hitta Dit',
       shuttleTitle: 'Shuttlebuss',
-      shuttleInfo: 'Buss från Mexico City till Cuernavaca den 8 januari, och tillbaka från Cuernavaca till Mexico City den 10 januari.',
+      shuttleInfo: 'Bussen avgår från Mexico City fredag 8 januari kl. 10.00, och vi bekräftar exakt avgångsplats närmare datumet. Resan till Cuernavaca tar ungefär en timme och tjugo minuter.\nTillbaka går bussen från huvudentrén på Las Mañanitas söndag 10 januari kl. 12.30.\nPacka gärna lätt så att det blir plats för allas väskor.',
       shuttleSignup: 'Anmäl er här om ni är intresserade.',
-      stayInfo: 'Vi rekommenderar att bo i centrala Cuernavaca. Det är ingen bra idé att åka tillbaka till Mexico City direkt efter bröllopet, så bo gärna i närheten. Bröllopsstället har en del rum, men det var väldigt dyrt och de hade inga rabatter. Vi kommer att bo i ett hus i närheten istället.',
+      stayInfo: 'Vi rekommenderar att bo i centrala Cuernavaca. Las Mañanitas har egna rum, och det finns gott om hotell i närheten. Var ni än bor rekommenderar vi att boka via Booking.com. Det är inte så lätt att ta sig tillbaka till Mexico City sent på natten, och efter en lång dag av firande blir det en tröttsam resa, så vi tror att det är skönast att sova över i Cuernavaca.',
       busTitle: 'Med Buss',
-      busInfo: 'Det går även direktbussar från Mexico City till Cuernavaca, med täta avgångar från terminalen Taxqueña och från flygplatsen – cirka 1,5 timme.',
+      busInfo: 'Pullman de Morelos kör täta direktbussar till Cuernavaca från busstationen Taxqueña och från flygplatsen. Resan tar ungefär en och en halv timme.',
+      busLink: 'Köp biljetter här.',
       parkingTitle: 'Med Bil',
       parkingInfo: 'Valet parking finns tillgängligt på platsen för gäster som kommer med bil.',
       accommodationTitle: 'Boende',
@@ -396,8 +404,9 @@ const translations: Record<Language, Translations> = {
     },
     activities: {
       title: 'Aktiviteter',
-      intro: 'Vi planerar några aktiviteter för er som vill träffas innan bröllopet. Är ni intresserade – säg till, så bestämmer vi datum och detaljer senare.',
+      intro: 'Vi planerar några aktiviteter för er som vill träffas innan bröllopet. Är ni intresserade – säg till, så skickar vi tider och mötesplatser närmare datumet.',
       signupTitle: 'Jag är intresserad av…',
+      moreInfo: 'Info',
       signupHint: 'Inget bindande – det hjälper oss bara att planera.',
       yourName: 'Ert namn',
       yourNamePlaceholder: 'Namn',
@@ -418,7 +427,7 @@ const translations: Record<Language, Translations> = {
       step3: 'Skriv ert namn i meddelandet så vi vet vem vi ska tacka!',
       contribute: 'Bidra',
       backHome: 'Tillbaka till inbjudan',
-      linkFromDetails: 'Några idéer, om ni vill →',
+      linkFromDetails: '',
       dialogTitle: 'Bidra till',
       yourName: 'Ert namn',
       yourNamePlaceholder: 'Så vi vet vem vi ska tacka',

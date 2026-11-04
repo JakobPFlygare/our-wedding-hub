@@ -2,7 +2,11 @@ import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "./SectionHeading";
 
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Las+Ma%C3%B1anitas+Cuernavaca";
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent("Jardín Casa de Muñecas Las Mañanitas, Los Árboles 99, Cuernavaca");
+// Pullman de Morelos: direct buses CDMX (Taxqueña, airport) → Cuernavaca, official online sales.
+const BUS_TICKETS_URL = "https://pullman.mx/";
 
 const LocationSection = () => {
   const { t } = useLanguage();
@@ -15,7 +19,11 @@ const LocationSection = () => {
         <div className="grid md:grid-cols-3 gap-8 md:gap-10">
           <div>
             <h3 className="font-display text-xl text-charcoal mb-2">Las Mañanitas</h3>
-            <p className="font-body text-sm text-charcoal/75 leading-relaxed">Ricardo Linares 107, Centro, Cuernavaca, Morelos</p>
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed">
+              Jardín Casa de Muñecas
+              <br />
+              Los Árboles 99, Cuernavaca Centro, 62000 Cuernavaca, Morelos
+            </p>
             <a
               href={MAPS_URL}
               target="_blank"
@@ -28,7 +36,7 @@ const LocationSection = () => {
           </div>
           <div>
             <h3 className="font-display text-xl text-charcoal mb-2">{t.location.transportTitle}</h3>
-            <p className="font-body text-sm text-charcoal/75 leading-relaxed">
+            <p className="font-body text-sm text-charcoal/75 leading-relaxed whitespace-pre-line">
               <span className="text-charcoal">{t.location.shuttleTitle}.</span> {t.location.shuttleInfo}{" "}
               <button
                 type="button"
@@ -39,7 +47,15 @@ const LocationSection = () => {
               </button>
             </p>
             <p className="font-body text-sm text-charcoal/75 leading-relaxed mt-2">
-              <span className="text-charcoal">{t.location.busTitle}.</span> {t.location.busInfo}
+              <span className="text-charcoal">{t.location.busTitle}.</span> {t.location.busInfo}{" "}
+              <a
+                href={BUS_TICKETS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal underline underline-offset-4 decoration-sage-light hover:decoration-sage"
+              >
+                {t.location.busLink}
+              </a>
             </p>
             <p className="font-body text-sm text-charcoal/75 leading-relaxed mt-2">
               <span className="text-charcoal">{t.location.parkingTitle}.</span> {t.location.parkingInfo}

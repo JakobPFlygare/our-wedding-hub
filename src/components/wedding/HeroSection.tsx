@@ -2,7 +2,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-lasmananitas.jpg";
 import Countdown from "./Countdown";
 
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Las+Ma%C3%B1anitas+Cuernavaca";
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent("Jardín Casa de Muñecas Las Mañanitas, Los Árboles 99, Cuernavaca");
 
 const HeroSection = () => {
   const { t } = useLanguage();

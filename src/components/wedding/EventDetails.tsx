@@ -66,12 +66,14 @@ const EventDetails = () => {
           <div>
             <h3 className="font-display text-xl text-charcoal mb-2">{t.details.giftsTitle}</h3>
             <p className="font-body text-sm text-charcoal/75 leading-relaxed">{t.details.giftsDescription}</p>
-            <Link
-              to="/gifts"
-              className="inline-block mt-2 font-body text-sm text-charcoal/55 underline underline-offset-4 decoration-sage-light hover:text-charcoal hover:decoration-sage"
-            >
-              {t.gifts.linkFromDetails}
-            </Link>
+            {t.gifts.linkFromDetails && (
+              <Link
+                to="/gifts"
+                className="inline-block mt-2 font-body text-sm text-charcoal/55 underline underline-offset-4 decoration-sage-light hover:text-charcoal hover:decoration-sage"
+              >
+                {t.gifts.linkFromDetails}
+              </Link>
+            )}
           </div>
         </div>
       </div>
