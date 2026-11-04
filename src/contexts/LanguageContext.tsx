@@ -373,7 +373,7 @@ const translations: Record<Language, Translations> = {
       childrenDescription: 'Vi tror att gästerna kommer att njuta mer av bröllopet om de kan delta utan barn. Vi förstår dock att detta inte är möjligt för alla och barn är självklart välkomna. Låt oss veta om du tar med dig ett barn så att vi kan planera i enlighet med menyn etc.',
       childrenMexicanNote: '',
       giftsTitle: 'Om presenter',
-      giftsDescription: 'Ni är vår finaste present! Att ni tar er hela vägen till Mexiko för att fira med oss betyder allt, så ni behöver inte ta med något annat.',
+      giftsDescription: 'Att ni tar er hela vägen till Mexiko för att fira med oss betyder allt, så ni behöver inte ta med någon present.',
     },
     location: {
       title: 'Plats',
